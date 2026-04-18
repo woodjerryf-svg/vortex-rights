@@ -7,11 +7,17 @@
     "start": "npx serve .",
     "dev": "npx serve . --listen 3000"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  },
   "devDependencies": {
     "serve": "^14.2.1"
   },
-  "keywords": ["music", "rights", "services"],
+  "keywords": [
+    "music",
+    "rights",
+    "services"
+  ],
   "author": "",
   "license": "ISC"
 }
