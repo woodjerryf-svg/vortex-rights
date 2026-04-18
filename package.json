@@ -1,0 +1,17 @@
+{
+  "name": "site-vortex-rights",
+  "version": "1.0.0",
+  "description": "Vortex Rights - Services Musicaux",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve . --listen 3000"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "serve": "^14.2.1"
+  },
+  "keywords": ["music", "rights", "services"],
+  "author": "",
+  "license": "ISC"
+}
