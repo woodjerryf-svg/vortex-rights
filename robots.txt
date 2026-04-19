@@ -1,9 +1,15 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.vortexrights.com/sitemap.xml
+# Autoriser spécifiquement Facebook et WhatsApp
+User-agent: facebookexternalhit
+Allow: /
+User-agent: Facebot
+Allow: /
 
-# Block admin/private paths (none currently but future-proof)
+Sitemap: https://vortexrights.com/sitemap.xml
+
+# Sécurité
 Disallow: /api/
 Disallow: /.env
 Disallow: /node_modules/
