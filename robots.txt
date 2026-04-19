@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.vortexrights.com/sitemap.xml
+
+# Block admin/private paths (none currently but future-proof)
+Disallow: /api/
+Disallow: /.env
+Disallow: /node_modules/
