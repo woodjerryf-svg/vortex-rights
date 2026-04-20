@@ -1,922 +1,1150 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vortex Rights - Services Musicaux</title>
-    <link rel="icon" type="image/jpeg" href="./Public/images/favicon.jpg">
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- ═══ PRIMARY SEO ═══ -->
+  <title>Vortex Rights — Conciergerie Digitale pour Artistes Haïtiens</title>
+  <meta name="description" content="Vortex Rights professionnalise l'infrastructure musicale des artistes haïtiens : distribution mondiale, badge OAC, Spotify for Artists, Content ID. 0% commission. Port-au-Prince, Haïti.">
+  <meta name="keywords" content="distribution musicale Haiti, badge OAC YouTube, Spotify for Artists Haiti, Content ID musique, droits musicaux Haiti, artiste independant Haiti, ISRC UPC Haiti, conciergerie digitale musique">
+  <meta name="author" content="Vortex Rights — Wood Jerry Fils-Aimé">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://www.vortexrights.com/">
+
+  <!-- ═══ OPEN GRAPH (Facebook, Instagram, WhatsApp) ═══ -->
+  <meta property="og:type"        content="website">
+  <meta property="og:site_name"   content="Vortex Rights">
+  <meta property="og:locale"      content="fr_HT">
+  <meta property="og:url"         content="https://www.vortexrights.com/">
+  <meta property="og:title"       content="Vortex Rights — Conciergerie Digitale pour Artistes Haïtiens">
+  <meta property="og:description" content="Distribution mondiale, badge OAC, Content ID, Spotify for Artists. 0% commission. Vous gardez 100% de vos revenus. Offre de lancement −50%.">
+  <meta property="og:image"       content="https://www.vortexrights.com/Public/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt"   content="Vortex Rights — Conciergerie Digitale Musicale Haiti">
+
+  <!-- ═══ TWITTER CARD ═══ -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:site"        content="@vortexrightshaiti">
+  <meta name="twitter:creator"     content="@vortexrightshaiti">
+  <meta name="twitter:title"       content="Vortex Rights — Conciergerie Digitale pour Artistes Haïtiens">
+  <meta name="twitter:description" content="Distribution mondiale, badge OAC, Content ID, Spotify for Artists. 0% commission. Offre de lancement −50%.">
+  <meta name="twitter:image"       content="https://www.vortexrights.com/Public/images/og-image.jpg">
+
+  <!-- ═══ SCHEMA.ORG STRUCTURED DATA ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.vortexrights.com/#organization",
+        "name": "Vortex Rights",
+        "url": "https://www.vortexrights.com",
+        "logo": "https://www.vortexrights.com/Public/images/favicon.jpg",
+        "description": "Agence de conciergerie digitale musicale pour artistes haïtiens — distribution, badge OAC, Content ID, 0% commission.",
+        "foundingDate": "2026",
+        "founder": { "@type": "Person", "name": "Wood Jerry Fils-Aimé" },
+        "address": { "@type": "PostalAddress", "addressLocality": "Port-au-Prince", "addressCountry": "HT" },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+509-4346-9043",
+          "contactType": "customer service",
+          "availableLanguage": ["French", "Haitian Creole"]
+        },
+        "sameAs": ["https://www.instagram.com/vortexrightshaiti/"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.vortexrights.com/#website",
+        "url": "https://www.vortexrights.com",
+        "name": "Vortex Rights",
+        "publisher": { "@id": "https://www.vortexrights.com/#organization" }
+      },
+      {
+        "@type": "Service",
+        "name": "Distribution Musicale Mondiale",
+        "provider": { "@id": "https://www.vortexrights.com/#organization" },
+        "description": "Distribution sur Spotify, Apple Music, Deezer, YouTube Music, Audiomack avec codes ISRC et UPC.",
+        "areaServed": "Worldwide",
+        "offers": {
+          "@type": "Offer",
+          "price": "50",
+          "priceCurrency": "USD",
+          "priceValidUntil": "2026-12-31"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ═══ FAVICON ═══ -->
+  <link rel="icon" type="image/jpeg" href="./Public/images/favicon.jpg">
+  <link rel="apple-touch-icon" href="./Public/images/favicon.jpg">
+  <meta name="theme-color" content="#1a6dff">
+  <meta name="msapplication-TileColor" content="#1a6dff">
+
+  <!-- ═══ PERFORMANCE ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.paypal.com">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800;900&family=Space+Mono&family=Anton&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800;900&family=Space+Mono&family=Anton&display=swap"></noscript>
+
+  <style>
+    /* ═══ RESET & BASE ═══ */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      background: #000;
+      color: #fff;
+      font-family: 'Syne', sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ═══ SCROLLBAR ═══ */
+    ::-webkit-scrollbar { width: 3px; }
+    ::-webkit-scrollbar-track { background: #000; }
+    ::-webkit-scrollbar-thumb { background: #1a6dff; border-radius: 2px; }
+
+    /* ═══ CSS VARIABLES ═══ */
+    :root {
+      --blue: #1a6dff;
+      --orange: #ff6b35;
+      --white: #ffffff;
+      --black: #000000;
+      --gray-100: #f5f5f5;
+      --gray-400: #999;
+      --gray-600: #666;
+      --glass: rgba(255,255,255,0.05);
+      --border: rgba(255,255,255,0.1);
+      --radius: 16px;
+      --radius-sm: 8px;
+      --max-w: 1200px;
+      --transition: 0.25s ease;
+    }
+
+    /* ═══ UTILITY ═══ */
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 20px; }
+    .gradient-text { background: linear-gradient(135deg, #1a6dff, #0099ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .gradient-accent { background: linear-gradient(135deg, #ff6b35, #f7931e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .glass { background: var(--glass); border: 1px solid var(--border); backdrop-filter: blur(10px); }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+    /* ═══ ANIMATIONS ═══ */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes pulse-glow { from { box-shadow: 0 0 5px rgba(26,109,255,0.2); } to { box-shadow: 0 0 20px rgba(26,109,255,0.5); } }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.7s ease forwards; }
+    .fade-up-d1 { animation-delay: 0.15s; }
+    .fade-up-d2 { animation-delay: 0.3s; }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ═══ BUTTONS ═══ */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 28px; border-radius: var(--radius-sm);
+      font-family: 'Syne', sans-serif; font-weight: 600; font-size: 15px;
+      text-decoration: none; border: none; cursor: pointer;
+      transition: transform var(--transition), box-shadow var(--transition), opacity var(--transition);
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:active { transform: translateY(0); }
+    .btn-primary { background: var(--blue); color: #fff; box-shadow: 0 0 20px rgba(26,109,255,0.3); }
+    .btn-primary:hover { box-shadow: 0 8px 28px rgba(26,109,255,0.45); }
+    .btn-outline { background: transparent; color: #fff; border: 1px solid var(--border); }
+    .btn-outline:hover { border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.04); }
+    .btn-spinner { width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.3); border-top-color: #fff; border-radius: 50%; animation: spin 0.7s linear infinite; }
+
+    /* ═══ ANNOUNCEMENT BANNER ═══ */
+    #banner {
+      background: linear-gradient(90deg, #010820, #011540, #010820);
+      border-bottom: 1px solid rgba(26,109,255,0.3);
+      padding: 10px 20px; text-align: center;
+      font-size: 13px; font-weight: 600; letter-spacing: 0.02em;
+    }
+
+    /* ═══ NAVBAR ═══ */
+    #navbar {
+      position: fixed; top: 36px; left: 0; right: 0; z-index: 100;
+      background: rgba(0,0,0,0.92);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      transition: top var(--transition);
+    }
+    #navbar.no-banner { top: 0; }
+    .nav-inner {
+      max-width: var(--max-w); margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 20px;
+    }
+    .nav-logo {
+      font-family: 'Syne', sans-serif; font-weight: 800; font-size: 18px;
+      text-decoration: none; color: #fff; letter-spacing: 0.02em;
+      display: inline-flex; align-items: baseline; gap: 6px;
+    }
+    .nav-logo .vx-word {
+      background: linear-gradient(90deg, #1a6dff 0%, #6b4fff 30%, #b83aff 52%, #e04020 72%, #ff6b35 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .nav-logo .ri-word { color: #ffffff; -webkit-text-fill-color: #ffffff; }
+    .nav-links { display: flex; align-items: center; gap: 4px; }
+    .nav-links a {
+      color: #ccc; text-decoration: none; font-size: 14px; font-weight: 500;
+      padding: 7px 14px; border-radius: 6px;
+      transition: color var(--transition), background var(--transition);
+    }
+    .nav-links a:hover, .nav-links a[aria-current] { color: var(--blue); }
+    .nav-cta { padding: 8px 18px !important; background: var(--blue) !important; color: #fff !important; border-radius: var(--radius-sm) !important; }
+    .nav-cta:hover { opacity: 0.9; }
+    .nav-toggle { display: none; background: none; border: none; color: #fff; cursor: pointer; padding: 4px; }
+    .nav-mobile { display: none; flex-direction: column; gap: 4px; padding: 12px 20px 16px; border-top: 1px solid var(--border); }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a { color: #ccc; text-decoration: none; font-size: 15px; padding: 10px 12px; border-radius: 6px; }
+    .nav-mobile a:hover { background: rgba(255,255,255,0.05); color: #fff; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+    }
+
+    /* ═══ PAGES ═══ */
+    .page { display: none; }
+    .page.active { display: block; }
+
+    /* ═══ HERO ═══ */
+    #hero {
+      position: relative; min-height: 92vh;
+      display: flex; align-items: center; overflow: hidden;
+      padding-top: 72px;
+    }
+    #hero-bg {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%; object-fit: cover;
+      loading: lazy;
+    }
+    #hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(90deg, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.7) 55%, rgba(0,0,0,0.2) 100%);
+    }
+    .hero-content { position: relative; z-index: 2; max-width: 760px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 1px solid rgba(26,109,255,0.35);
+      background: rgba(26,109,255,0.1); border-radius: 50px;
+      padding: 8px 16px; margin-bottom: 28px; font-size: 12px; font-weight: 700;
+      color: var(--blue); letter-spacing: 0.05em;
+      animation: pulse-glow 2s ease-in-out infinite alternate;
+    }
+    .hero-title {
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(2.4rem, 5.5vw, 4.8rem);
+      font-weight: 900; line-height: 1.05; margin-bottom: 22px;
+    }
+    .hero-sub { font-size: 18px; color: #ccc; max-width: 560px; line-height: 1.65; margin-bottom: 36px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+
+    /* ═══ SECTIONS ═══ */
+    section { padding: 80px 0; }
+    .section-tag { font-size: 11px; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 0.18em; margin-bottom: 14px; }
+    .section-title { font-family: 'Anton', sans-serif; font-size: clamp(1.9rem, 4vw, 3rem); font-weight: 900; margin-bottom: 16px; line-height: 1.08; }
+    .section-sub { color: var(--gray-400); font-size: 16px; line-height: 1.65; max-width: 600px; margin-bottom: 48px; }
+    .section-sub.centered { margin: 0 auto 48px; text-align: center; }
+    .text-center { text-align: center; }
+
+    /* ═══ PROBLEMS GRID ═══ */
+    .problems-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; max-width: 800px; margin: 0 auto; }
+    .problem-card {
+      display: flex; align-items: flex-start; gap: 12px;
+      background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.18);
+      border-radius: 12px; padding: 18px;
+    }
+    .problem-card svg { flex-shrink: 0; color: #ef4444; width: 20px; height: 20px; margin-top: 1px; }
+    .problem-card span { font-size: 14px; line-height: 1.55; color: #fff; }
+
+    /* ═══ PILLAR CARDS ═══ */
+    .pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 22px; }
+    .pillar-card { background: var(--glass); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; backdrop-filter: blur(10px); transition: transform var(--transition), border-color var(--transition); }
+    .pillar-card:hover { transform: translateY(-4px); border-color: rgba(26,109,255,0.35); }
+    .pillar-img { width: 100%; height: 200px; object-fit: cover; display: block; }
+    .pillar-body { padding: 28px; }
+    .pillar-icon { width: 46px; height: 46px; background: rgba(26,109,255,0.12); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; color: var(--blue); }
+    .pillar-title { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+    .pillar-desc { font-size: 14px; color: #ccc; line-height: 1.6; }
+
+    /* ═══ PRICING ═══ */
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 48px; }
+    .price-card {
+      background: var(--glass); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px;
+      display: flex; flex-direction: column;
+      transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+      position: relative;
+    }
+    .price-card:hover { transform: translateY(-5px); border-color: var(--blue); box-shadow: 0 16px 40px rgba(26,109,255,0.15); }
+    .price-card.featured { background: rgba(26,109,255,0.1); border: 2px solid var(--blue); }
+    .featured-badge { position: absolute; top: 18px; right: 18px; background: var(--blue); color: #fff; font-size: 11px; font-weight: 700; padding: 5px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .price-name { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .price-desc { color: var(--gray-400); font-size: 14px; margin-bottom: 22px; line-height: 1.55; }
+    .price-amount { margin-bottom: 24px; }
+    .price-now { font-size: 42px; font-weight: 800; color: var(--blue); }
+    .price-was { color: var(--gray-400); text-decoration: line-through; margin-left: 10px; font-size: 16px; }
+    .price-features { list-style: none; margin-bottom: 28px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
+    .price-features li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #fff; }
+    .price-features li svg { color: var(--blue); flex-shrink: 0; margin-top: 1px; width: 16px; height: 16px; }
+    .price-features li.dimmed svg { color: #444; }
+
+    /* ═══ PAYMENT METHODS ═══ */
+    .payment-box { background: var(--glass); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; text-align: center; }
+    .payment-methods { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 16px; }
+    .payment-pill { background: rgba(255,255,255,0.07); border: 1px solid var(--border); border-radius: 12px; padding: 10px 18px; font-weight: 700; font-size: 13px; }
+
+    /* ═══ SERVICES ═══ */
+    .services-list { display: grid; gap: 32px; }
+    .service-block { background: var(--glass); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; backdrop-filter: blur(10px); }
+    .service-img { width: 100%; height: 240px; object-fit: cover; display: block; }
+    .service-body { padding: 36px; }
+    .service-header { display: flex; gap: 18px; align-items: flex-start; margin-bottom: 24px; }
+    .service-icon { width: 46px; height: 46px; background: rgba(26,109,255,0.12); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--blue); flex-shrink: 0; }
+    .service-features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+    .service-feat { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; }
+    .service-feat svg { color: var(--blue); flex-shrink: 0; margin-top: 1px; width: 16px; height: 16px; }
+
+    /* ═══ ABOUT ═══ */
+    .differentiators { display: grid; gap: 14px; }
+    .diff-item { display: flex; gap: 16px; align-items: flex-start; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 18px; }
+    .diff-icon { width: 38px; height: 38px; min-width: 38px; background: rgba(26,109,255,0.12); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--blue); }
+    .proof-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 18px; }
+    .proof-card { background: var(--glass); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; backdrop-filter: blur(10px); }
+    .proof-icon { width: 44px; height: 44px; background: rgba(255,107,53,0.12); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--orange); margin-bottom: 16px; }
+    .pillar3-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .p3-card { background: var(--glass); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px; backdrop-filter: blur(10px); }
+    .p3-num { font-size: 11px; font-weight: 700; color: var(--blue); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px; }
+
+    /* ═══ CONTACT ═══ */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+    .contact-form { display: flex; flex-direction: column; gap: 18px; }
+    .form-group { display: flex; flex-direction: column; gap: 8px; }
+    .form-label { font-size: 14px; font-weight: 600; color: #fff; }
+    .form-input, .form-select, .form-textarea {
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(26,109,255,0.3);
+      border-radius: var(--radius-sm); padding: 12px 16px; color: #fff; font-size: 14px;
+      font-family: 'Syne', sans-serif; outline: none; width: 100%;
+      transition: border-color var(--transition);
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--blue); }
+    .form-input.error, .form-textarea.error { border-color: #ef4444; }
+    .form-error { font-size: 12px; color: #f87171; }
+    .form-textarea { resize: none; }
+    .form-select option { background: #111; }
+    .contact-info { display: flex; flex-direction: column; gap: 16px; }
+    .contact-card { background: var(--glass); border: 1px solid var(--border); border-radius: 12px; padding: 20px; backdrop-filter: blur(10px); display: flex; align-items: center; gap: 14px; }
+    .contact-icon { width: 40px; height: 40px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .alert { border-radius: 10px; padding: 14px 16px; font-size: 13px; line-height: 1.6; }
+    .alert-success { background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); color: #d1fae5; }
+    .alert-error { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); color: #fee2e2; }
+
+    /* ═══ FAQ ═══ */
+    .faq-section-label { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; padding-bottom: 10px; }
+    .faq-bar { width: 4px; height: 22px; border-radius: 2px; }
+    .faq-items { display: flex; flex-direction: column; gap: 8px; margin-bottom: 40px; }
+    .faq-item { border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; overflow: hidden; background: rgba(255,255,255,0.02); }
+    .faq-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 20px; background: transparent; border: none; cursor: pointer; text-align: left; color: #fff; font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 600; }
+    .faq-chevron { font-size: 22px; font-weight: 300; transition: transform 0.25s; flex-shrink: 0; color: var(--blue); }
+    .faq-item.open .faq-chevron { transform: rotate(45deg); }
+    .faq-answer { display: none; padding: 0 20px 18px; font-size: 14px; color: #aaa; line-height: 1.8; }
+    .faq-item.open .faq-answer { display: block; }
+    .faq-item.open { border-color: rgba(26,109,255,0.25); background: rgba(255,255,255,0.04); }
+
+    /* ═══ LEGAL PAGES ═══ */
+    .legal-wrap { max-width: 820px; margin: 0 auto; }
+    .legal-hero { margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .legal-date { font-size: 12px; color: #555; font-family: 'Space Mono', monospace; margin-top: 12px; }
+    .legal-block { padding: 24px 28px; border-radius: var(--radius); background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); margin-bottom: 16px; }
+    .legal-block.accent { border-left: 3px solid var(--blue); background: rgba(26,109,255,0.05); }
+    .legal-block h2 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 14px; display: flex; align-items: center; gap: 12px; }
+    .legal-num { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background: rgba(26,109,255,0.15); color: var(--blue); font-size: 11px; font-weight: 700; flex-shrink: 0; }
+    .legal-body { font-size: 14px; color: #aaa; line-height: 1.85; }
+    .legal-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+    .legal-list li { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: #aaa; line-height: 1.7; }
+    .legal-list li::before { content: '→'; color: var(--blue); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .legal-note { display: flex; gap: 10px; align-items: flex-start; background: rgba(255,107,53,0.07); border: 1px solid rgba(255,107,53,0.2); border-radius: 8px; padding: 12px 14px; margin-top: 14px; font-size: 13px; color: #c9a080; line-height: 1.6; }
+
+    /* ═══ CTA SECTION ═══ */
+    .cta-section { position: relative; overflow: hidden; }
+    .cta-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.1; }
+    .cta-content { position: relative; z-index: 1; text-align: center; }
+
+    /* ═══ FOOTER ═══ */
+    footer { background: #111; border-top: 1px solid var(--border); }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; padding: 48px 0 32px; }
+    .footer-brand-desc { color: var(--gray-400); font-size: 14px; line-height: 1.65; max-width: 280px; margin-top: 12px; }
+    .footer-heading { font-weight: 700; font-size: 14px; color: #fff; margin-bottom: 16px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-links a { color: var(--gray-400); text-decoration: none; font-size: 14px; transition: color var(--transition); }
+    .footer-links a:hover { color: var(--blue); }
+    .footer-bottom { border-top: 1px solid var(--border); padding: 20px 0; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; color: var(--gray-600); font-size: 13px; }
+    .scroll-top {
+      position: fixed; bottom: 24px; right: 24px;
+      width: 46px; height: 46px; border-radius: 50%;
+      background: var(--blue); border: none; color: #fff;
+      display: none; align-items: center; justify-content: center;
+      cursor: pointer; z-index: 50; box-shadow: 0 0 20px rgba(26,109,255,0.35);
+      transition: transform var(--transition);
+    }
+    .scroll-top:hover { transform: translateY(-2px); }
+    .scroll-top.visible { display: flex; }
+
+    /* ═══ RESPONSIVE ═══ */
+    @media (max-width: 768px) {
+      section { padding: 60px 0; }
+      .hero-title { font-size: 2.4rem; }
+      .pillars-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
-    <div id="root"></div>
 
-    <script type="text/babel">
-        const { useState, useEffect, useRef } = React;
+<!-- SKIP LINK (accessibilité) -->
+<a href="#main-content" class="sr-only" style="position:absolute;top:4px;left:4px;background:#1a6dff;color:#fff;padding:8px 16px;border-radius:4px;z-index:9999;text-decoration:none">Aller au contenu</a>
 
-        const whatsappUrl = "https://wa.me/50943469043?text=Bonjour%20Vortex%20Rights%2C%20je%20souhaite%20profiter%20de%20l%27offre%20de%20lancement.";
+<!-- BANNER -->
+<div id="banner" role="banner" aria-label="Offre spéciale">
+  OFFRE DE LANCEMENT — 50% DE RÉDUCTION · <span style="color:#ff6b35">Expire bientôt !</span>
+</div>
 
-        const BarChart3 = () => (<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg>);
-        const Shield = () => (<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>);
-        const Palette = () => (<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="13.5" cy="6.5" r=".5"></circle><circle cx="17.5" cy="10.5" r=".5"></circle><circle cx="8.5" cy="7.5" r=".5"></circle><circle cx="6.5" cy="12.5" r=".5"></circle><path d="m14.5 15.5-3-3 4-2.5-4.5-2.5 3-3 2.5 4 4.5 2.5-2.5 4-3-3z"></path></svg>);
-        const ArrowRight = () => (<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m9 18 6-6-6-6"></path></svg>);
-        const AlertTriangle = () => (<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg>);
-        const Check = () => (<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg>);
-        const Send = () => (<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m22 2-7 19-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>);
-        const Mail = () => (<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>);
-        const Phone = () => (<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>);
-        const MessageCircle = () => (<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>);
-        const ArrowUp = () => (<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 19V5M5 12l7-7 7 7"></path></svg>);
-        const MenuIcon = () => (<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>);
-        const CloseIcon = () => (<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>);
+<!-- NAVBAR -->
+<nav id="navbar" role="navigation" aria-label="Navigation principale">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" onclick="nav(event,'accueil')" aria-label="Vortex Rights — Accueil"><span class="vx-word">VORTEX</span><span class="ri-word">RIGHTS</span></a>
+    <div class="nav-links" role="menubar">
+      <a href="#" role="menuitem" data-page="accueil" onclick="nav(event,'accueil')" aria-current="page">Accueil</a>
+      <a href="#" role="menuitem" data-page="services" onclick="nav(event,'services')">Services</a>
+      <a href="#" role="menuitem" data-page="tarifs" onclick="nav(event,'tarifs')">Tarifs</a>
+      <a href="#" role="menuitem" data-page="apropos" onclick="nav(event,'apropos')">À Propos</a>
+      <a href="#" role="menuitem" data-page="contact" onclick="nav(event,'contact')">Contact</a>
+      <a href="https://wa.me/50943469043?text=Bonjour%20Vortex%20Rights%2C%20je%20souhaite%20en%20savoir%20plus." target="_blank" rel="noopener noreferrer" class="nav-cta btn" role="menuitem">Commencer</a>
+    </div>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" onclick="toggleMenu(this)">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="nav-mobile" id="nav-mobile" role="menu">
+    <a href="#" role="menuitem" data-page="accueil" onclick="nav(event,'accueil')">Accueil</a>
+    <a href="#" role="menuitem" data-page="services" onclick="nav(event,'services')">Services</a>
+    <a href="#" role="menuitem" data-page="tarifs" onclick="nav(event,'tarifs')">Tarifs</a>
+    <a href="#" role="menuitem" data-page="apropos" onclick="nav(event,'apropos')">À Propos</a>
+    <a href="#" role="menuitem" data-page="contact" onclick="nav(event,'contact')">Contact</a>
+    <a href="#" role="menuitem" data-page="faq" onclick="nav(event,'faq')">FAQ</a>
+    <a href="https://wa.me/50943469043?text=Bonjour%20Vortex%20Rights." target="_blank" rel="noopener noreferrer" style="background:var(--blue);color:#fff;padding:12px;border-radius:8px;text-align:center;font-weight:600;margin-top:6px;">Commencer</a>
+  </div>
+</nav>
 
-        function ScrollReveal({children, delay = 0}) {
-          const ref = useRef(null);
-          useEffect(() => {
-            const el = ref.current;
-            if (!el) return;
-            const observer = new IntersectionObserver(([entry]) => {
-              if (entry.isIntersecting) {
-                setTimeout(() => { el.style.opacity = "1"; el.style.transform = "translateY(0)"; }, delay);
-                observer.unobserve(el);
-              }
-            }, { threshold: 0.1 });
-            observer.observe(el);
-            return () => observer.disconnect();
-          }, [delay]);
-          return (<div ref={ref} style={{opacity: 0, transform: "translateY(30px)", transition: "opacity 0.6s ease-out, transform 0.6s ease-out"}}>{children}</div>);
-        }
+<main id="main-content">
 
-        const pillars = [
-          { icon: BarChart3, title: "Conformité Technique", desc: "Distribution mondiale avec gestion rigoureuse des codes ISRC et UPC. Vos métadonnées certifiées pour une diffusion sans faille.", img: "./Public/images/artist.jpg" },
-          { icon: Shield, title: "Protection IP", desc: "Content ID sur TikTok, Facebook, Instagram. Revendication OAC et Spotify for Artists. Vous restez maître de vos revenus.", img: "./Public/images/performer.jpg" },
-          { icon: Palette, title: "Identité Visuelle", desc: "Supports graphiques professionnels respectant les standards de l'industrie. L'image qui vend le son.", img: "./Public/images/studio.jpg" },
-        ];
+<!-- ══════════════════════════════════════
+     PAGE : ACCUEIL
+══════════════════════════════════════ -->
+<div id="page-accueil" class="page active">
 
-        const problems = [
-          "Des revenus de streaming qui disparaissent faute de Content ID",
-          "Des profils artistes non réclamés sur Spotify et Apple Music",
-          "Des métadonnées incorrectes qui bloquent la distribution",
-          "Aucune protection contre le vol de contenu sur les réseaux",
-        ];
+  <!-- HERO -->
+  <section id="hero" aria-label="Section principale">
+    <img id="hero-bg" src="./Public/images/hero.jpg" alt="" role="presentation" loading="eager" fetchpriority="high">
+    <div id="hero-overlay" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge" aria-label="Offre promotionnelle">OFFRE DE LANCEMENT — 50% DE RÉDUCTION</div>
+        <h1 class="hero-title fade-up">
+          Le pont entre votre <span class="gradient-text">talent</span><br>
+          et vos <span class="gradient-accent">revenus</span>.
+        </h1>
+        <p class="hero-sub fade-up fade-up-d1">Nous simplifions la technologie musicale pour les artistes de la diaspora haïtienne. Vos droits, notre priorité.</p>
+        <div class="hero-actions fade-up fade-up-d2">
+          <a href="https://wa.me/50943469043?text=Bonjour%20Vortex%20Rights%2C%20je%20souhaite%20profiter%20de%20l%27offre%20de%20lancement." target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Commencer avec Vortex Rights via WhatsApp">
+            Commencer maintenant
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          </a>
+          <button class="btn btn-outline" onclick="nav(null,'services')">Découvrir nos services</button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        const missions = [
-          { title: "Conformité Technique", desc: "Nous certifions vos métadonnées pour une distribution sans faille sur les plateformes mondiales." },
-          { title: "Protection des Actifs", desc: "Grâce au Content ID et au claim de profils (OAC, Spotify for Artists), nous nous assurons que vous restez le seul maître de votre image et de vos revenus." },
-          { title: "Accompagnement Visuel", desc: "Parce que l'image vend le son, nous créons des univers graphiques qui respectent les standards les plus exigeants de l'industrie." },
-        ];
+  <!-- PROBLÈMES -->
+  <section style="background:#111;" aria-labelledby="problems-title">
+    <div class="container text-center">
+      <p class="section-tag">Pourquoi Vortex ?</p>
+      <h2 id="problems-title" class="section-title reveal">Trop de talents voient leurs <span class="gradient-text">revenus s'évaporer</span></h2>
+      <p class="section-sub centered reveal">Voici les problèmes concrets que nous résolvons pour les artistes haïtiens :</p>
+      <div class="problems-grid">
+        <div class="problem-card reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+          <span>Des revenus de streaming qui disparaissent faute de Content ID actif</span>
+        </div>
+        <div class="problem-card reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+          <span>Des profils artistes non réclamés sur Spotify et Apple Music</span>
+        </div>
+        <div class="problem-card reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+          <span>Des métadonnées incorrectes qui bloquent la distribution</span>
+        </div>
+        <div class="problem-card reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+          <span>Aucune protection contre le vol de contenu sur les réseaux</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        const plans = [
-          { name: "Pack Décollage", priceOriginal: "100$", price: "50$", desc: "Idéal pour les artistes qui débutent leur mise en conformité.", features: ["Distribution sur toutes les plateformes", "Codes ISRC pour 2 titres", "Code UPC", "Nettoyage métadonnées de base", "Support par email"], highlighted: false },
-          { name: "Pack Pro", priceOriginal: "300$", price: "150$", desc: "La solution complète pour sécuriser vos revenus et votre image.", features: ["Tout le Pack Décollage", "Content ID YouTube", "Content ID TikTok/Facebook/Instagram", "Claim Spotify for Artists", "Claim Apple Music for Artists", "Revendication OAC YouTube", "Support prioritaire WhatsApp"], highlighted: true },
-          { name: "Pack Label", priceOriginal: "600$", price: "300$", desc: "Pour les labels et artistes avec un catalogue à structurer.", features: ["Tout le Pack Pro", "Jusqu'à 10 titres ISRC", "Pochettes d'album professionnelles", "Kit presse EPK complet", "Bannières plateformes de streaming", "Templates réseaux sociaux", "Account Manager dédié"], highlighted: false },
-        ];
+  <!-- 3 PILIERS -->
+  <section aria-labelledby="pillars-title">
+    <div class="container text-center">
+      <p class="section-tag">Notre approche</p>
+      <h2 id="pillars-title" class="section-title reveal">Nos <span class="gradient-accent">3 Piliers</span></h2>
+      <p class="section-sub centered reveal">Une approche complète pour transformer votre carrière en entreprise structurée et rentable.</p>
+      <div class="pillars-grid">
+        <article class="pillar-card reveal">
+          <img class="pillar-img" src="./Public/images/artist.jpg" alt="Artiste en studio — conformité technique" loading="lazy" width="400" height="200">
+          <div class="pillar-body">
+            <div class="pillar-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></div>
+            <h3 class="pillar-title">Conformité Technique</h3>
+            <p class="pillar-desc">Distribution mondiale avec gestion rigoureuse des codes ISRC et UPC. Vos métadonnées certifiées pour une diffusion sans faille.</p>
+          </div>
+        </article>
+        <article class="pillar-card reveal">
+          <img class="pillar-img" src="./Public/images/performer.jpg" alt="Artiste en performance — protection IP" loading="lazy" width="400" height="200">
+          <div class="pillar-body">
+            <div class="pillar-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <h3 class="pillar-title">Protection IP</h3>
+            <p class="pillar-desc">Content ID sur YouTube, TikTok, Facebook, Instagram. Revendication OAC et Spotify for Artists. Vous restez maître de vos revenus.</p>
+          </div>
+        </article>
+        <article class="pillar-card reveal">
+          <img class="pillar-img" src="./Public/images/studio.jpg" alt="Studio d'enregistrement — identité visuelle" loading="lazy" width="400" height="200">
+          <div class="pillar-body">
+            <div class="pillar-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="10.5" r="2.5"/><circle cx="8.5" cy="7.5" r="2.5"/><circle cx="6.5" cy="12.5" r="2.5"/></svg></div>
+            <h3 class="pillar-title">Identité Visuelle</h3>
+            <p class="pillar-desc">Supports graphiques professionnels respectant les standards de l'industrie musicale internationale. L'image qui vend le son.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-        const services = [
-          { icon: BarChart3, title: "Administration & Conformité", desc: "Distribution mondiale avec gestion rigoureuse de vos actifs numériques.", img: "./Public/images/artist.jpg", features: ["Attribution et gestion des codes ISRC", "Génération et suivi des codes UPC/EAN", "Certification et nettoyage des métadonnées", "Distribution multi-plateforme (Spotify, Apple, Deezer, etc.)", "Rapports de revenus détaillés et transparents"] },
-          { icon: Shield, title: "Protection de la Propriété Intellectuelle", desc: "Sécurisez vos revenus et votre image sur toutes les plateformes.", img: "./Public/images/performer.jpg", features: ["Content ID YouTube – monétisation automatique", "Content ID TikTok, Facebook & Instagram", "Revendication OAC (Official Artist Channel YouTube)", "Claim Spotify for Artists & Apple Music for Artists", "Surveillance et retrait des contenus pirates"] },
-          { icon: Palette, title: "Identité Visuelle & Branding", desc: "Une image professionnelle qui respecte les standards de l'industrie.", img: "./Public/images/studio.jpg", features: ["Pochettes d'album et singles aux normes", "Bannières et visuels pour plateformes de streaming", "Kit presse et EPK (Electronic Press Kit)", "Identité visuelle cohérente multi-canal", "Templates pour réseaux sociaux"] },
-        ];
+  <!-- CTA BLOCK -->
+  <section class="cta-section" style="background:#111;" aria-labelledby="cta-title">
+    <img class="cta-bg" src="./Public/images/concert.jpg" alt="" role="presentation" loading="lazy">
+    <div class="container cta-content">
+      <h2 id="cta-title" class="section-title reveal">Restez propriétaire à <span class="gradient-accent">100%</span> de vos œuvres</h2>
+      <p class="section-sub centered reveal">Nous ne sommes que vos administrateurs techniques. Aucune cession de droits, aucun piège contractuel.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;" class="reveal">
+        <a href="https://wa.me/50943469043?text=Bonjour%20Vortex%20Rights%2C%20je%20souhaite%20profiter%20de%20l%27offre%20de%20lancement." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          Profiter de l'offre −50%
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+        <button class="btn btn-outline" onclick="nav(null,'tarifs')">Voir les tarifs</button>
+      </div>
+    </div>
+  </section>
+</div>
 
-        function App() {
-          const [page, setPage] = useState("Accueil");
-          const [transitioning, setTransitioning] = useState(false);
-          useEffect(() => {
-            const blockContext = (event) => { if (event.type === "contextmenu") event.preventDefault(); };
-            document.addEventListener("contextmenu", blockContext);
-            return () => document.removeEventListener("contextmenu", blockContext);
-          }, []);
-          const go = (p) => {
-            setTransitioning(true);
-            window.scrollTo({top: 0, behavior: "smooth"});
-            setTimeout(() => { setPage(p); setTransitioning(false); }, 180);
-          };
-          const render = () => {
-            switch(page) {
-              case "Accueil": return <Index setPage={go} />;
-              case "Services": return <Services setPage={go} />;
-              case "Tarifs": return <Pricing setPage={go} />;
-              case "À Propos": return <About setPage={go} />;
-              case "Contact": return <Contact />;
-              case "FAQ": return <FAQ />;
-              case "Politique": return <PrivacyPolicy />;
-              case "Conditions": return <Terms />;
-              default: return <Index />;
-            }
-          };
-          return (
-            <div style={{background: "#000", minHeight: "100vh", color: "#fff", fontFamily: "'Syne', sans-serif", overflowX: "hidden"}}>
-              <style>{`
-                @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Anton&display=swap');
-                *{margin:0;padding:0;box-sizing:border-box;}
-                html{scroll-behavior:smooth;}
-                ::-webkit-scrollbar{width:3px;}
-                ::-webkit-scrollbar-track{background:#000;}
-                ::-webkit-scrollbar-thumb{background:#1a4dff;border-radius:2px;}
-                input::placeholder,textarea::placeholder{color:#666;}
-                select option{background:#111;}
-                img{transition: transform 0.35s ease, filter 0.35s ease, opacity 0.35s ease;will-change:transform,filter;}
-                img:hover{transform: scale(1.03);filter: brightness(1.05) saturate(1.08);}
-                .fade-up{opacity:0;transform:translateY(10px);animation:fadeUp 0.85s ease-out forwards;}
-                .fade-up-slow{animation-duration:1.1s;}
-                .action-btn{display:inline-flex;align-items:center;gap:8px;transition:transform 0.25s ease,box-shadow 0.25s ease,background 0.25s ease,color 0.25s ease;touch-action:manipulation;-webkit-tap-highlight-color:transparent;-webkit-user-drag:none;user-select:none;}
-                .action-btn:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(26,109,255,0.28);}
-                .action-btn:active{transform:translateY(0);box-shadow:0 10px 20px rgba(26,109,255,0.18);}
-                .action-btn-blue{background:#1a6dff;color:#fff;}
-                .action-btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.18);color:#fff;}
-                .pricing-card{transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;cursor:pointer;}
-                .pricing-card:hover{transform:translateY(-6px);border-color:#1a6dff;box-shadow:0 18px 40px rgba(26,109,255,0.18);background:rgba(10,24,72,0.95);}
-                .page-fade{transition:opacity 0.25s ease,transform 0.25s ease;}
-                .page-hidden{opacity:0;transform:translateY(12px);}
-                .page-visible{opacity:1;transform:translateY(0);}
-                @keyframes fadeUp{to{opacity:1;transform:translateY(0);}}
-                .gradient-text{background: linear-gradient(135deg, #1a6dff, #0099ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;}
-                .gradient-text-accent{background: linear-gradient(135deg, #ff6b35, #f7931e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;}
-                .glass{background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);}
-                .animate-pulse-glow{animation: pulse-glow 2s ease-in-out infinite alternate;}
-                @keyframes pulse-glow {from {box-shadow: 0 0 5px rgba(26, 109, 255, 0.2);} to {box-shadow: 0 0 20px rgba(26, 109, 255, 0.5);}}
-                .button-spinner{width:16px;height:16px;border:2px solid rgba(255,255,255,0.28);border-top-color:#fff;border-radius:50%;animation:spin 0.75s linear infinite;}
-                @keyframes spin {to {transform: rotate(360deg);}}
-                /* FAQ & Privacy styles */
-                .legal-section{padding:100px 20px;background:#000;min-height:80vh;}
-                .legal-wrap{max-width:820px;margin:0 auto;}
-                .legal-hero{margin-bottom:56px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.08);}
-                .legal-tag{font-size:0.75rem;font-weight:700;color:#1a6dff;text-transform:uppercase;letter-spacing:0.18em;margin-bottom:16px;}
-                .legal-title{font-family:'Anton',sans-serif;font-size:clamp(2.2rem,5vw,3.2rem);font-weight:900;color:#fff;margin-bottom:16px;line-height:1.05;}
-                .legal-date{font-size:0.85rem;color:#555;font-family:'Space Mono',monospace;}
-                .legal-section-title{font-family:'Syne',sans-serif;font-size:1.15rem;font-weight:700;color:#fff;margin:0 0 12px;}
-                .legal-body{font-size:0.97rem;color:#aaa;line-height:1.85;}
-                .legal-block{padding:28px 30px;border-radius:16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);margin-bottom:20px;}
-                .legal-block-accent{border-left:3px solid #1a6dff;background:rgba(26,109,255,0.06);}
-                .legal-block-warning{border-left:3px solid #ff6b35;background:rgba(255,107,53,0.06);}
-                .legal-num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:rgba(26,109,255,0.15);color:#1a6dff;font-size:0.75rem;font-weight:700;font-family:'Space Mono',monospace;flex-shrink:0;margin-top:2px;}
-                .legal-q{font-weight:700;color:#fff;font-size:1rem;margin-bottom:8px;font-family:'Syne',sans-serif;}
-                .legal-a{font-size:0.95rem;color:#aaa;line-height:1.8;}
-                .legal-highlight{color:#fff;font-weight:600;}
-                .legal-blue{color:#1a6dff;font-weight:600;}
-                .legal-orange{color:#ff6b35;font-weight:600;}
-                .legal-note{display:flex;gap:12px;align-items:flex-start;padding:14px 18px;border-radius:10px;background:rgba(255,107,53,0.07);border:1px solid rgba(255,107,53,0.15);margin-top:14px;font-size:0.85rem;color:#cca888;line-height:1.6;}
-                .legal-divider{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:36px 0;}
-                @media (min-width: 768px) { .navbar-desktop { display: flex !important; } .navbar-mobile-btn { display: none !important; } }
-                @media (max-width: 767px) { .navbar-desktop { display: none !important; } }
-              `}</style>
-              <CountdownBanner />
-              <Navbar page={page} setPage={go} />
-              <main className={`page-fade ${transitioning ? 'page-hidden' : 'page-visible'}`} style={{paddingTop:"64px"}}>{render()}</main>
-              <Footer setPage={go} />
-              <ScrollTop />
+<!-- ══════════════════════════════════════
+     PAGE : SERVICES
+══════════════════════════════════════ -->
+<div id="page-services" class="page">
+  <section style="padding:100px 0 60px;background:#000;">
+    <div class="container text-center">
+      <p class="section-tag">Nos Services</p>
+      <h1 class="section-title reveal">Tout ce qu'il faut pour protéger<br>et monétiser votre musique</h1>
+      <p class="section-sub centered reveal">Une suite complète conçue pour les artistes indépendants de la diaspora haïtienne.</p>
+    </div>
+  </section>
+  <section style="padding:20px 0 80px;background:#000;">
+    <div class="container">
+      <div class="services-list">
+        <article class="service-block reveal">
+          <img class="service-img" src="./Public/images/artist.jpg" alt="Distribution musicale mondiale" loading="lazy" width="1200" height="240">
+          <div class="service-body">
+            <div class="service-header">
+              <div class="service-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></div>
+              <div>
+                <h2 style="font-size:20px;font-weight:700;margin-bottom:6px;">Administration & Conformité</h2>
+                <p style="color:#ccc;font-size:14px;">Distribution mondiale avec gestion rigoureuse de vos actifs numériques.</p>
+              </div>
             </div>
-          );
-        }
-
-        function Index({setPage}) {
-          return (
-            <>
-              <section style={{position:"relative",minHeight:"90vh",display:"flex",alignItems:"center",overflow:"hidden"}}>
-                <img src="./Public/images/hero.jpg" alt="" style={{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover"}} />
-                <div style={{position:"absolute",inset:0,background:"linear-gradient(90deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 60%, transparent 100%)"}} />
-                <div style={{position:"relative",zIndex:10,maxWidth:"1200px",margin:"0 auto",padding:"20px"}}>
-                  <div style={{display:"inline-flex",alignItems:"center",gap:"8px",borderRadius:"50px",border:"1px solid rgba(26,109,255,0.3)",background:"rgba(26,109,255,0.1)",padding:"8px 16px",marginBottom:"32px",animation:"pulse-glow 2s ease-in-out infinite alternate"}}>
-                    <span style={{fontSize:"12px",fontWeight:600,color:"#1a6dff"}}>OFFRE DE LANCEMENT — 50% DE RÉDUCTION</span>
-                  </div>
-                  <h1 className="fade-up" style={{fontFamily:"'Anton', sans-serif",fontSize:"clamp(2.5rem, 5vw, 4.5rem)",fontWeight:900,lineHeight:1.1,maxWidth:"800px",marginBottom:"24px"}}>
-                    Le pont entre votre <span className="gradient-text">talent</span> et vos <span className="gradient-text-accent">revenus</span>.
-                  </h1>
-                  <p className="fade-up fade-up-slow" style={{fontSize:"18px",color:"#ccc",maxWidth:"600px",marginBottom:"40px",lineHeight:1.6}}>
-                    Nous simplifions la technologie musicale pour les artistes de la diaspora. Vos droits, notre priorité.
-                  </p>
-                  <div style={{display:"flex",flexDirection:"column",gap:"16px",alignItems:"flex-start"}}>
-                    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="action-btn action-btn-blue" style={{display:"inline-flex",alignItems:"center",gap:"8px",background:"#1a6dff",color:"#fff",padding:"14px 32px",borderRadius:"8px",textDecoration:"none",fontWeight:600,fontSize:"16px",boxShadow:"0 0 20px rgba(26,109,255,0.3)"}}>
-                      Commencer maintenant <ArrowRight />
-                    </a>
-                    <button onClick={() => setPage("Services")} className="action-btn action-btn-outline" style={{display:"inline-flex",alignItems:"center",gap:"8px",background:"transparent",color:"#fff",padding:"14px 32px",borderRadius:"8px",cursor:"pointer",fontWeight:600,fontSize:"16px",border:"1px solid rgba(255,255,255,0.18)"}}>
-                      Découvrir nos services
-                    </button>
-                  </div>
-                </div>
-              </section>
-
-              <section style={{padding:"80px 20px",background:"#111"}}>
-                <div style={{maxWidth:"1200px",margin:"0 auto"}}>
-                  <h2 className="fade-up" style={{fontFamily:"'Anton', sans-serif",fontSize:"clamp(2rem, 4vw, 3rem)",fontWeight:900,textAlign:"center",marginBottom:"16px"}}>Pourquoi <span className="gradient-text">Vortex</span> ?</h2>
-                  <p style={{textAlign:"center",color:"#999",maxWidth:"600px",margin:"0 auto 48px",fontSize:"16px",lineHeight:1.6}}>Trop de talents haïtiens voient leurs revenus s'évaporer. Voici ce que nous corrigeons :</p>
-                  <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit, minmax(300px, 1fr))",gap:"16px",maxWidth:"800px",margin:"0 auto"}}>
-                    {problems.map((problem, i) => (
-                      <div key={i} style={{display:"flex",alignItems:"flex-start",gap:"12px",background:"rgba(239,68,68,0.1)",border:"1px solid rgba(239,68,68,0.2)",borderRadius:"12px",padding:"20px"}}>
-                        <AlertTriangle />
-                        <span style={{fontSize:"14px",color:"#fff",lineHeight:1.5}}>{problem}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </section>
-
-              <section style={{padding:"80px 20px",background:"#000"}}>
-                <div style={{maxWidth:"1200px",margin:"0 auto"}}>
-                  <h2 className="fade-up" style={{fontFamily:"'Anton', sans-serif",fontSize:"clamp(2rem, 4vw, 3rem)",fontWeight:900,textAlign:"center",marginBottom:"16px"}}>Nos <span className="gradient-text-accent">3 Piliers</span></h2>
-                  <p style={{textAlign:"center",color:"#999",maxWidth:"600px",margin:"0 auto 56px",fontSize:"16px",lineHeight:1.6}}>Une approche complète pour transformer votre carrière en entreprise structurée et rentable.</p>
-                  <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit, minmax(350px, 1fr))",gap:"24px"}}>
-                    {pillars.map((pillar, i) => (
-                      <div key={i} style={{background:"rgba(255,255,255,0.05)",border:"1px solid rgba(255,255,255,0.1)",borderRadius:"16px",overflow:"hidden",backdropFilter:"blur(10px)",transition:"all 0.3s"}}>
-                        <img src={pillar.img} alt={pillar.title} style={{width:"100%",height:"200px",objectFit:"cover"}} />
-                        <div style={{padding:"32px"}}>
-                          <div style={{width:"48px",height:"48px",background:"rgba(26,109,255,0.1)",borderRadius:"12px",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"20px"}}><pillar.icon /></div>
-                          <h3 style={{fontFamily:"'Syne', sans-serif",fontSize:"18px",fontWeight:600,marginBottom:"12px",color:"#fff"}}>{pillar.title}</h3>
-                          <p style={{fontSize:"14px",color:"#ccc",lineHeight:1.6}}>{pillar.desc}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </section>
-
-              <section style={{padding:"80px 20px",background:"#111",position:"relative",overflow:"hidden"}}>
-                <div style={{position:"absolute",inset:0,opacity:0.1}}><img src="./Public/images/concert.jpg" alt="" style={{width:"100%",height:"100%",objectFit:"cover"}} /></div>
-                <div style={{maxWidth:"1200px",margin:"0 auto",textAlign:"center",position:"relative",zIndex:1}}>
-                  <h2 style={{fontFamily:"'Anton', sans-serif",fontSize:"clamp(2rem, 4vw, 3rem)",fontWeight:900,marginBottom:"24px",maxWidth:"800px",marginLeft:"auto",marginRight:"auto"}}>Restez propriétaire à <span className="gradient-text-accent">100%</span> de vos œuvres</h2>
-                  <p style={{color:"#ccc",maxWidth:"600px",margin:"0 auto 32px",fontSize:"16px",lineHeight:1.6}}>Nous ne sommes que vos administrateurs techniques. Aucune cession de droits, aucun piège contractuel. Juste une mise en conformité qui empêche vos revenus de s'évaporer.</p>
-                  <div style={{display:"inline-flex",flexDirection:"column",gap:"12px",alignItems:"center"}}>
-                    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="action-btn action-btn-blue" style={{display:"inline-flex",alignItems:"center",gap:"8px",background:"#1a6dff",color:"#fff",padding:"14px 32px",borderRadius:"8px",textDecoration:"none",fontWeight:600,fontSize:"16px",boxShadow:"0 0 20px rgba(26,109,255,0.3)"}}>
-                      Profiter de l'offre -50% <ArrowRight />
-                    </a>
-                    <button onClick={() => setPage("Tarifs")} className="action-btn action-btn-outline" style={{display:"inline-flex",alignItems:"center",gap:"8px",background:"transparent",color:"#fff",padding:"14px 32px",borderRadius:"8px",cursor:"pointer",fontWeight:600,fontSize:"16px",border:"1px solid rgba(255,255,255,0.18)"}}>
-                      Voir les tarifs
-                    </button>
-                  </div>
-                </div>
-              </section>
-            </>
-          );
-        }
-
-        function Services({setPage}) {
-          return (
-            <>
-              <section style={{padding:"100px 20px",background:"#000"}}>
-                <div style={{maxWidth:"900px",margin:"0 auto",textAlign:"center"}}>
-                  <p style={{fontSize:"0.8rem",fontWeight:600,color:"#1a6dff",textTransform:"uppercase",letterSpacing:"0.15em",marginBottom:"20px"}}>Nos Services</p>
-                  <h1 className="fade-up" style={{fontFamily:"'Anton',sans-serif",fontSize:"clamp(2rem,4vw,3rem)",fontWeight:900,marginBottom:"20px"}}>Tout ce qu'il faut pour protéger et monétiser votre musique</h1>
-                  <p style={{color:"#ccc",fontSize:"1rem",lineHeight:1.8}}>Une suite complète de services conçus pour les artistes indépendants de la diaspora haïtienne.</p>
-                </div>
-              </section>
-              <section style={{padding:"80px 20px",background:"#000"}}>
-                <div style={{maxWidth:"1200px",margin:"0 auto",display:"grid",gap:"40px"}}>
-                  {services.map((service,i)=>(
-                    <div key={i} style={{background:"rgba(255,255,255,0.05)",border:"1px solid rgba(255,255,255,0.1)",borderRadius:"16px",overflow:"hidden",backdropFilter:"blur(10px)"}}>
-                      <img src={service.img} alt={service.title} style={{width:"100%",height:"250px",objectFit:"cover"}} />
-                      <div style={{padding:"40px"}}>
-                        <div style={{display:"flex",gap:"20px",alignItems:"flex-start",marginBottom:"30px"}}>
-                          <div style={{minWidth:"48px",width:"48px",height:"48px",background:"rgba(26,109,255,0.1)",borderRadius:"12px",display:"flex",alignItems:"center",justifyContent:"center",color:"#1a6dff",flexShrink:0}}><service.icon /></div>
-                          <div><h2 style={{color:"#fff",fontSize:"1.3rem",fontWeight:600,marginBottom:"8px"}}>{service.title}</h2><p style={{color:"#ccc",fontSize:"0.95rem"}}>{service.desc}</p></div>
-                        </div>
-                        <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit, minmax(250px, 1fr))",gap:"12px"}}>
-                          {service.features.map((feat,j)=>(<div key={j} style={{display:"flex",gap:"10px",alignItems:"flex-start"}}><div style={{color:"#1a6dff",flexShrink:0,marginTop:"2px"}}><Check /></div><span style={{color:"#fff",fontSize:"0.95rem"}}>{feat}</span></div>))}
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </section>
-            </>
-          );
-        }
-
-        function Pricing({setPage}) {
-          const pricingWhatsappUrl = "https://wa.me/50943469043?text=Bonjour%20Vortex%20Rights%2C%20je%20souhaite%20souscrire%20au%20pack%20";
-          return (
-            <section style={{padding:"80px 20px",background:"#000"}}>
-              <div style={{maxWidth:"1200px",margin:"0 auto"}}>
-                <div style={{textAlign:"center",marginBottom:"80px"}}>
-                  <div style={{display:"inline-flex",alignItems:"center",gap:"8px",borderRadius:"50px",border:"1px solid rgba(26,109,255,0.3)",background:"rgba(26,109,255,0.1)",padding:"8px 16px",marginBottom:"40px",animation:"pulse-glow 2s ease-in-out infinite alternate"}}>
-                    <span style={{fontSize:"0.75rem",fontWeight:600,color:"#ff6b35",textTransform:"uppercase",letterSpacing:"0.1em"}}>OFFRE DE LANCEMENT — 50% DE RÉDUCTION</span>
-                  </div>
-                  <h1 style={{fontFamily:"'Anton',sans-serif",fontSize:"clamp(2rem,4vw,3rem)",fontWeight:900,marginBottom:"20px"}}>Des tarifs transparents</h1>
-                  <p style={{color:"#ccc",maxWidth:"600px",margin:"0 auto",fontSize:"1rem",lineHeight:1.6}}>Pas d'abonnement mensuel caché. Un paiement unique pour une mise en conformité durable.</p>
-                  <p style={{color:"#ccc",maxWidth:"720px",margin:"24px auto 0",fontSize:"1rem",lineHeight:1.8}}>Tous les royalties restent la propriété exclusive de l'artiste. Nous fournissons un reporting hebdomadaire clair de l'évolution de chaque titre, afin que vous suiviez l'impact de votre musique en toute transparence.</p>
-                </div>
-                <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit, minmax(320px, 1fr))",gap:"30px",marginBottom:"60px"}}>
-                  {plans.map((plan,i)=>(
-                    <div key={i} className="pricing-card" style={{background:plan.highlighted?"rgba(26,109,255,0.1)":"rgba(255,255,255,0.05)",border:plan.highlighted?"2px solid #1a6dff":"1px solid rgba(255,255,255,0.1)",borderRadius:"16px",backdropFilter:"blur(10px)",padding:"30px",position:"relative",display:"flex",flexDirection:"column"}}>
-                      {plan.highlighted && (<span style={{position:"absolute",top:"20px",right:"20px",background:"#1a6dff",color:"#fff",padding:"6px 14px",borderRadius:"20px",fontSize:"0.7rem",fontWeight:600,textTransform:"uppercase",letterSpacing:"0.1em"}}>Populaire</span>)}
-                      <h3 style={{color:"#fff",fontSize:"1.2rem",fontWeight:600,marginBottom:"10px"}}>{plan.name}</h3>
-                      <p style={{color:"#999",fontSize:"0.9rem",marginBottom:"25px",lineHeight:1.6}}>{plan.desc}</p>
-                      <div style={{marginBottom:"30px"}}><span style={{fontSize:"2.5rem",fontWeight:700,color:"#1a6dff"}}>{plan.price}</span><span style={{color:"#999",textDecoration:"line-through",marginLeft:"10px"}}>{plan.priceOriginal}</span></div>
-                      <ul style={{listStyle:"none",marginBottom:"30px",flex:1}}>
-                        {plan.features.map((feat,j)=>(<li key={j} style={{display:"flex",gap:"10px",marginBottom:"12px",alignItems:"flex-start"}}><div style={{color:plan.highlighted?"#1a6dff":"#666",flexShrink:0,marginTop:"2px"}}><Check /></div><span style={{color:"#fff",fontSize:"0.9rem"}}>{feat}</span></li>))}
-                      </ul>
-                      <a href={`${pricingWhatsappUrl}${encodeURIComponent(plan.name)}`} target="_blank" rel="noopener noreferrer" style={{display:"flex",alignItems:"center",justifyContent:"center",gap:"8px",background:plan.highlighted?"#1a6dff":"transparent",border:plan.highlighted?"none":"1px solid rgba(255,255,255,0.2)",color:"#fff",padding:"12px 24px",borderRadius:"8px",textDecoration:"none",fontWeight:600,fontSize:"0.95rem",cursor:"pointer",transition:"all 0.3s",boxShadow:plan.highlighted?"0 0 20px rgba(26,109,255,0.3)":"none"}}>
-                        Commencer <ArrowRight />
-                      </a>
-                    </div>
-                  ))}
-                </div>
-                <div style={{background:"rgba(255,255,255,0.05)",border:"1px solid rgba(255,255,255,0.1)",borderRadius:"16px",backdropFilter:"blur(10px)",padding:"30px",textAlign:"center"}}>
-                  <p style={{color:"#ccc",fontSize:"0.95rem",lineHeight:1.8}}><strong style={{color:"#fff"}}>Modalités de paiement flexibles :</strong> 70% à la commande pour lancer les procédures techniques, 30% à la livraison finale de vos liens et certificats.</p>
-                  <div style={{display:"flex",justifyContent:"center",flexWrap:"wrap",gap:"14px",marginTop:"18px"}}>
-                    <span style={{display:"inline-flex",alignItems:"center",justifyContent:"center",minWidth:"120px",padding:"12px 16px",borderRadius:"14px",background:"rgba(255,255,255,0.07)",border:"1px solid rgba(255,255,255,0.1)",fontWeight:700,color:"#fff",letterSpacing:"0.06em"}}>MonCash</span>
-                    <span style={{display:"inline-flex",alignItems:"center",justifyContent:"center",minWidth:"120px",padding:"12px 16px",borderRadius:"14px",background:"rgba(255,255,255,0.07)",border:"1px solid rgba(255,255,255,0.1)",fontWeight:700,color:"#fff",letterSpacing:"0.06em"}}>NatCash</span>
-                    <span id="paypal-button-container" style={{minWidth:"180px",display:"inline-flex",alignItems:"center",justifyContent:"center"}} />
-                    <span style={{display:"inline-flex",alignItems:"center",justifyContent:"center",minWidth:"180px",padding:"12px 16px",borderRadius:"14px",background:"rgba(255,255,255,0.07)",border:"1px solid rgba(255,255,255,0.1)",fontWeight:700,color:"#fff",letterSpacing:"0.06em"}}>Sogebank – woodjerry Fils-aime</span>
-                  </div>
-                </div>
-              </div>
-            </section>
-          );
-        }
-
-        function About({setPage}) {
-          const differentiators = [
-            "0% de commission sur vos royalties — vous gardez chaque centime généré sur toutes les plateformes.",
-            "Paiement en deux temps (70% / 30%) — vous ne payez le solde qu'une fois la mission livrée et validée.",
-            "Propriété totale et transférée — à la fin de chaque mission, vous devenez le seul propriétaire légal de tous vos comptes. Nous nous déconnectons dans les 48 heures ouvrables suivant la livraison.",
-            "Transparence documentée — chaque étape clé est confirmée par capture d'écran envoyée via WhatsApp ou email."
-          ];
-          const proofPoints = [
-            "Badge YouTube OAC (Official Artist Channel) obtenu pour des artistes haïtiens — un accès direct aux outils YouTube Studio avancés et une crédibilité renforcée auprès des algorithmes éditoriaux.",
-            "Profil Spotify for Artists certifié — accès complet aux statistiques d'écoute, pitch direct aux équipes de playlisting de Spotify, et contrôle total des métadonnées de l'artiste."
-          ];
-          const actionPillars = [
-            { title: "Conformité technique & distribution", desc: "Nous certifions vos métadonnées, attribuons vos codes ISRC et UPC, et assurons votre distribution sur toutes les plateformes mondiales (Spotify, Apple Music, Deezer, YouTube Music, Audiomack, Tidal...). Une distribution sans faille, c'est une carrière sans fuite de revenus." },
-            { title: "Protection de la propriété intellectuelle", desc: "Content ID sur YouTube, TikTok, Facebook, Instagram. Revendication de votre Official Artist Channel. Activation de Spotify for Artists et Apple Music for Artists. Surveillance active des contenus pirates. Votre catalogue est un actif — nous le protégeons comme tel." },
-            { title: "Identité visuelle & branding musical", desc: "Pochettes d'album et singles aux normes industry. Bannières streaming. Kit presse (EPK). Templates réseaux sociaux cohérents. Parce que dans l'économie de l'attention, l'image est aussi importante que la musique elle-même." }
-          ];
-          const audiences = [
-            "Artistes solo en développement cherchant leur première structure professionnelle.",
-            "Artistes établis souhaitant récupérer le contrôle de leur infrastructure existante.",
-            "Labels indépendants ayant besoin d'un partenaire technique pour structurer leur catalogue."
-          ];
-          return (
-            <>
-              <section style={{padding:"100px 20px",background:"#000",position:"relative",overflow:"hidden"}}>
-                <div style={{position:"absolute",inset:0,opacity:0.1}}><img src="./Public/images/concert.jpg" alt="" style={{width:"100%",height:"100%",objectFit:"cover"}} /></div>
-                <div style={{maxWidth:"860px",margin:"0 auto",position:"relative",zIndex:1}}>
-                  <p style={{fontSize:"0.8rem",fontWeight:600,color:"#1a6dff",textTransform:"uppercase",letterSpacing:"0.15em",marginBottom:"20px"}}>Page "À Propos" — Version officielle 2026</p>
-                  <h1 style={{fontFamily:"'Anton',sans-serif",fontSize:"clamp(2.2rem,4.5vw,3.5rem)",fontWeight:900,lineHeight:1.05,marginBottom:"20px"}}>L'expertise technique au service de la création.</h1>
-                  <p style={{color:"#ccc",fontSize:"1rem",lineHeight:1.9,marginBottom:"18px"}}>Vortex Rights est née d'un constat simple : beaucoup d'artistes talentueux perdent le contrôle de leur carrière à cause de la complexité technique des plateformes de streaming. Après avoir accompagné avec succès plusieurs artistes dans la certification de leurs profils (badges YouTube OAC, Spotify for Artists, Audiomack), nous avons décidé de structurer cette expertise pour en faire bénéficier toute la communauté musicale haïtienne — en Haïti comme dans la diaspora.</p>
-                  <p style={{color:"#ccc",fontSize:"1rem",lineHeight:1.9}}>Nous ne sommes pas un label traditionnel. Nous sommes votre partenaire de gestion digitale. Notre mission est de construire votre infrastructure numérique (distribution, administration, protection) et de vous en remettre les clés. Chez Vortex Rights, nous croyons que l'artiste doit être le seul maître de ses revenus et de son image.</p>
-                </div>
-              </section>
-              <section style={{padding:"90px 20px",background:"#111"}}>
-                <div style={{maxWidth:"960px",margin:"0 auto"}}>
-                  <p style={{fontSize:"0.78rem",fontWeight:600,color:"#1a6dff",textTransform:"uppercase",letterSpacing:"0.15em",marginBottom:"14px"}}>02 — Ce Qui Nous Distingue</p>
-                  <h2 style={{fontFamily:"'Anton',sans-serif",fontSize:"clamp(1.8rem,4vw,2.7rem)",fontWeight:900,marginBottom:"18px"}}>Zéro piège. Zéro commission. 100% votre propriété.</h2>
-                  <p style={{color:"#ccc",fontSize:"1rem",lineHeight:1.8,marginBottom:"34px"}}>Dans un secteur où les contrats cachent souvent des cessions de droits déguisées et des commissions à vie sur les revenus, Vortex Rights a construit un modèle radicalement différent :</p>
-                  <div style={{display:"grid",gap:"18px"}}>
-                    {differentiators.map((item, i)=>(<div key={i} style={{display:"flex",gap:"16px",alignItems:"flex-start",padding:"20px",borderRadius:"14px",background:"rgba(255,255,255,0.04)",border:"1px solid rgba(255,255,255,0.08)"}}><div style={{width:"40px",height:"40px",minWidth:"40px",background:"rgba(26,109,255,0.12)",borderRadius:"10px",display:"flex",alignItems:"center",justifyContent:"center",color:"#1a6dff"}}><Check /></div><p style={{color:"#fff",fontSize:"0.98rem",lineHeight:1.7}}>{item}</p></div>))}
-                  </div>
-                </div>
-              </section>
-              <section style={{padding:"90px 20px",background:"#000"}}>
-                <div style={{maxWidth:"960px",margin:"0 auto"}}>
-                  <p style={{fontSize:"0.78rem",fontWeight:600,color:"#ff6b35",textTransform:"uppercase",letterSpacing:"0.15em",marginBottom:"14px"}}>03 — Nos Preuves Concrètes</p>
-                  <h2 style={{fontFamily:"'Anton',sans-serif",fontSize:"clamp(1.8rem,4vw,2.7rem)",fontWeight:900,marginBottom:"18px"}}>Des résultats vérifiables, pas des promesses.</h2>
-                  <p style={{color:"#ccc",fontSize:"1rem",lineHeight:1.8,marginBottom:"32px"}}>Avant de lancer Vortex Rights comme agence structurée, nous avons d'abord prouvé notre expertise sur le terrain :</p>
-                  <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit, minmax(280px, 1fr))",gap:"20px",marginBottom:"24px"}}>
-                    {proofPoints.map((item, i)=>(<div key={i} style={{padding:"26px",borderRadius:"16px",background:"rgba(255,255,255,0.05)",border:"1px solid rgba(255,255,255,0.1)",backdropFilter:"blur(10px)"}}><div style={{width:"46px",height:"46px",background:"rgba(255,107,53,0.12)",borderRadius:"12px",display:"flex",alignItems:"center",justifyContent:"center",color:"#ff6b35",marginBottom:"18px"}}><Shield /></div><p style={{color:"#fff",fontSize:"0.96rem",lineHeight:1.75}}>{item}</p></div>))}
-                  </div>
-                  <p style={{color:"#ccc",fontSize:"1rem",lineHeight:1.8}}>Ces résultats sont vérifiables. Si vous souhaitez des références, contactez-nous directement — nous vous mettrons en relation avec des artistes qui ont vécu l'expérience Vortex Rights.</p>
-                </div>
-              </section>
-              <section style={{padding:"90px 20px",background:"#111",position:"relative",overflow:"hidden"}}>
-                <div style={{position:"absolute",inset:0,opacity:0.08}}><img src="./Public/images/studio.jpg" alt="" style={{width:"100%",height:"100%",objectFit:"cover"}} /></div>
-                <div style={{maxWidth:"960px",margin:"0 auto",position:"relative",zIndex:1}}>
-                  <p style={{fontSize:"0.78rem",fontWeight:600,color:"#1a6dff",textTransform:"uppercase",letterSpacing:"0.15em",marginBottom:"14px"}}>04 — Fondateur & Vision</p>
-                  <h2 style={{fontFamily:"'Anton',sans-serif",fontSize:"clamp(1.8rem,4vw,2.7rem)",fontWeight:900,marginBottom:"20px"}}>Wood Jerry Fils-Aimé — Fondateur</h2>
-                  <p style={{color:"#ccc",fontSize:"1rem",lineHeight:1.9,marginBottom:"24px"}}>Artiste, beatmaker et développeur web, Wood Jerry est le fondateur de Blaka Recordz, studio d'enregistrement indépendant basé à Port-au-Prince. Fort de son expérience à la croisée de la production musicale et de l'infrastructure IT, il a créé Vortex Rights pour combler un vide structurel évident dans l'industrie musicale haïtienne : l'absence d'un intermédiaire technique fiable, transparent et sans conflit d'intérêt.</p>
-                  <p style={{color:"#ccc",fontSize:"1rem",lineHeight:1.9,marginBottom:"28px"}}>Sa conviction centrale : un artiste qui maîtrise son infrastructure numérique est un artiste qui contrôle sa carrière. Vortex Rights est le pont entre ce constat et la réalité concrète de chaque client.</p>
-                  <div style={{background:"rgba(255,255,255,0.05)",border:"1px solid rgba(255,255,255,0.1)",borderRadius:"12px",backdropFilter:"blur(10px)",padding:"20px",display:"inline-block"}}>
-                    <p style={{color:"#999",fontSize:"0.75rem",textTransform:"uppercase",letterSpacing:"0.1em",marginBottom:"8px"}}>Fondateur</p>
-                    <p style={{color:"#fff",fontSize:"1.1rem",fontWeight:600}}>Wood Jerry Fils-Aimé</p>
-                  </div>
-                </div>
-              </section>
-              <section style={{padding:"90px 20px",background:"#000"}}>
-                <div style={{maxWidth:"1100px",margin:"0 auto"}}>
-                  <p style={{fontSize:"0.78rem",fontWeight:600,color:"#ff6b35",textTransform:"uppercase",letterSpacing:"0.15em",marginBottom:"14px"}}>05 — Nos Trois Piliers d'Action</p>
-                  <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit, minmax(300px, 1fr))",gap:"24px"}}>
-                    {actionPillars.map((pillar, i)=>(<div key={i} style={{padding:"30px",borderRadius:"16px",background:"rgba(255,255,255,0.05)",border:"1px solid rgba(255,255,255,0.1)",backdropFilter:"blur(10px)"}}><p style={{color:"#1a6dff",fontSize:"0.82rem",fontWeight:700,letterSpacing:"0.1em",textTransform:"uppercase",marginBottom:"14px"}}>{i + 1}. Pilier</p><h3 style={{color:"#fff",fontSize:"1.1rem",fontWeight:600,marginBottom:"14px"}}>{pillar.title}</h3><p style={{color:"#ccc",fontSize:"0.95rem",lineHeight:1.75}}>{pillar.desc}</p></div>))}
-                  </div>
-                </div>
-              </section>
-              <section style={{padding:"90px 20px",background:"#111"}}>
-                <div style={{maxWidth:"960px",margin:"0 auto"}}>
-                  <p style={{fontSize:"0.78rem",fontWeight:600,color:"#1a6dff",textTransform:"uppercase",letterSpacing:"0.15em",marginBottom:"14px"}}>06 — Qui Nous Servons</p>
-                  <h2 style={{fontFamily:"'Anton',sans-serif",fontSize:"clamp(1.8rem,4vw,2.7rem)",fontWeight:900,marginBottom:"20px"}}>Artistes haïtiens, en Haïti et dans la diaspora.</h2>
-                  <p style={{color:"#ccc",fontSize:"1rem",lineHeight:1.9,marginBottom:"28px"}}>Que vous soyez à Port-au-Prince, Miami, Montréal, Paris ou ailleurs — si vous créez de la musique et que vous voulez en vivre dignement, Vortex Rights est votre partenaire. Nous parlons votre langue (français, Kreyòl), nous comprenons votre marché, et nous travaillons aux mêmes horaires que vous.</p>
-                  <div style={{display:"grid",gap:"16px",marginBottom:"34px"}}>
-                    {audiences.map((item, i)=>(<div key={i} style={{display:"flex",gap:"14px",alignItems:"flex-start",padding:"18px 20px",borderRadius:"14px",background:"rgba(255,255,255,0.04)",border:"1px solid rgba(255,255,255,0.08)"}}><div style={{color:"#1a6dff",flexShrink:0,marginTop:"2px"}}><Check /></div><p style={{color:"#fff",fontSize:"0.97rem",lineHeight:1.7}}>{item}</p></div>))}
-                  </div>
-                  <div style={{padding:"26px",borderRadius:"18px",background:"linear-gradient(135deg, rgba(26,109,255,0.15), rgba(255,107,53,0.12))",border:"1px solid rgba(255,255,255,0.1)"}}>
-                    <p style={{color:"#fff",fontSize:"1.08rem",fontWeight:600,marginBottom:"14px"}}>Prêt à commencer ? Contactez-nous directement.</p>
-                    <p style={{color:"#d7def7",fontSize:"0.95rem",lineHeight:1.8}}>www.vortexrights.com · contact@vortexrights.com · WhatsApp : +509 4346-9043 · @vortexrightshaiti</p>
-                    <div style={{marginTop:"20px",display:"flex",flexWrap:"wrap",gap:"14px"}}>
-                      <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="action-btn action-btn-blue" style={{display:"inline-flex",alignItems:"center",gap:"8px",padding:"12px 22px",borderRadius:"8px",textDecoration:"none",fontWeight:600}}>Nous contacter <ArrowRight /></a>
-                      <button onClick={() => setPage("Contact")} className="action-btn action-btn-outline" style={{display:"inline-flex",alignItems:"center",gap:"8px",padding:"12px 22px",borderRadius:"8px",fontWeight:600,cursor:"pointer"}}>Aller à la page contact</button>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </>
-          );
-        }
-
-        function Contact() {
-          const [form,setForm] = useState({name:"",email:"",message:"",pack:""});
-          const [errors, setErrors] = useState({});
-          const [touched, setTouched] = useState({});
-          const [isSubmitting, setIsSubmitting] = useState(false);
-          const [submitState, setSubmitState] = useState("idle");
-          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          const validateForm = (values) => {
-            const nextErrors = {};
-            if (!values.name.trim()) nextErrors.name = "Veuillez entrer votre nom.";
-            if (values.email.trim() && !emailRegex.test(values.email.trim())) nextErrors.email = "Veuillez saisir une adresse email valide.";
-            if (!values.message.trim()) nextErrors.message = "Veuillez décrire votre projet ou vos besoins.";
-            return nextErrors;
-          };
-          const handleFieldChange = (field, value) => {
-            const nextForm = {...form, [field]: value};
-            setForm(nextForm);
-            if (submitState !== "idle") setSubmitState("idle");
-            if (touched[field] || field === "email") setErrors(validateForm(nextForm));
-          };
-          const handleFieldBlur = (field) => { setTouched((prev) => ({...prev, [field]: true})); setErrors(validateForm(form)); };
-          const handleSubmit = (e) => {
-            e.preventDefault();
-            const nextTouched = {name: true, email: true, message: true, pack: true};
-            const validationErrors = validateForm(form);
-            setTouched(nextTouched); setErrors(validationErrors);
-            if (Object.keys(validationErrors).length > 0 || isSubmitting) return;
-            setIsSubmitting(true); setSubmitState("idle");
-            const packInfo = form.pack ? ` Intéressé par le ${form.pack}.` : "";
-            const emailInfo = form.email ? ` (${form.email.trim()})` : "";
-            const whatsappMsg = `Bonjour Vortex Rights, je suis ${form.name.trim()}${emailInfo}.${packInfo} ${form.message.trim()}`;
-            setTimeout(() => {
-              const whatsappWindow = window.open(`https://wa.me/50943469043?text=${encodeURIComponent(whatsappMsg)}`,"_blank");
-              if (whatsappWindow) setSubmitState("success"); else setSubmitState("error");
-              setIsSubmitting(false);
-            }, 800);
-          };
-          const showNameError = touched.name && errors.name;
-          const showEmailError = form.email.trim() ? errors.email : touched.email && errors.email;
-          const showMessageError = touched.message && errors.message;
-          const hasEmailError = Boolean(errors.email && form.email.trim());
-          return (
-            <section style={{padding:"100px 20px",background:"#000",position:"relative",overflow:"hidden"}}>
-              <div style={{position:"absolute",inset:0,opacity:0.1}}><img src="./Public/images/mixing.jpg" alt="" style={{width:"100%",height:"100%",objectFit:"cover"}} /></div>
-              <div style={{maxWidth:"1200px",margin:"0 auto",position:"relative",zIndex:1}}>
-                <p style={{fontSize:"0.8rem",fontWeight:600,color:"#1a6dff",textTransform:"uppercase",letterSpacing:"0.15em",marginBottom:"20px",textAlign:"center"}}>Contact</p>
-                <h1 style={{fontFamily:"'Anton',sans-serif",fontSize:"clamp(2rem,4vw,3rem)",fontWeight:900,textAlign:"center",marginBottom:"20px"}}>Parlons de votre projet</h1>
-                <p style={{color:"#ccc",textAlign:"center",maxWidth:"600px",margin:"0 auto 60px",fontSize:"1rem",lineHeight:1.6}}>Prêt à protéger et monétiser votre musique ? Écrivez-nous.</p>
-                <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit, minmax(350px, 1fr))",gap:"40px"}}>
-                  <form onSubmit={handleSubmit} style={{display:"flex",flexDirection:"column",gap:"20px"}}>
-                    <div><label style={{fontSize:"0.9rem",fontWeight:500,color:"#fff",marginBottom:"10px",display:"block"}}>Nom</label><input type="text" required value={form.name} onChange={(e)=>handleFieldChange("name", e.target.value)} onBlur={()=>handleFieldBlur("name")} placeholder="Votre nom" aria-invalid={showNameError ? "true" : "false"} style={{width:"100%",borderRadius:"8px",border:showNameError?"1px solid #ff6b6b":"1px solid rgba(26,109,255,0.3)",background:"rgba(255,255,255,0.05)",padding:"12px 16px",color:"#fff",fontSize:"0.95rem",outline:"none"}} />{showNameError && (<p style={{marginTop:"8px",fontSize:"0.82rem",color:"#ff8a8a"}}>{errors.name}</p>)}</div>
-                    <div><label style={{fontSize:"0.9rem",fontWeight:500,color:"#fff",marginBottom:"10px",display:"block"}}>Pack intéressé (optionnel)</label><select value={form.pack} onChange={(e)=>handleFieldChange("pack", e.target.value)} onBlur={()=>handleFieldBlur("pack")} style={{width:"100%",borderRadius:"8px",border:"1px solid rgba(26,109,255,0.3)",background:"rgba(255,255,255,0.05)",padding:"12px 16px",color:"#fff",fontSize:"0.95rem",outline:"none"}}><option value="">Choisir un pack (optionnel)</option><option value="Pack Décollage">Pack Décollage - 50$</option><option value="Pack Pro">Pack Pro - 150$</option><option value="Pack Label">Pack Label - 300$</option></select></div>
-                    <div><label style={{fontSize:"0.9rem",fontWeight:500,color:"#fff",marginBottom:"10px",display:"block"}}>Email (optionnel)</label><input type="email" value={form.email} onChange={(e)=>handleFieldChange("email", e.target.value)} onBlur={()=>handleFieldBlur("email")} placeholder="votre@email.com" aria-invalid={showEmailError ? "true" : "false"} style={{width:"100%",borderRadius:"8px",border:showEmailError?"1px solid #ff6b6b":"1px solid rgba(26,109,255,0.3)",background:"rgba(255,255,255,0.05)",padding:"12px 16px",color:"#fff",fontSize:"0.95rem",outline:"none"}} />{showEmailError && (<p style={{marginTop:"8px",fontSize:"0.82rem",color:"#ff8a8a"}}>{errors.email}</p>)}</div>
-                    <div><label style={{fontSize:"0.9rem",fontWeight:500,color:"#fff",marginBottom:"10px",display:"block"}}>Message</label><textarea required rows="5" value={form.message} onChange={(e)=>handleFieldChange("message", e.target.value)} onBlur={()=>handleFieldBlur("message")} placeholder="Décrivez votre projet ou vos besoins..." aria-invalid={showMessageError ? "true" : "false"} style={{width:"100%",borderRadius:"8px",border:showMessageError?"1px solid #ff6b6b":"1px solid rgba(26,109,255,0.3)",background:"rgba(255,255,255,0.05)",padding:"12px 16px",color:"#fff",fontSize:"0.95rem",outline:"none",fontFamily:"inherit",resize:"none"}} />{showMessageError && (<p style={{marginTop:"8px",fontSize:"0.82rem",color:"#ff8a8a"}}>{errors.message}</p>)}</div>
-                    <button type="submit" disabled={isSubmitting || hasEmailError} style={{width:"100%",display:"flex",alignItems:"center",justifyContent:"center",gap:"8px",background:isSubmitting?"#3a4f7f":"#1a6dff",color:"#fff",padding:"14px 24px",borderRadius:"8px",border:"none",fontWeight:600,fontSize:"1rem",cursor:isSubmitting?"wait":"pointer",boxShadow:"0 0 20px rgba(26,109,255,0.3)",opacity:isSubmitting?0.9:1}}>{isSubmitting ? (<><span className="button-spinner" aria-hidden="true"></span>Envoi en cours...</>) : (<><Send /> Envoyer via WhatsApp</>)}</button>
-                    {submitState === "success" && (<div style={{borderRadius:"12px",border:"1px solid rgba(34,197,94,0.35)",background:"rgba(34,197,94,0.12)",padding:"16px 18px"}}><p style={{color:"#d8ffe5",fontSize:"0.92rem",lineHeight:1.6}}>Merci ! Votre demande pour Vortex Rights a été préparée dans WhatsApp. Finalisez l'envoi et nous vous répondrons sous 24h.</p></div>)}
-                    {submitState === "error" && (<div style={{borderRadius:"12px",border:"1px solid rgba(239,68,68,0.35)",background:"rgba(239,68,68,0.12)",padding:"16px 18px"}}><p style={{color:"#ffd6d6",fontSize:"0.92rem",lineHeight:1.6}}>Impossible d'ouvrir WhatsApp automatiquement. Autorisez les pop-ups puis réessayez.</p></div>)}
-                  </form>
-                  <div style={{display:"flex",flexDirection:"column",gap:"20px"}}>
-                    <div style={{background:"rgba(255,255,255,0.05)",border:"1px solid rgba(255,255,255,0.1)",borderRadius:"12px",backdropFilter:"blur(10px)",padding:"24px"}}><div style={{display:"flex",alignItems:"center",gap:"16px",marginBottom:"12px"}}><div style={{width:"40px",height:"40px",background:"rgba(26,109,255,0.1)",borderRadius:"8px",display:"flex",alignItems:"center",justifyContent:"center",color:"#1a6dff",flexShrink:0}}><MessageCircle /></div><div><p style={{fontWeight:600,color:"#fff",fontSize:"0.95rem"}}>WhatsApp</p><a href="https://wa.me/50943469043" target="_blank" rel="noopener noreferrer" style={{color:"#1a6dff",textDecoration:"none",fontSize:"0.9rem"}}>+509 4346-9043</a></div></div><p style={{color:"#999",fontSize:"0.8rem"}}>Réponse sous 24h — méthode de contact privilégiée.</p></div>
-                    <div style={{background:"rgba(255,255,255,0.05)",border:"1px solid rgba(255,255,255,0.1)",borderRadius:"12px",backdropFilter:"blur(10px)",padding:"24px"}}><div style={{display:"flex",alignItems:"center",gap:"16px"}}><div style={{width:"40px",height:"40px",background:"rgba(26,109,255,0.1)",borderRadius:"8px",display:"flex",alignItems:"center",justifyContent:"center",color:"#1a6dff",flexShrink:0}}><Mail /></div><div><p style={{fontWeight:600,color:"#fff",fontSize:"0.95rem"}}>Email</p><a href="mailto:contact@vortexrights.com" style={{color:"#1a6dff",textDecoration:"none",fontSize:"0.9rem"}}>contact@vortexrights.com</a></div></div></div>
-                    <div style={{background:"rgba(255,255,255,0.05)",border:"1px solid rgba(255,255,255,0.1)",borderRadius:"12px",backdropFilter:"blur(10px)",padding:"24px"}}><div style={{display:"flex",alignItems:"center",gap:"16px"}}><div style={{width:"40px",height:"40px",background:"rgba(255,107,53,0.1)",borderRadius:"8px",display:"flex",alignItems:"center",justifyContent:"center",color:"#ff6b35",flexShrink:0}}><Phone /></div><div><p style={{fontWeight:600,color:"#fff",fontSize:"0.95rem"}}>Réseaux Sociaux</p><a href="https://www.instagram.com/vortexrightshaiti/" target="_blank" rel="noopener noreferrer" style={{color:"#1a6dff",textDecoration:"none",fontSize:"0.9rem"}}>@vortexrightshaiti</a></div></div></div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          );
-        }
-
-        // ═══════════════════════════════════════════════════
-        // FAQ — VERSION COMPLÈTE RÉVISÉE
-        // ═══════════════════════════════════════════════════
-        function FAQ() {
-          const [open, setOpen] = useState(null);
-          const toggle = (i) => setOpen(open === i ? null : i);
-
-          const faqs = [
-            {
-              section: "Notre Modèle & Mission",
-              color: "#1a6dff",
-              items: [
-                {
-                  q: "Qui est Vortex Rights ?",
-                  a: "Vortex Rights est une agence de conciergerie digitale basée à Port-au-Prince, Haïti. Notre mission est de professionnaliser l'infrastructure numérique des artistes — distribution, certification de profils, administration des comptes — puis de leur en remettre le contrôle total. Nous ne sommes pas un label : nous sommes votre partenaire technique, et vous restez le seul propriétaire de votre carrière."
-                },
-                {
-                  q: "Prenez-vous un pourcentage sur mes revenus (royalties) ?",
-                  a: "Absolument pas. Vortex Rights applique une politique de 0% de commission sur vos revenus artistiques. Vous payez uniquement pour un service technique précis, et vous conservez 100% de vos gains sur toutes les plateformes (Spotify, YouTube, Apple Music, Audiomack, etc.). Note : les frais de distribution facturés par des tiers (DistroKid, TuneCore, etc.) sont distincts de nos honoraires et vous sont communiqués par écrit avant tout engagement."
-                },
-                {
-                  q: "Pourquoi le paiement est-il divisé en 70% et 30% ?",
-                  a: "Cette structure garantit une sécurité mutuelle. Les 70% initiaux couvrent les frais techniques engagés et l'ouverture des démarches. Les 30% restants ne sont versés qu'une fois la mission totalement accomplie : badges obtenus, distribution validée, tous les accès prêts à vous être remis. Si nous n'atteignons pas les objectifs définis, le solde n'est pas dû."
-                },
-                {
-                  q: "Vais-je perdre l'accès à mon compte après la prestation ?",
-                  a: "Au contraire. Notre rôle est de configurer vos accès de manière professionnelle pour que vous en soyez le seul maître. Une fois la mission terminée et le solde réglé, nous vous transférons la pleine propriété de tous les comptes dans un délai maximum de 48 heures ouvrables. Nous nous déconnectons ensuite définitivement. Vous êtes totalement autonome."
-                }
-              ]
-            },
-            {
-              section: "Services & Résultats",
-              color: "#ff6b35",
-              items: [
-                {
-                  q: "Quels badges pouvez-vous obtenir pour moi ?",
-                  a: "Nous avons déjà obtenu avec succès des badges YouTube Official Artist Channel (OAC) et des profils vérifiés Spotify for Artists pour des artistes haïtiens. Nous travaillons également sur Audiomack et Apple Music for Artists. Chaque demande est évaluée individuellement, et nous vous communiquons honnêtement les critères d'éligibilité avant de commencer."
-                },
-                {
-                  q: "Proposez-vous une promotion pour ma musique ?",
-                  a: "Notre cœur de métier est l'infrastructure et la distribution, pas la promotion directe. Cependant, la certification de votre profil (badge OAC, Spotify for Artists) renforce significativement votre crédibilité artistique et votre visibilité auprès des équipes éditoriales des plateformes. Pour des campagnes de promotion spécifiques (playlisting, publicité), nous pouvons vous orienter vers des partenaires spécialisés."
-                },
-                {
-                  q: "Combien de temps prend une mission ?",
-                  a: "La durée varie selon le service et la réactivité des plateformes. En général, comptez entre 2 et 6 semaines pour une mission complète (distribution + certification). Nous vous fournissons un calendrier estimatif dès la signature du contrat et vous tenons informé à chaque étape."
-                },
-                {
-                  q: "Comment puis-je suivre l'avancement de mon dossier ?",
-                  a: "Nous envoyons une confirmation à chaque étape clé : soumission au distributeur, validation ISRC, activation Content ID, mise en ligne effective. Chaque confirmation est accompagnée d'une capture d'écran via WhatsApp ou email."
-                }
-              ]
-            },
-            {
-              section: "Confiance & Sécurité",
-              color: "#22c55e",
-              items: [
-                {
-                  q: "Comment savoir que vous êtes fiables ?",
-                  a: "Notre preuve de concept est concrète : nous avons déjà accompagné plusieurs artistes haïtiens dans l'obtention de leur badge YouTube OAC et leur certification Spotify — des résultats vérifiables. De plus, notre modèle 70/30 et notre politique de transfert total de propriété ont été conçus précisément pour qu'aucune confiance aveugle ne soit nécessaire. Si vous souhaitez des références, contactez-nous et nous vous mettons en relation avec d'anciens clients."
-                },
-                {
-                  q: "Que se passe-t-il si vous n'obtenez pas le badge ?",
-                  a: "Si un objectif défini au contrat n'est pas atteint, le solde de 30% n'est pas exigible. Nous vous informons de l'échec par écrit, vous expliquons les raisons et vous restituons tous les éléments fournis. Vortex Rights n'a aucun intérêt à vous faire payer pour un résultat non livré."
-                },
-                {
-                  q: "Quels sont les moyens de paiement acceptés ?",
-                  a: "Nous acceptons MonCash, NatCash, PayPal et Sogebank (Wood Jerry Fils-Aimé). Chaque paiement est confirmé par capture d'écran. Les modalités complètes sont détaillées dans notre contrat de service."
-                },
-                {
-                  q: "Comment me contacter en cas de problème pendant la mission ?",
-                  a: "Vous disposez d'un canal de communication direct (WhatsApp ou email dédié) avec votre chargé de mission dès la signature du contrat. Nous nous engageons à répondre dans un délai de 24 heures ouvrables. Toute communication importante est confirmée par écrit."
-                }
-              ]
-            }
-          ];
-
-          return (
-            <section className="legal-section">
-              <div className="legal-wrap">
-                <div className="legal-hero">
-                  <div className="legal-tag">Foire Aux Questions</div>
-                  <h1 className="legal-title">FAQ <span className="gradient-text">Vortex Rights</span></h1>
-                  <p className="legal-date">Version 2.0 — Avril 2026</p>
-                </div>
-
-                {faqs.map((section, si) => (
-                  <div key={si} style={{marginBottom:"48px"}}>
-                    <div style={{display:"flex",alignItems:"center",gap:"12px",marginBottom:"20px",paddingBottom:"12px",borderBottom:`1px solid ${section.color}30`}}>
-                      <div style={{width:"6px",height:"24px",background:section.color,borderRadius:"3px"}}></div>
-                      <h2 style={{fontFamily:"'Syne',sans-serif",fontSize:"1rem",fontWeight:700,color:"#fff",textTransform:"uppercase",letterSpacing:"0.1em"}}>{section.section}</h2>
-                    </div>
-                    <div style={{display:"grid",gap:"10px"}}>
-                      {section.items.map((item, ii) => {
-                        const idx = `${si}-${ii}`;
-                        const isOpen = open === idx;
-                        return (
-                          <div key={ii} style={{borderRadius:"14px",border:`1px solid ${isOpen ? section.color + '40' : 'rgba(255,255,255,0.07)'}`,background:isOpen?"rgba(255,255,255,0.04)":"rgba(255,255,255,0.02)",overflow:"hidden",transition:"all 0.25s"}}>
-                            <button onClick={() => toggle(idx)} style={{width:"100%",display:"flex",alignItems:"center",justifyContent:"space-between",gap:"16px",padding:"18px 22px",background:"transparent",border:"none",cursor:"pointer",textAlign:"left"}}>
-                              <span style={{fontFamily:"'Syne',sans-serif",fontSize:"0.97rem",fontWeight:600,color:"#fff",lineHeight:1.4}}>{item.q}</span>
-                              <span style={{color:section.color,fontSize:"1.3rem",fontWeight:300,flexShrink:0,transform:isOpen?"rotate(45deg)":"none",transition:"transform 0.25s"}}>+</span>
-                            </button>
-                            {isOpen && (
-                              <div style={{padding:"0 22px 20px"}}>
-                                <p style={{fontSize:"0.95rem",color:"#aaa",lineHeight:1.85}}>{item.a}</p>
-                              </div>
-                            )}
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                ))}
-
-                <div style={{marginTop:"48px",padding:"24px 28px",borderRadius:"16px",background:"rgba(26,109,255,0.08)",border:"1px solid rgba(26,109,255,0.2)"}}>
-                  <p style={{color:"#fff",fontWeight:600,marginBottom:"8px",fontFamily:"'Syne',sans-serif"}}>Vous avez une autre question ?</p>
-                  <p style={{color:"#aaa",fontSize:"0.92rem",lineHeight:1.7,marginBottom:"16px"}}>Contactez-nous directement — nous répondons sous 24h.</p>
-                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" style={{display:"inline-flex",alignItems:"center",gap:"8px",background:"#1a6dff",color:"#fff",padding:"10px 22px",borderRadius:"8px",textDecoration:"none",fontWeight:600,fontSize:"0.9rem"}}>
-                    Nous écrire sur WhatsApp <ArrowRight />
-                  </a>
-                </div>
-              </div>
-            </section>
-          );
-        }
-
-        // ═══════════════════════════════════════════════════
-        // PRIVACY POLICY — VERSION COMPLÈTE RÉVISÉE
-        // ═══════════════════════════════════════════════════
-        function PrivacyPolicy() {
-          const articles = [
-            {
-              num: "01",
-              title: "Données Collectées",
-              accent: false,
-              content: (
-                <>
-                  <p className="legal-body" style={{marginBottom:"16px"}}>Nous collectons uniquement les informations strictement nécessaires à l'exécution de notre mission :</p>
-                  <ul style={{listStyle:"none",display:"grid",gap:"10px"}}>
-                    {[
-                      "Identité artistique : nom d'artiste, biographie, photo de profil, liens de réseaux sociaux.",
-                      "Visuels et médias : photos, artwork, contenu promotionnel fourni par l'artiste.",
-                      "Coordonnées de paiement : informations transmises au distributeur uniquement (non conservées par Vortex Rights).",
-                      "Accès temporaires : identifiants confiés pour la configuration technique (voir Article 3)."
-                    ].map((item, i) => (
-                      <li key={i} style={{display:"flex",gap:"12px",alignItems:"flex-start"}}>
-                        <div style={{width:"6px",height:"6px",borderRadius:"50%",background:"#1a6dff",marginTop:"9px",flexShrink:0}}></div>
-                        <span className="legal-body">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="legal-note">⚠️ Nous ne collectons jamais d'informations sans lien direct avec la mission définie au contrat.</div>
-                </>
-              )
-            },
-            {
-              num: "02",
-              title: "Utilisation des Données",
-              accent: false,
-              content: (
-                <>
-                  <p className="legal-body" style={{marginBottom:"16px"}}>Les informations collectées sont utilisées exclusivement pour :</p>
-                  <ul style={{listStyle:"none",display:"grid",gap:"10px",marginBottom:"16px"}}>
-                    {[
-                      "La création et la configuration de vos profils officiels sur les plateformes de streaming.",
-                      "La soumission de demandes de certification (badges OAC, Spotify for Artists, etc.).",
-                      "La communication contractuelle entre Vortex Rights et l'artiste client."
-                    ].map((item, i) => (
-                      <li key={i} style={{display:"flex",gap:"12px",alignItems:"flex-start"}}>
-                        <div style={{width:"6px",height:"6px",borderRadius:"50%",background:"#1a6dff",marginTop:"9px",flexShrink:0}}></div>
-                        <span className="legal-body">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <p className="legal-body"><span className="legal-highlight">Aucune donnée n'est vendue, louée, partagée ou transmise</span> à des tiers non impliqués dans l'exécution directe de la mission.</p>
-                </>
-              )
-            },
-            {
-              num: "03",
-              title: "Gestion des Accès",
-              accent: true,
-              content: (
-                <>
-                  <p style={{fontFamily:"'Syne',sans-serif",fontWeight:600,color:"#fff",fontSize:"0.9rem",marginBottom:"8px"}}>3.1 — Utilisation strictement limitée</p>
-                  <p className="legal-body" style={{marginBottom:"20px"}}>Lorsque vous nous confiez la gestion temporaire d'un compte (distributeur, Gmail dédié, plateforme), cet accès est utilisé exclusivement pour les paramétrages techniques liés à la mission définie au contrat. Aucune action commerciale non autorisée ne sera effectuée.</p>
-                  <p style={{fontFamily:"'Syne',sans-serif",fontWeight:600,color:"#fff",fontSize:"0.9rem",marginBottom:"8px"}}>3.2 — Transfert et déconnexion</p>
-                  <p className="legal-body" style={{marginBottom:"12px"}}>À la fin de chaque mission, Vortex Rights s'engage à :</p>
-                  <ul style={{listStyle:"none",display:"grid",gap:"8px"}}>
-                    {[
-                      "Vous transmettre tous les identifiants dans un délai de 48 heures ouvrables suivant le règlement du solde final.",
-                      "Supprimer définitivement ses propres accès à tous les comptes concernés.",
-                      "Vous fournir une confirmation écrite par email attestant de la déconnexion complète, sur simple demande."
-                    ].map((item, i) => (
-                      <li key={i} style={{display:"flex",gap:"12px",alignItems:"flex-start"}}>
-                        <span style={{color:"#1a6dff",fontWeight:700,flexShrink:0}}>→</span>
-                        <span className="legal-body">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              )
-            },
-            {
-              num: "04",
-              title: "Conservation & Suppression des Données",
-              accent: true,
-              content: (
-                <>
-                  <p className="legal-body" style={{marginBottom:"16px"}}>Vos données personnelles et vos fichiers (visuels, biographie, médias) sont conservés pendant la durée de la mission, puis <span className="legal-highlight">supprimés définitivement dans un délai de 30 jours</span> suivant la clôture du contrat.</p>
-                  <p className="legal-body" style={{marginBottom:"16px"}}>Si vous souhaitez la suppression immédiate de vos données avant ce délai, vous pouvez en faire la demande par écrit à <span className="legal-blue">contact@vortexrights.com</span>. Nous traiterons votre demande dans un délai de 72 heures.</p>
-                  <div className="legal-note">⚠️ Exception : les documents contractuels (factures, contrats signés) peuvent être conservés jusqu'à 5 ans à des fins légales et comptables.</div>
-                </>
-              )
-            },
-            {
-              num: "05",
-              title: "Sécurité des Données",
-              accent: false,
-              content: (
-                <>
-                  <p className="legal-body" style={{marginBottom:"16px"}}>Vortex Rights prend des mesures raisonnables pour protéger vos informations :</p>
-                  <ul style={{listStyle:"none",display:"grid",gap:"10px"}}>
-                    {[
-                      "Stockage des accès temporaires dans des gestionnaires de mots de passe sécurisés.",
-                      "Communications sensibles exclusivement via des canaux chiffrés.",
-                      "Accès aux données limité aux membres de l'équipe directement impliqués dans votre mission."
-                    ].map((item, i) => (
-                      <li key={i} style={{display:"flex",gap:"12px",alignItems:"flex-start"}}>
-                        <div style={{width:"6px",height:"6px",borderRadius:"50%",background:"#1a6dff",marginTop:"9px",flexShrink:0}}></div>
-                        <span className="legal-body">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              )
-            },
-            {
-              num: "06",
-              title: "Juridiction & Droit Applicable",
-              accent: false,
-              content: (
-                <>
-                  <p className="legal-body" style={{marginBottom:"16px"}}>En l'absence d'entité légale formellement enregistrée à ce jour, la présente politique est régie par les principes généraux du droit haïtien applicables aux contrats de prestation de services. Pour les clients basés dans la diaspora (France, Canada, États-Unis), nous nous engageons à respecter les obligations de transparence en vigueur dans votre pays de résidence dans la mesure du possible.</p>
-                  <div className="legal-note">⚠️ Vortex Rights est en cours d'enregistrement officiel. La version légale définitive de cette politique sera publiée dès la formalisation de l'entité. Toute mise à jour substantielle vous sera communiquée par email 15 jours avant son entrée en vigueur.</div>
-                </>
-              )
-            },
-            {
-              num: "07",
-              title: "Vos Droits",
-              accent: false,
-              content: (
-                <>
-                  <p className="legal-body" style={{marginBottom:"16px"}}>En tant que client de Vortex Rights, vous disposez à tout moment des droits suivants :</p>
-                  <ul style={{listStyle:"none",display:"grid",gap:"10px",marginBottom:"16px"}}>
-                    {[
-                      "Droit d'accès : obtenir la liste des données que nous détenons sur vous.",
-                      "Droit de rectification : corriger toute information inexacte.",
-                      "Droit à l'effacement : demander la suppression de vos données avant le délai standard de 30 jours.",
-                      "Droit de confirmation : recevoir par email la preuve de la suppression de vos accès."
-                    ].map((item, i) => (
-                      <li key={i} style={{display:"flex",gap:"12px",alignItems:"flex-start"}}>
-                        <span style={{color:"#1a6dff",fontWeight:700,flexShrink:0}}>→</span>
-                        <span className="legal-body">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <p className="legal-body">Pour exercer l'un de ces droits, contactez-nous à : <span className="legal-blue">contact@vortexrights.com</span></p>
-                </>
-              )
-            }
-          ];
-
-          return (
-            <section className="legal-section">
-              <div className="legal-wrap">
-                <div className="legal-hero">
-                  <div className="legal-tag">Politique de Confidentialité</div>
-                  <h1 className="legal-title">Protection de <span className="gradient-text">vos données</span></h1>
-                  <p className="legal-date">Dernière mise à jour : Avril 2026 — Version 2.0</p>
-                  <p className="legal-body" style={{marginTop:"20px"}}>La confidentialité de vos données est au cœur de notre métier. En utilisant les services de Vortex Rights, vous acceptez les pratiques décrites dans la présente politique.</p>
-                </div>
-
-                <div style={{display:"grid",gap:"16px"}}>
-                  {articles.map((art, i) => (
-                    <div key={i} className={`legal-block ${art.accent ? 'legal-block-accent' : ''}`}>
-                      <div style={{display:"flex",gap:"16px",alignItems:"flex-start",marginBottom:"18px"}}>
-                        <div className="legal-num">{art.num}</div>
-                        <h2 className="legal-section-title">{art.title}</h2>
-                      </div>
-                      {art.content}
-                    </div>
-                  ))}
-                </div>
-
-                <div style={{marginTop:"40px",padding:"20px 24px",borderRadius:"14px",background:"rgba(255,255,255,0.03)",border:"1px solid rgba(255,255,255,0.06)",textAlign:"center"}}>
-                  <p className="legal-body" style={{fontSize:"0.85rem"}}>www.vortexrights.com · contact@vortexrights.com · WhatsApp : +509 4346-9043 · @vortexrightshaiti</p>
-                </div>
-              </div>
-            </section>
-          );
-        }
-
-        function Terms() {
-          return (
-            <section className="legal-section">
-              <div className="legal-wrap">
-                <div className="legal-hero">
-                  <div className="legal-tag">Conditions Générales</div>
-                  <h1 className="legal-title">Conditions Générales <span className="gradient-text">de Service</span></h1>
-                  <p className="legal-date">Avril 2026</p>
-                </div>
-                <div style={{display:"grid",gap:"16px"}}>
-                  <div className="legal-block">
-                    <div style={{display:"flex",gap:"16px",alignItems:"flex-start",marginBottom:"16px"}}><div className="legal-num">01</div><h2 className="legal-section-title">Nature du Service</h2></div>
-                    <p className="legal-body">Vortex Rights agit en tant qu'administrateur technique. L'artiste conserve 100% de la propriété intellectuelle de ses œuvres à tout moment.</p>
-                  </div>
-                  <div className="legal-block legal-block-accent">
-                    <div style={{display:"flex",gap:"16px",alignItems:"flex-start",marginBottom:"16px"}}><div className="legal-num">02</div><h2 className="legal-section-title">Modalités de Paiement</h2></div>
-                    <p className="legal-body" style={{marginBottom:"14px"}}>Pour tout service commandé, le paiement s'effectue en deux étapes :</p>
-                    <ul style={{listStyle:"none",display:"grid",gap:"10px"}}>
-                      <li style={{display:"flex",gap:"12px",alignItems:"flex-start"}}><span style={{color:"#1a6dff",fontWeight:700,flexShrink:0}}>70%</span><span className="legal-body"><span className="legal-highlight">Acompte</span> — À verser au début de la mission pour couvrir les frais techniques et l'ouverture du dossier.</span></li>
-                      <li style={{display:"flex",gap:"12px",alignItems:"flex-start"}}><span style={{color:"#ff6b35",fontWeight:700,flexShrink:0}}>30%</span><span className="legal-body"><span className="legal-highlight">Solde</span> — À verser après la livraison finale des accès et confirmations de distribution.</span></li>
-                    </ul>
-                  </div>
-                  <div className="legal-block legal-block-accent">
-                    <div style={{display:"flex",gap:"16px",alignItems:"flex-start",marginBottom:"16px"}}><div className="legal-num">03</div><h2 className="legal-section-title">Garantie de Transparence</h2></div>
-                    <p className="legal-body">Vortex Rights s'engage à une transparence totale. À chaque étape clé du processus (soumission au distributeur, validation des codes ISRC, activation du Content ID), une <span className="legal-highlight">capture d'écran de confirmation</span> sera envoyée au client via WhatsApp ou Email.</p>
-                  </div>
-                  <div className="legal-block">
-                    <div style={{display:"flex",gap:"16px",alignItems:"flex-start",marginBottom:"16px"}}><div className="legal-num">04</div><h2 className="legal-section-title">Délais</h2></div>
-                    <p className="legal-body">Les délais de distribution dépendent des plateformes (généralement 3 à 10 jours ouvrés). Vortex Rights ne peut être tenu responsable des retards causés par les distributeurs tiers après soumission du dossier.</p>
-                  </div>
-                </div>
-              </div>
-            </section>
-          );
-        }
-
-        function Navbar({page,setPage}) {
-          const [mobileOpen, setMobileOpen] = useState(false);
-          const navPages = ["Accueil","Services","Tarifs","À Propos","Contact"];
-          return (
-            <nav style={{background:"rgba(0,0,0,0.95)",position:"fixed",top:0,left:0,right:0,zIndex:100,backdropFilter:"blur(20px)",borderBottom:"1px solid rgba(255,255,255,0.1)"}}>
-              <div style={{maxWidth:"1200px",margin:"0 auto",display:"flex",justifyContent:"space-between",alignItems:"center",padding:"16px 20px"}}>
-                <div style={{fontSize:"1.3rem",fontWeight:"bold",cursor:"pointer",color:"#fff"}} onClick={()=>{setPage("Accueil"); setMobileOpen(false);}}>
-                  <span style={{background:"linear-gradient(90deg,#1a6dff 0%,#ff6b35 100%)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent",backgroundClip:"text"}}>VORTEX</span> <span>RIGHTS</span>
-                </div>
-                <div className="navbar-desktop" style={{display:"flex",gap:"8px"}}>
-                  {navPages.map(link => (<button key={link} onClick={()=>{setPage(link); setMobileOpen(false);}} style={{background:"transparent",border:"none",color:page===link?"#1a6dff":"#ccc",cursor:"pointer",padding:"8px 16px",fontSize:"0.95rem",fontWeight:500,transition:"color 0.3s",borderBottom:page===link?"2px solid #1a6dff":"none"}}>{link}</button>))}
-                  <a href="https://wa.me/50943469043?text=Bonjour%20Vortex%20Rights%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services." target="_blank" rel="noopener noreferrer" style={{display:"inline-flex",alignItems:"center",justifyContent:"center",background:"#1a6dff",color:"#fff",padding:"8px 20px",borderRadius:"8px",textDecoration:"none",fontWeight:600,fontSize:"0.9rem",cursor:"pointer",transition:"opacity 0.3s",boxShadow:"0 0 20px rgba(26,109,255,0.3)"}}>Commencer</a>
-                </div>
-                <button className="navbar-mobile-btn" onClick={()=>setMobileOpen(!mobileOpen)} style={{background:"none",border:"none",color:"#fff",cursor:"pointer",padding:"8px",display:"flex",alignItems:"center",justifyContent:"center"}}>{mobileOpen ? <CloseIcon /> : <MenuIcon />}</button>
-              </div>
-              {mobileOpen && (
-                <div style={{background:"rgba(0,0,0,0.95)",borderTop:"1px solid rgba(255,255,255,0.1)",padding:"16px 20px",display:"flex",flexDirection:"column",gap:"12px"}}>
-                  {navPages.map(link => (<button key={link} onClick={()=>{setPage(link); setMobileOpen(false);}} style={{background:"transparent",border:"none",color:page===link?"#1a6dff":"#ccc",cursor:"pointer",padding:"12px",fontSize:"1rem",fontWeight:500,textAlign:"left",transition:"color 0.3s"}}>{link}</button>))}
-                  <a href="https://wa.me/50943469043?text=Bonjour%20Vortex%20Rights%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services." target="_blank" rel="noopener noreferrer" style={{display:"flex",alignItems:"center",justifyContent:"center",background:"#1a6dff",color:"#fff",padding:"12px 20px",borderRadius:"8px",textDecoration:"none",fontWeight:600,fontSize:"0.95rem",cursor:"pointer",marginTop:"8px",boxShadow:"0 0 20px rgba(26,109,255,0.3)"}}>Commencer</a>
-                </div>
-              )}
-            </nav>
-          );
-        }
-
-        function Footer({setPage}) {
-          return (
-            <footer style={{background:"#111",borderTop:"1px solid rgba(255,255,255,0.1)",color:"#ccc"}}>
-              <div style={{maxWidth:"1200px",margin:"0 auto",padding:"48px 20px"}}>
-                <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit, minmax(250px, 1fr))",gap:"32px",marginBottom:"40px"}}>
-                  <div>
-                    <div style={{fontSize:"1.25rem",fontWeight:"bold",color:"#fff",marginBottom:"12px",cursor:"pointer"}} onClick={()=>setPage("Accueil")}><span style={{background:"linear-gradient(90deg,#1a6dff 0%,#ff6b35 100%)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent",backgroundClip:"text"}}>VORTEX</span>{" "}<span style={{color:"#fff"}}>RIGHTS</span></div>
-                    <p style={{marginTop:"12px",fontSize:"0.9rem",color:"#999",maxWidth:"280px"}}>Le pont entre votre talent et vos revenus. Nous simplifions la technologie musicale pour les artistes de la diaspora.</p>
-                  </div>
-                  <div>
-                    <h4 style={{fontWeight:600,fontSize:"0.95rem",marginBottom:"16px",color:"#fff"}}>Navigation</h4>
-                    <ul style={{listStyle:"none",padding:0,margin:0,display:"flex",flexDirection:"column",gap:"8px"}}>
-                      {["À Propos","Services","Tarifs","Contact"].map(p=>(<li key={p}><button onClick={()=>setPage(p)} style={{background:"none",border:"none",color:"#999",cursor:"pointer",fontSize:"0.9rem",padding:0,textAlign:"left"}}>{p}</button></li>))}
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 style={{fontWeight:600,fontSize:"0.95rem",marginBottom:"16px",color:"#fff"}}>Informations</h4>
-                    <ul style={{listStyle:"none",padding:0,margin:0,display:"flex",flexDirection:"column",gap:"8px"}}>
-                      {[["FAQ","FAQ"],["Politique","Politique de Confidentialité"],["Conditions","Conditions Générales"]].map(([key,label])=>(<li key={key}><button onClick={()=>setPage(key)} style={{background:"none",border:"none",color:"#999",cursor:"pointer",fontSize:"0.9rem",padding:0,textAlign:"left"}}>{label}</button></li>))}
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 style={{fontWeight:600,fontSize:"0.95rem",marginBottom:"16px",color:"#fff"}}>Contact</h4>
-                    <ul style={{listStyle:"none",padding:0,margin:0,display:"flex",flexDirection:"column",gap:"8px"}}>
-                      <li><a href="mailto:contact@vortexrights.com" style={{color:"#999",textDecoration:"none",fontSize:"0.9rem"}}>contact@vortexrights.com</a></li>
-                      <li><a href="https://wa.me/50943469043" target="_blank" rel="noopener noreferrer" style={{color:"#999",textDecoration:"none",fontSize:"0.9rem"}}>+509 4346-9043</a></li>
-                      <li><a href="https://www.instagram.com/vortexrightshaiti/" target="_blank" rel="noopener noreferrer" style={{color:"#999",textDecoration:"none",fontSize:"0.9rem"}}>@VortexRights</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div style={{marginTop:"40px",paddingTop:"24px",borderTop:"1px solid rgba(255,255,255,0.1)",display:"flex",flexDirection:"column",gap:"16px",alignItems:"center",textAlign:"center",fontSize:"0.8rem",color:"#666"}}>
-                  <p>Vortex Rights © 2026. Tous droits réservés.</p>
-                  <p>Propulsé en partenariat avec Blaka Recordz</p>
-                </div>
-              </div>
-            </footer>
-          );
-        }
-
-        function CountdownBanner() {
-          return (
-            <div style={{background:"linear-gradient(90deg,#010820,#011540,#010820)",padding:"10px",textAlign:"center",color:"#fff",borderBottom:"1px solid rgba(26,109,255,0.3)"}}>
-              <span style={{fontSize:"14px",fontWeight:600}}>OFFRE LANCEMENT — 50% DE RÉDUCTION · Expire bientôt !</span>
+            <div class="service-features">
+              <div class="service-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Attribution et gestion des codes ISRC</div>
+              <div class="service-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Génération et suivi des codes UPC/EAN</div>
+              <div class="service-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Certification et nettoyage des métadonnées</div>
+              <div class="service-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Distribution multi-plateforme (Spotify, Apple, Deezer…)</div>
+              <div class="service-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Rapports de revenus détaillés et transparents</div>
             </div>
-          );
-        }
+          </div>
+        </article>
+        <article class="service-block reveal">
+          <img class="service-img" src="./Public/images/performer.jpg" alt="Protection propriété intellectuelle musicale" loading="lazy" width="1200" height="240">
+          <div class="service-body">
+            <div class="service-header">
+              <div class="service-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <div>
+                <h2 style="font-size:20px;font-weight:700;margin-bottom:6px;">Protection de la Propriété Intellectuelle</h2>
+                <p style="color:#ccc;font-size:14px;">Sécurisez vos revenus et votre image sur toutes les plateformes.</p>
+              </div>
+            </div>
+            <div class="service-features">
+              <div class="service-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Content ID YouTube – monétisation automatique</div>
+              <div class="service-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Content ID TikTok, Facebook & Instagram</div>
+              <div class="service-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Revendication OAC (Official Artist Channel YouTube)</div>
+              <div class="service-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Claim Spotify for Artists & Apple Music for Artists</div>
+              <div class="service-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Surveillance et retrait des contenus pirates</div>
+            </div>
+          </div>
+        </article>
+        <article class="service-block reveal">
+          <img class="service-img" src="./Public/images/studio.jpg" alt="Identité visuelle et branding musical" loading="lazy" width="1200" height="240">
+          <div class="service-body">
+            <div class="service-header">
+              <div class="service-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m9 9 6 6M15 9l-6 6"/></svg></div>
+              <div>
+                <h2 style="font-size:20px;font-weight:700;margin-bottom:6px;">Identité Visuelle & Branding</h2>
+                <p style="color:#ccc;font-size:14px;">Une image professionnelle qui respecte les standards de l'industrie.</p>
+              </div>
+            </div>
+            <div class="service-features">
+              <div class="service-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Pochettes d'album et singles aux normes</div>
+              <div class="service-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Bannières et visuels pour plateformes de streaming</div>
+              <div class="service-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Kit presse et EPK (Electronic Press Kit)</div>
+              <div class="service-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Identité visuelle cohérente multi-canal</div>
+              <div class="service-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Templates pour réseaux sociaux</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</div>
 
-        function ScrollTop() {
-          const [visible, setVisible] = useState(false);
-          useEffect(() => {
-            const handleScroll = () => setVisible(window.scrollY > 400);
-            window.addEventListener('scroll', handleScroll, { passive: true });
-            return () => window.removeEventListener('scroll', handleScroll);
-          }, []);
-          return visible ? (
-            <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{position:"fixed",bottom:"24px",right:"24px",width:"48px",height:"48px",borderRadius:"50%",background:"#1a6dff",border:"none",color:"#fff",display:"flex",alignItems:"center",justifyContent:"center",cursor:"pointer",zIndex:50,boxShadow:"0 0 20px rgba(26,109,255,0.3)",transition:"all 0.3s"}} title="Retour en haut"><ArrowUp /></button>
-          ) : null;
-        }
+<!-- ══════════════════════════════════════
+     PAGE : TARIFS
+══════════════════════════════════════ -->
+<div id="page-tarifs" class="page">
+  <section style="padding:100px 0 80px;background:#000;">
+    <div class="container text-center">
+      <div class="hero-badge" style="display:inline-flex;margin-bottom:32px;" aria-label="Promotion">OFFRE DE LANCEMENT — 50% DE RÉDUCTION</div>
+      <h1 class="section-title reveal">Des tarifs <span class="gradient-text">transparents</span></h1>
+      <p class="section-sub centered reveal">Pas d'abonnement mensuel caché. Un paiement unique pour une mise en conformité durable. Tous les royalties restent 100% les vôtres.</p>
 
-        const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(<App />);
-    </script>
-    <script src="https://www.paypal.com/sdk/js?client-id=BAAr6QFiC7uIEjeAMjSrz51k4A1-UYL4o2AzLq1ZcqNK1asTmy2SYA7V4u8wW4zy7tijkhtzQtCZCUj7Pk&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
-<script defer src="/_vercel/insights/script.js"></script>
+      <div class="pricing-grid">
+        <article class="price-card reveal">
+          <h2 class="price-name">Pack Décollage</h2>
+          <p class="price-desc">Idéal pour les artistes qui débutent leur mise en conformité.</p>
+          <div class="price-amount"><span class="price-now">50$</span><span class="price-was">100$</span></div>
+          <ul class="price-features" aria-label="Fonctionnalités Pack Décollage">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Distribution sur toutes les plateformes</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Codes ISRC pour 2 titres</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Code UPC</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Nettoyage métadonnées de base</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Support par email</li>
+          </ul>
+          <a href="https://wa.me/50943469043?text=Bonjour%20Vortex%20Rights%2C%20je%20souhaite%20souscrire%20au%20Pack%20D%C3%A9collage." target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="justify-content:center;" aria-label="Souscrire au Pack Décollage via WhatsApp">Commencer <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+        </article>
+
+        <article class="price-card featured reveal">
+          <span class="featured-badge">Populaire</span>
+          <h2 class="price-name">Pack Pro</h2>
+          <p class="price-desc">La solution complète pour sécuriser vos revenus et votre image.</p>
+          <div class="price-amount"><span class="price-now">150$</span><span class="price-was">300$</span></div>
+          <ul class="price-features" aria-label="Fonctionnalités Pack Pro">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Tout le Pack Décollage</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Content ID YouTube</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Content ID TikTok/Facebook/Instagram</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Claim Spotify for Artists</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Claim Apple Music for Artists</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Revendication OAC YouTube</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Support prioritaire WhatsApp</li>
+          </ul>
+          <a href="https://wa.me/50943469043?text=Bonjour%20Vortex%20Rights%2C%20je%20souhaite%20souscrire%20au%20Pack%20Pro." target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="justify-content:center;" aria-label="Souscrire au Pack Pro via WhatsApp">Commencer <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+        </article>
+
+        <article class="price-card reveal">
+          <h2 class="price-name">Pack Label</h2>
+          <p class="price-desc">Pour les labels et artistes avec un catalogue à structurer.</p>
+          <div class="price-amount"><span class="price-now">300$</span><span class="price-was">600$</span></div>
+          <ul class="price-features" aria-label="Fonctionnalités Pack Label">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Tout le Pack Pro</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Jusqu'à 10 titres ISRC</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Pochettes d'album professionnelles</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Kit presse EPK complet</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Bannières plateformes de streaming</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Templates réseaux sociaux</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Account Manager dédié</li>
+          </ul>
+          <a href="https://wa.me/50943469043?text=Bonjour%20Vortex%20Rights%2C%20je%20souhaite%20souscrire%20au%20Pack%20Label." target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="justify-content:center;" aria-label="Souscrire au Pack Label via WhatsApp">Commencer <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+        </article>
+      </div>
+
+      <div class="payment-box reveal">
+        <p style="font-size:15px;line-height:1.75;color:#ccc;"><strong style="color:#fff;">Modalités de paiement :</strong> 70% à la commande pour lancer les procédures, 30% à la livraison finale.</p>
+        <div class="payment-methods" aria-label="Méthodes de paiement acceptées">
+          <span class="payment-pill">MonCash</span>
+          <span class="payment-pill">NatCash</span>
+          <span class="payment-pill">PayPal</span>
+          <span class="payment-pill">Sogebank</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════════════════════════
+     PAGE : À PROPOS
+══════════════════════════════════════ -->
+<div id="page-apropos" class="page">
+  <section style="padding:100px 0 60px;background:#000;position:relative;overflow:hidden;">
+    <img src="./Public/images/concert.jpg" alt="" role="presentation" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.1;" loading="lazy">
+    <div class="container" style="position:relative;z-index:1;max-width:860px;">
+      <p class="section-tag">À Propos</p>
+      <h1 class="section-title reveal">L'expertise technique au service de la création.</h1>
+      <p style="color:#ccc;font-size:16px;line-height:1.85;margin-bottom:18px;" class="reveal">Vortex Rights est née d'un constat simple : beaucoup d'artistes talentueux perdent le contrôle de leur carrière à cause de la complexité technique des plateformes de streaming. Après avoir accompagné avec succès plusieurs artistes dans la certification de leurs profils (badges YouTube OAC, Spotify for Artists, Audiomack), nous avons structuré cette expertise pour toute la communauté musicale haïtienne — en Haïti comme dans la diaspora.</p>
+      <p style="color:#ccc;font-size:16px;line-height:1.85;" class="reveal">Nous ne sommes pas un label traditionnel. Nous sommes votre <strong style="color:#fff;">partenaire de gestion digitale</strong>. Notre mission est de construire votre infrastructure numérique et de vous en remettre les clés. L'artiste doit être le seul maître de ses revenus et de son image.</p>
+    </div>
+  </section>
+
+  <section style="background:#111;">
+    <div class="container" style="max-width:960px;">
+      <p class="section-tag">Ce qui nous distingue</p>
+      <h2 class="section-title reveal">Zéro piège. Zéro commission.<br>100% votre propriété.</h2>
+      <div class="differentiators">
+        <div class="diff-item reveal"><div class="diff-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><p><strong>0% de commission sur vos royalties</strong> — vous gardez chaque centime généré sur toutes les plateformes.</p></div>
+        <div class="diff-item reveal"><div class="diff-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><p><strong>Paiement 70/30</strong> — vous ne payez le solde qu'une fois la mission livrée et validée.</p></div>
+        <div class="diff-item reveal"><div class="diff-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><p><strong>Transfert des accès en 48h ouvrables</strong> — à la fin de chaque mission, vous devenez le seul propriétaire légal de tous vos comptes.</p></div>
+        <div class="diff-item reveal"><div class="diff-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><p><strong>Transparence documentée</strong> — chaque étape clé est confirmée par capture d'écran via WhatsApp ou email.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#000;">
+    <div class="container" style="max-width:960px;">
+      <p class="section-tag" style="color:var(--orange);">Preuves concrètes</p>
+      <h2 class="section-title reveal">Des résultats vérifiables,<br>pas des promesses.</h2>
+      <div class="proof-grid">
+        <div class="proof-card reveal">
+          <div class="proof-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <p><strong>Badge YouTube OAC</strong> obtenu pour des artistes haïtiens — accès direct aux outils YouTube Studio avancés et crédibilité renforcée auprès des algorithmes éditoriaux.</p>
+        </div>
+        <div class="proof-card reveal">
+          <div class="proof-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <p><strong>Profil Spotify for Artists certifié</strong> — accès complet aux statistiques, pitch direct aux équipes de playlisting, et contrôle total des métadonnées.</p>
+        </div>
+      </div>
+      <p style="color:#ccc;font-size:15px;line-height:1.8;margin-top:24px;" class="reveal">Ces résultats sont vérifiables. Contactez-nous directement — nous vous mettons en relation avec des artistes ayant vécu l'expérience Vortex Rights.</p>
+    </div>
+  </section>
+
+  <section style="background:#111;position:relative;overflow:hidden;">
+    <img src="./Public/images/studio.jpg" alt="" role="presentation" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.08;" loading="lazy">
+    <div class="container" style="max-width:960px;position:relative;z-index:1;">
+      <p class="section-tag">Fondateur & Vision</p>
+      <h2 class="section-title reveal">Wood Jerry Fils-Aimé — Fondateur</h2>
+      <p style="color:#ccc;font-size:16px;line-height:1.85;margin-bottom:20px;" class="reveal">Artiste, beatmaker et développeur web, Wood Jerry est le fondateur de <strong style="color:#fff;">Blaka Recordz</strong>, studio d'enregistrement indépendant basé à Port-au-Prince. Il a créé Vortex Rights pour combler un vide structurel : l'absence d'un intermédiaire technique fiable, transparent et sans conflit d'intérêt dans l'industrie musicale haïtienne.</p>
+      <div class="glass" style="border-radius:12px;padding:18px 22px;display:inline-block;" class="reveal">
+        <p style="font-size:11px;color:#666;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;">Fondateur & PDG</p>
+        <p style="font-size:17px;font-weight:700;">Wood Jerry Fils-Aimé</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════════════════════════
+     PAGE : CONTACT
+══════════════════════════════════════ -->
+<div id="page-contact" class="page">
+  <section style="padding:100px 0 80px;background:#000;position:relative;overflow:hidden;">
+    <img src="./Public/images/mixing.jpg" alt="" role="presentation" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.1;" loading="lazy">
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="text-center" style="margin-bottom:48px;">
+        <p class="section-tag">Contact</p>
+        <h1 class="section-title reveal">Parlons de votre projet</h1>
+        <p class="section-sub centered reveal">Prêt à protéger et monétiser votre musique ? Écrivez-nous.</p>
+      </div>
+      <div class="contact-grid">
+        <form class="contact-form" id="contact-form" novalidate aria-label="Formulaire de contact">
+          <div class="form-group">
+            <label class="form-label" for="cf-name">Nom <span aria-hidden="true">*</span></label>
+            <input type="text" id="cf-name" name="name" class="form-input" placeholder="Votre nom d'artiste" required autocomplete="name" aria-required="true">
+            <span class="form-error" id="err-name" role="alert" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cf-pack">Pack intéressé</label>
+            <select id="cf-pack" name="pack" class="form-select" aria-label="Choisir un pack">
+              <option value="">Choisir un pack (optionnel)</option>
+              <option value="Pack Décollage">Pack Décollage — 50$</option>
+              <option value="Pack Pro">Pack Pro — 150$</option>
+              <option value="Pack Label">Pack Label — 300$</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cf-email">Email</label>
+            <input type="email" id="cf-email" name="email" class="form-input" placeholder="votre@email.com" autocomplete="email" aria-describedby="email-hint">
+            <span id="email-hint" style="font-size:12px;color:#666;">Optionnel — pour un suivi par email</span>
+            <span class="form-error" id="err-email" role="alert" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cf-msg">Message <span aria-hidden="true">*</span></label>
+            <textarea id="cf-msg" name="message" class="form-input form-textarea" rows="5" placeholder="Décrivez votre projet ou vos besoins..." required aria-required="true"></textarea>
+            <span class="form-error" id="err-msg" role="alert" aria-live="polite"></span>
+          </div>
+          <button type="submit" class="btn btn-primary" id="cf-submit" style="width:100%;justify-content:center;" aria-label="Envoyer via WhatsApp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m22 2-7 19-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+            Envoyer via WhatsApp
+          </button>
+          <div id="cf-feedback" role="status" aria-live="polite"></div>
+        </form>
+
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon" style="background:rgba(26,109,255,0.12);color:var(--blue);" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+            <div>
+              <p style="font-weight:700;font-size:14px;margin-bottom:4px;">WhatsApp</p>
+              <a href="https://wa.me/50943469043" target="_blank" rel="noopener noreferrer" style="color:var(--blue);text-decoration:none;font-size:14px;" aria-label="Contacter sur WhatsApp">+509 4346-9043</a>
+              <p style="color:#666;font-size:12px;margin-top:4px;">Réponse sous 24h — contact privilégié</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon" style="background:rgba(26,109,255,0.12);color:var(--blue);" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
+            <div>
+              <p style="font-weight:700;font-size:14px;margin-bottom:4px;">Email</p>
+              <a href="mailto:contact@vortexrights.com" style="color:var(--blue);text-decoration:none;font-size:14px;" aria-label="Envoyer un email">contact@vortexrights.com</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon" style="background:rgba(255,107,53,0.12);color:var(--orange);" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+            <div>
+              <p style="font-weight:700;font-size:14px;margin-bottom:4px;">Instagram</p>
+              <a href="https://www.instagram.com/vortexrightshaiti/" target="_blank" rel="noopener noreferrer" style="color:var(--blue);text-decoration:none;font-size:14px;" aria-label="Suivre sur Instagram">@vortexrightshaiti</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════════════════════════
+     PAGE : FAQ
+══════════════════════════════════════ -->
+<div id="page-faq" class="page">
+  <section style="padding:100px 0 80px;background:#000;">
+    <div class="container legal-wrap">
+      <div class="legal-hero">
+        <p class="section-tag">Foire Aux Questions</p>
+        <h1 class="section-title">FAQ <span class="gradient-text">Vortex Rights</span></h1>
+        <p class="legal-date">Version 2.0 — Avril 2026</p>
+      </div>
+
+      <div style="margin-bottom:40px;">
+        <div class="faq-section-label"><div class="faq-bar" style="background:var(--blue);"></div><h2 style="font-size:13px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:0.1em;">Modèle & Mission</h2></div>
+        <div class="faq-items">
+          <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">Qui est Vortex Rights ? <span class="faq-chevron" aria-hidden="true">+</span></button><div class="faq-answer">Vortex Rights est une agence de conciergerie digitale basée à Port-au-Prince, Haïti. Notre mission est de professionnaliser l'infrastructure numérique des artistes — distribution, certification de profils, administration des comptes — puis de leur en remettre le contrôle total. Nous ne sommes pas un label : nous sommes votre partenaire technique.</div></div>
+          <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">Prenez-vous un pourcentage sur mes revenus ? <span class="faq-chevron" aria-hidden="true">+</span></button><div class="faq-answer">Absolument pas. Vortex Rights applique une politique de 0% de commission sur vos revenus artistiques. Vous conservez 100% de vos gains sur toutes les plateformes. Les frais de distribution tiers (DistroKid, TuneCore, etc.) sont distincts de nos honoraires et communiqués par écrit avant tout engagement.</div></div>
+          <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">Pourquoi le paiement est divisé en 70% et 30% ? <span class="faq-chevron" aria-hidden="true">+</span></button><div class="faq-answer">Cette structure garantit une sécurité mutuelle. Les 70% initiaux couvrent les frais techniques et l'ouverture des démarches. Les 30% restants ne sont versés qu'une fois la mission totalement accomplie. Si les objectifs définis ne sont pas atteints, le solde n'est pas dû.</div></div>
+          <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">Vais-je perdre l'accès à mon compte ? <span class="faq-chevron" aria-hidden="true">+</span></button><div class="faq-answer">Au contraire. Une fois la mission terminée et le solde réglé, nous vous transférons la pleine propriété de tous les comptes dans un délai maximum de 48 heures ouvrables. Nous nous déconnectons définitivement. Vous êtes totalement autonome.</div></div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:40px;">
+        <div class="faq-section-label"><div class="faq-bar" style="background:var(--orange);"></div><h2 style="font-size:13px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:0.1em;">Services & Résultats</h2></div>
+        <div class="faq-items">
+          <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">Quels badges pouvez-vous obtenir ? <span class="faq-chevron" aria-hidden="true">+</span></button><div class="faq-answer">Nous avons obtenu avec succès des badges YouTube OAC et des profils vérifiés Spotify for Artists pour des artistes haïtiens. Nous travaillons également sur Audiomack et Apple Music for Artists. Chaque demande est évaluée et nous communiquons honnêtement les critères d'éligibilité.</div></div>
+          <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">Combien de temps prend une mission ? <span class="faq-chevron" aria-hidden="true">+</span></button><div class="faq-answer">Entre 2 et 6 semaines pour une mission complète selon le service et la réactivité des plateformes. Nous fournissons un calendrier estimatif dès la signature et vous tenons informé à chaque étape avec des captures d'écran de confirmation.</div></div>
+          <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">Quels sont les moyens de paiement acceptés ? <span class="faq-chevron" aria-hidden="true">+</span></button><div class="faq-answer">Nous acceptons MonCash, NatCash, PayPal et Sogebank (Wood Jerry Fils-Aimé). Chaque paiement est confirmé par capture d'écran.</div></div>
+        </div>
+      </div>
+
+      <div style="background:rgba(26,109,255,0.08);border:1px solid rgba(26,109,255,0.2);border-radius:var(--radius);padding:24px 28px;">
+        <p style="font-weight:700;margin-bottom:8px;">Une autre question ?</p>
+        <p style="color:#aaa;font-size:14px;line-height:1.7;margin-bottom:16px;">Contactez-nous directement — réponse sous 24h.</p>
+        <a href="https://wa.me/50943469043?text=Bonjour%20Vortex%20Rights%2C%20j%27ai%20une%20question." target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Poser une question sur WhatsApp">
+          Nous écrire sur WhatsApp
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════════════════════════
+     PAGE : POLITIQUE DE CONFIDENTIALITÉ
+══════════════════════════════════════ -->
+<div id="page-politique" class="page">
+  <section style="padding:100px 0 80px;background:#000;">
+    <div class="container legal-wrap">
+      <div class="legal-hero">
+        <p class="section-tag">Politique de Confidentialité</p>
+        <h1 class="section-title">Protection de <span class="gradient-text">vos données</span></h1>
+        <p class="legal-date">Dernière mise à jour : Avril 2026 — Version 2.0</p>
+        <p class="legal-body" style="margin-top:18px;">La confidentialité de vos données est au cœur de notre métier. En utilisant les services de Vortex Rights, vous acceptez les pratiques décrites ci-dessous.</p>
+      </div>
+      <div class="legal-block accent"><h2><span class="legal-num">01</span>Données Collectées</h2><p class="legal-body">Nous collectons uniquement les informations strictement nécessaires à l'exécution de notre mission : identité artistique, visuels et médias fournis par l'artiste, coordonnées de paiement transmises au distributeur uniquement (non conservées), et accès temporaires pour la configuration technique.</p><div class="legal-note">⚠️ Nous ne collectons jamais d'informations sans lien direct avec la mission définie au contrat.</div></div>
+      <div class="legal-block"><h2><span class="legal-num">02</span>Utilisation des Données</h2><p class="legal-body">Vos données sont utilisées exclusivement pour la création de vos profils officiels, la soumission de demandes de certification, et la communication contractuelle. <strong style="color:#fff;">Aucune donnée n'est vendue, louée ou partagée</strong> à des tiers non impliqués dans l'exécution de la mission.</p></div>
+      <div class="legal-block accent"><h2><span class="legal-num">03</span>Gestion des Accès</h2><p class="legal-body">Les accès confiés sont utilisés exclusivement pour les paramétrages techniques définis au contrat. À la fin de chaque mission : transfert de tous les identifiants dans les <strong style="color:#fff;">48h ouvrables</strong>, suppression définitive de nos accès, et confirmation écrite par email sur demande.</p></div>
+      <div class="legal-block accent"><h2><span class="legal-num">04</span>Conservation & Suppression</h2><p class="legal-body">Vos données sont supprimées définitivement dans un délai de <strong style="color:#fff;">30 jours</strong> suivant la clôture du contrat. Sur demande écrite à contact@vortexrights.com, nous traitons la suppression dans les 72h.</p><div class="legal-note">⚠️ Exception : les documents contractuels peuvent être conservés jusqu'à 5 ans à des fins légales.</div></div>
+      <div class="legal-block"><h2><span class="legal-num">05</span>Vos Droits</h2><ul class="legal-list"><li>Droit d'accès : obtenir la liste des données que nous détenons sur vous</li><li>Droit de rectification : corriger toute information inexacte</li><li>Droit à l'effacement : suppression avant le délai de 30 jours</li><li>Droit de confirmation : email attestant la déconnexion complète</li></ul><p class="legal-body" style="margin-top:12px;">Contact : <a href="mailto:contact@vortexrights.com" style="color:var(--blue);">contact@vortexrights.com</a></p></div>
+      <div class="legal-block"><h2><span class="legal-num">06</span>Juridiction</h2><p class="legal-body">Cette politique est régie par le droit haïtien. Vortex Rights est en cours d'enregistrement officiel. Toute mise à jour substantielle sera communiquée par email 15 jours avant son entrée en vigueur.</p></div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════════════════════════
+     PAGE : CONDITIONS GÉNÉRALES
+══════════════════════════════════════ -->
+<div id="page-conditions" class="page">
+  <section style="padding:100px 0 80px;background:#000;">
+    <div class="container legal-wrap">
+      <div class="legal-hero">
+        <p class="section-tag">Conditions Générales</p>
+        <h1 class="section-title">Conditions Générales <span class="gradient-text">de Service</span></h1>
+        <p class="legal-date">Avril 2026</p>
+      </div>
+      <div class="legal-block"><h2><span class="legal-num">01</span>Nature du Service</h2><p class="legal-body">Vortex Rights agit en tant qu'administrateur technique. L'artiste conserve 100% de la propriété intellectuelle de ses œuvres à tout moment.</p></div>
+      <div class="legal-block accent"><h2><span class="legal-num">02</span>Modalités de Paiement</h2><ul class="legal-list"><li><strong>70% d'acompte</strong> — à verser au début de la mission pour couvrir les frais techniques et l'ouverture du dossier.</li><li><strong>30% de solde</strong> — à verser après la livraison finale des accès et confirmations de distribution.</li></ul></div>
+      <div class="legal-block accent"><h2><span class="legal-num">03</span>Garantie de Transparence</h2><p class="legal-body">À chaque étape clé (soumission au distributeur, validation ISRC, activation Content ID), une <strong style="color:#fff;">capture d'écran de confirmation</strong> est envoyée au client via WhatsApp ou Email.</p></div>
+      <div class="legal-block"><h2><span class="legal-num">04</span>Délais</h2><p class="legal-body">Les délais de distribution dépendent des plateformes (généralement 3 à 10 jours ouvrés). Vortex Rights ne peut être tenu responsable des retards causés par les distributeurs tiers après soumission.</p></div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="nav-logo" style="font-size:16px;" onclick="nav(event,'accueil')" aria-label="Vortex Rights — Retour à l'accueil"><span class="vx-word">VORTEX</span><span class="ri-word">RIGHTS</span></a>
+        <p class="footer-brand-desc">Le pont entre votre talent et vos revenus. Conciergerie digitale pour artistes haïtiens.</p>
+      </div>
+      <nav aria-label="Navigation secondaire">
+        <p class="footer-heading">Navigation</p>
+        <ul class="footer-links">
+          <li><a href="#" onclick="nav(event,'apropos')">À Propos</a></li>
+          <li><a href="#" onclick="nav(event,'services')">Services</a></li>
+          <li><a href="#" onclick="nav(event,'tarifs')">Tarifs</a></li>
+          <li><a href="#" onclick="nav(event,'contact')">Contact</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Informations légales">
+        <p class="footer-heading">Informations</p>
+        <ul class="footer-links">
+          <li><a href="#" onclick="nav(event,'faq')">FAQ</a></li>
+          <li><a href="#" onclick="nav(event,'politique')">Politique de Confidentialité</a></li>
+          <li><a href="#" onclick="nav(event,'conditions')">Conditions Générales</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="footer-heading">Contact</p>
+        <ul class="footer-links">
+          <li><a href="mailto:contact@vortexrights.com" aria-label="Envoyer un email à Vortex Rights">contact@vortexrights.com</a></li>
+          <li><a href="https://wa.me/50943469043" target="_blank" rel="noopener noreferrer" aria-label="Contacter sur WhatsApp">+509 4346-9043</a></li>
+          <li><a href="https://www.instagram.com/vortexrightshaiti/" target="_blank" rel="noopener noreferrer" aria-label="Suivre sur Instagram">@vortexrightshaiti</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Vortex Rights © 2026. Tous droits réservés.</span>
+      <span>Propulsé en partenariat avec Blaka Recordz</span>
+    </div>
+  </div>
+</footer>
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Retour en haut de page">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<!-- PayPal SDK (chargé de façon différée) -->
+<script>
+  window.addEventListener('load', function() {
+    var s = document.createElement('script');
+    s.src = 'https://www.paypal.com/sdk/js?client-id=BAAr6QFiC7uIEjeAMjSrz51k4A1-UYL4o2AzLq1ZcqNK1asTmy2SYA7V4u8wW4zy7tijkhtzQtCZCUj7Pk&components=hosted-buttons&disable-funding=venmo&currency=USD';
+    s.async = true; s.defer = true;
+    document.body.appendChild(s);
+  });
+</script>
+
+<script>
+'use strict';
+
+// ── PAGE ROUTER ──
+const PAGES = ['accueil','services','tarifs','apropos','contact','faq','politique','conditions'];
+const BANNER_H = 36;
+let currentPage = 'accueil';
+
+function nav(e, page) {
+  if (e) e.preventDefault();
+  if (page === currentPage) { closeMenu(); return; }
+  
+  // Fade out
+  const el = document.getElementById('main-content');
+  el.style.opacity = '0';
+  el.style.transition = 'opacity 0.18s ease';
+  
+  setTimeout(() => {
+    PAGES.forEach(p => {
+      const el = document.getElementById('page-' + p);
+      if (el) el.classList.toggle('active', p === page);
+    });
+    currentPage = page;
+    
+    // Update nav aria-current
+    document.querySelectorAll('[data-page]').forEach(a => {
+      a.removeAttribute('aria-current');
+      if (a.dataset.page === page) a.setAttribute('aria-current', 'page');
+    });
+
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    closeMenu();
+    
+    el.style.opacity = '1';
+    
+    // Re-trigger scroll reveals on new page
+    setTimeout(observeReveals, 50);
+  }, 180);
+}
+
+// ── MOBILE MENU ──
+function toggleMenu(btn) {
+  const m = document.getElementById('nav-mobile');
+  const open = m.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open);
+  btn.innerHTML = open
+    ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+    : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+}
+
+function closeMenu() {
+  const m = document.getElementById('nav-mobile');
+  m.classList.remove('open');
+  const btn = document.querySelector('.nav-toggle');
+  if (btn) {
+    btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+  }
+}
+
+// ── SCROLL BEHAVIORS ──
+let lastScroll = 0;
+window.addEventListener('scroll', function() {
+  const s = window.scrollY;
+  
+  // Navbar position accounting for banner
+  const nb = document.getElementById('navbar');
+  if (s > BANNER_H) {
+    nb.classList.add('no-banner');
+  } else {
+    nb.classList.remove('no-banner');
+  }
+  
+  // Scroll top button
+  const st = document.getElementById('scroll-top');
+  st.classList.toggle('visible', s > 400);
+  
+  lastScroll = s;
+}, { passive: true });
+
+// ── SCROLL REVEAL ──
+function observeReveals() {
+  const els = document.querySelectorAll('.page.active .reveal');
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(el => el.classList.add('visible'));
+    return;
+  }
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(el => obs.observe(el));
+}
+
+// ── FAQ ACCORDION ──
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen);
+}
+
+// ── CONTACT FORM ──
+(function() {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  function setErr(id, msg) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = msg;
+    const input = id === 'err-name' ? document.getElementById('cf-name')
+                : id === 'err-email' ? document.getElementById('cf-email')
+                : document.getElementById('cf-msg');
+    if (input) { msg ? input.classList.add('error') : input.classList.remove('error'); }
+  }
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('cf-name').value.trim();
+    const email = document.getElementById('cf-email').value.trim();
+    const pack = document.getElementById('cf-pack').value;
+    const msg = document.getElementById('cf-msg').value.trim();
+    const btn = document.getElementById('cf-submit');
+    const fb = document.getElementById('cf-feedback');
+
+    // Clear
+    ['err-name','err-email','err-msg'].forEach(id => setErr(id, ''));
+    fb.innerHTML = '';
+
+    let valid = true;
+    if (!name) { setErr('err-name','Veuillez entrer votre nom.'); valid = false; }
+    if (email && !emailRx.test(email)) { setErr('err-email','Email invalide.'); valid = false; }
+    if (!msg) { setErr('err-msg','Veuillez décrire votre projet.'); valid = false; }
+    if (!valid) return;
+
+    btn.disabled = true;
+    btn.innerHTML = '<span class="btn-spinner" aria-hidden="true"></span> Envoi en cours…';
+
+    const packInfo = pack ? ` Intéressé par le ${pack}.` : '';
+    const emailInfo = email ? ` (${email})` : '';
+    const waMsg = `Bonjour Vortex Rights, je suis ${name}${emailInfo}.${packInfo} ${msg}`;
+
+    setTimeout(() => {
+      const w = window.open('https://wa.me/50943469043?text=' + encodeURIComponent(waMsg), '_blank');
+      btn.disabled = false;
+      btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m22 2-7 19-4-9-9-4Z"/><path d="M22 2 11 13"/></svg> Envoyer via WhatsApp';
+      if (w) {
+        fb.innerHTML = '<div class="alert alert-success">Message préparé dans WhatsApp. Finalisez l\'envoi — réponse sous 24h.</div>';
+      } else {
+        fb.innerHTML = '<div class="alert alert-error">Impossible d\'ouvrir WhatsApp. Autorisez les pop-ups et réessayez.</div>';
+      }
+    }, 800);
+  });
+})();
+
+// ── INIT ──
+document.addEventListener('DOMContentLoaded', function() {
+  observeReveals();
+  // Banner hide on scroll
+  window.dispatchEvent(new Event('scroll'));
+});
+</script>
+
 </body>
 </html>
