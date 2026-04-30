@@ -1,6 +1,8 @@
 {
   "rewrites": [
     { "source": "/api/:path*", "destination": "/api/:path*" },
+    { "source": "/blog/badge-youtube-oac-artiste-haitien", "destination": "/blog-badge-youtube-oac-artiste-haitien.html" },
+    { "source": "/blog/badge-youtube-oac-artiste-haitien/", "destination": "/blog-badge-youtube-oac-artiste-haitien.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "headers": [

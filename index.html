@@ -44,7 +44,7 @@
         "@id": "https://www.vortexrights.com/#organization",
         "name": "Vortex Rights",
         "url": "https://www.vortexrights.com",
-        "logo": "https://www.vortexrights.com/Public/images/favicon.jpg",
+        "logo": "https://www.vortexrights.com/Public/images/favicon.png",
         "description": "Agence de conciergerie digitale musicale pour artistes haïtiens - distribution, badge OAC, Content ID, 0% commission.",
         "foundingDate": "2026",
         "founder": { "@type": "Person", "name": "Wood Jerry Fils-Aimé" },
@@ -82,8 +82,10 @@
   </script>
 
   <!-- FAVICON -->
-  <link rel="icon" type="image/png" href="./Public/images/favicon.png">
-  <link rel="apple-touch-icon" href="./Public/images/favicon.png">
+  <link rel="icon" type="image/png" href="/Public/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Public/images/favicon32px.png">
+  <link rel="shortcut icon" href="/Public/images/favicon32px.png">
+  <link rel="apple-touch-icon" href="/Public/images/favicon.png">
   <meta name="theme-color" content="#1a6dff">
   <meta name="msapplication-TileColor" content="#1a6dff">
 
@@ -672,6 +674,240 @@
     }
     .vrx-highlight-box svg { width: 18px; height: 18px; stroke: var(--orange); fill: none; stroke-width: 2; flex-shrink: 0; }
 
+    /* BLOG FULL PAGE (SPA) */
+    #page-blog { background: #09090f; }
+    .blogx-wrap { padding: 100px 0 80px; }
+    .blogx-hero {
+      background: linear-gradient(180deg, #0d0d1a 0%, #09090f 100%);
+      border: 1px solid #1d1d2e;
+      border-radius: 16px;
+      padding: 54px 24px 46px;
+      text-align: center;
+      margin-bottom: 34px;
+    }
+    .blogx-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(59,130,246,.1);
+      border: 1px solid rgba(59,130,246,.25);
+      border-radius: 99px;
+      padding: 5px 14px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #3b82f6;
+      margin-bottom: 22px;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .blogx-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(38px, 7vw, 66px);
+      line-height: 1.05;
+      max-width: 840px;
+      margin: 0 auto 18px;
+    }
+    .blogx-title .a { color: #3b82f6; }
+    .blogx-title .b { color: #f97316; }
+    .blogx-meta {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 13px;
+      color: #777799;
+      margin-top: 16px;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .blogx-meta span { display: flex; align-items: center; gap: 6px; }
+    .blogx-meta svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; }
+    .blogx-container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 6px;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .blogx-lead {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #c0c0da;
+      border-left: 3px solid #3b82f6;
+      padding-left: 20px;
+      margin-bottom: 48px;
+    }
+    .blogx-container h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(28px, 5vw, 40px);
+      line-height: 1.1;
+      margin: 52px 0 18px;
+      color: #eeeef5;
+    }
+    .blogx-container h2 .accent { color: #3b82f6; }
+    .blogx-container h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 32px 0 12px;
+      color: #eeeef5;
+    }
+    .blogx-container p { margin-bottom: 18px; color: #b8b8d0; }
+    .blogx-toc {
+      background: #111118;
+      border: 1px solid #1d1d2e;
+      border-radius: 10px;
+      padding: 22px 24px;
+      margin-bottom: 44px;
+    }
+    .blogx-toc-title {
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #777799;
+      margin-bottom: 14px;
+    }
+    .blogx-toc ol { padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+    .blogx-toc li { font-size: 14px; }
+    .blogx-toc a { color: #3b82f6; text-decoration: none; }
+    .blogx-toc a:hover { text-decoration: underline; }
+    .blogx-proof-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 28px 0 36px;
+    }
+    .blogx-proof-card {
+      background: #14141e;
+      border: 1px solid #1d1d2e;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform .25s, border-color .25s;
+    }
+    .blogx-proof-card:hover { transform: translateY(-4px); border-color: #2a2a44; }
+    .blogx-proof-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+      border-bottom: 1px solid #1d1d2e;
+    }
+    .blogx-proof-card.reveal img {
+      filter: blur(5px) brightness(.78) saturate(.9);
+      transition: filter .85s ease;
+    }
+    .blogx-proof-card.reveal.visible img { filter: none; }
+    .blogx-proof-card.reveal:nth-child(2) { transition-delay: .12s; }
+    .blogx-proof-card.reveal:nth-child(3) { transition-delay: .24s; }
+    .blogx-proof-card.reveal:nth-child(2) img { transition-delay: .12s; }
+    .blogx-proof-card.reveal:nth-child(3) img { transition-delay: .24s; }
+    .blogx-proof-info { padding: 14px 16px; display: flex; flex-direction: column; gap: 4px; }
+    .blogx-proof-name { font-weight: 700; font-size: 14px; color: #eeeef5; }
+    .blogx-proof-detail { font-size: 12px; color: #777799; }
+    .blogx-proof-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(34,197,94,.1);
+      border: 1px solid rgba(34,197,94,.25);
+      border-radius: 99px;
+      padding: 3px 10px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #22c55e;
+      margin-top: 6px;
+      width: fit-content;
+    }
+    .blogx-proof-badge::before { content: '✓'; }
+    .blogx-steps { display: flex; flex-direction: column; gap: 0; margin: 28px 0; }
+    .blogx-step {
+      display: flex;
+      gap: 20px;
+      padding: 24px 0;
+      border-bottom: 1px solid #1d1d2e;
+    }
+    .blogx-step:last-child { border-bottom: none; }
+    .blogx-step-n {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 36px;
+      color: #1d1d2e;
+      line-height: 1;
+      flex-shrink: 0;
+      width: 36px;
+      text-align: right;
+    }
+    .blogx-step-body { flex: 1; }
+    .blogx-step-body strong { display: block; font-size: 16px; color: #eeeef5; margin-bottom: 8px; }
+    .blogx-step-body p { margin: 0; font-size: 14.5px; }
+    .blogx-callout {
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin: 28px 0;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      font-size: 14.5px;
+      line-height: 1.65;
+    }
+    .blogx-callout svg { width: 20px; height: 20px; flex-shrink: 0; margin-top: 2px; }
+    .blogx-callout.info { background: rgba(59,130,246,.08); border: 1px solid rgba(59,130,246,.2); color: #a0c4ff; }
+    .blogx-callout.info svg { stroke: #3b82f6; fill: none; stroke-width: 2; }
+    .blogx-callout.warn { background: rgba(249,115,22,.08); border: 1px solid rgba(249,115,22,.2); color: #fbb07a; }
+    .blogx-callout.warn svg { stroke: #f97316; fill: none; stroke-width: 2; }
+    .blogx-callout.success { background: rgba(34,197,94,.08); border: 1px solid rgba(34,197,94,.2); color: #86efac; }
+    .blogx-callout.success svg { stroke: #22c55e; fill: none; stroke-width: 2; }
+    .blogx-cta {
+      margin: 56px 0 0;
+      background: linear-gradient(135deg, #0e1525, #141420);
+      border: 1px solid #1d1d2e;
+      border-radius: 16px;
+      padding: 40px 32px;
+      text-align: center;
+    }
+    .blogx-cta h2 { margin-top: 0; font-size: clamp(26px, 5vw, 38px); }
+    .blogx-cta p { max-width: 500px; margin: 0 auto 28px; font-size: 15px; }
+    .blogx-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #3b82f6;
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background .2s, transform .2s;
+    }
+    .blogx-cta-btn:hover { background: #2563eb; transform: translateY(-2px); }
+    .blogx-author {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      background: #14141e;
+      border: 1px solid #1d1d2e;
+      border-radius: 12px;
+      padding: 22px 24px;
+      margin: 48px 0 0;
+    }
+    .blogx-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      border: 2px solid rgba(255,255,255,0.16);
+      flex-shrink: 0;
+    }
+    .blogx-name { font-weight: 700; font-size: 15px; color: #eeeef5; }
+    .blogx-role { font-size: 13px; color: #777799; margin-top: 2px; }
+    @media (max-width: 768px) {
+      .blogx-wrap { padding: 84px 0 60px; }
+      .blogx-hero { padding: 42px 18px 36px; }
+      .blogx-container { padding: 0 2px; }
+      .blogx-step { gap: 12px; }
+      .blogx-step-n { width: 28px; font-size: 30px; }
+      .blogx-author { align-items: flex-start; }
+    }
+
     /* RESPONSIVE */
     @media (max-width: 768px) {
       section { padding: 60px 0; }
@@ -708,6 +944,7 @@
       <a href="/" role="menuitem" data-page="accueil" onclick="nav(event,'accueil')" aria-current="page">Accueil</a>
       <a href="/services" role="menuitem" data-page="services" onclick="nav(event,'services')">Services</a>
       <a href="/tarifs" role="menuitem" data-page="tarifs" onclick="nav(event,'tarifs')">Tarifs</a>
+      <a href="/blog/badge-youtube-oac-artiste-haitien" role="menuitem" data-page="blog" onclick="nav(event,'blog')">Blog</a>
       <a href="/a-propos" role="menuitem" data-page="apropos" onclick="nav(event,'apropos')">&Agrave; Propos</a>
       <a href="/contact" role="menuitem" data-page="contact" onclick="nav(event,'contact')">Contact</a>
       <a href="/commande" data-page="commande" onclick="nav(event,'commande')" class="nav-cta btn" role="menuitem">Commencer</a>
@@ -720,6 +957,7 @@
     <a href="/" role="menuitem" data-page="accueil" onclick="nav(event,'accueil')">Accueil</a>
     <a href="/services" role="menuitem" data-page="services" onclick="nav(event,'services')">Services</a>
     <a href="/tarifs" role="menuitem" data-page="tarifs" onclick="nav(event,'tarifs')">Tarifs</a>
+    <a href="/blog/badge-youtube-oac-artiste-haitien" role="menuitem" data-page="blog" onclick="nav(event,'blog')">Blog</a>
     <a href="/a-propos" role="menuitem" data-page="apropos" onclick="nav(event,'apropos')">&Agrave; Propos</a>
     <a href="/contact" role="menuitem" data-page="contact" onclick="nav(event,'contact')">Contact</a>
     <a href="/faq" role="menuitem" data-page="faq" onclick="nav(event,'faq')">FAQ</a>
@@ -1557,6 +1795,235 @@
   </section>
 </div>
 
+<!-- ===== PAGE : BLOG ===== -->
+<div id="page-blog" class="page">
+  <section class="blogx-wrap">
+    <div class="container">
+      <header class="blogx-hero">
+        <div class="blogx-tag">Guide Pratique · YouTube OAC</div>
+        <h1 class="blogx-title">Comment obtenir le badge <span class="a">YouTube OAC</span><br/>en tant qu'artiste <span class="b">haïtien</span></h1>
+        <div class="blogx-meta">
+          <span>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg>
+            Wood Jerry Fils-Aimé · Vortex Rights
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            30 avril 2026
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            8 min de lecture
+          </span>
+        </div>
+      </header>
+
+      <div class="blogx-container">
+        <p class="blogx-lead">
+          Le badge YouTube Official Artist Channel (OAC) est la clé qui ouvre les vrais outils de YouTube pour un artiste : statistiques avancées, contrôle total des métadonnées, crédibilité renforcée, et protection contre les revendications abusives. Voici comment l'obtenir — même depuis Haïti ou la diaspora.
+        </p>
+
+        <div class="blogx-toc">
+          <div class="blogx-toc-title">Dans cet article</div>
+          <ol>
+            <li><a href="#cest-quoi">C'est quoi le badge YouTube OAC ?</a></li>
+            <li><a href="#conditions">Les conditions pour l'obtenir</a></li>
+            <li><a href="#etapes">Les étapes complètes</a></li>
+            <li><a href="#preuves">Artistes haïtiens certifiés — preuves réelles</a></li>
+            <li><a href="#problemes">Les problèmes courants et comment les éviter</a></li>
+            <li><a href="#vortex">Comment Vortex Rights vous accompagne</a></li>
+          </ol>
+        </div>
+
+        <h2 id="cest-quoi">C'est quoi le badge <span class="accent">YouTube OAC</span> ?</h2>
+        <p>Le badge OAC — <em>Official Artist Channel</em> — est une certification officielle de YouTube qui regroupe automatiquement toutes les sorties musicales d'un artiste sur une seule chaîne unifiée. Il se présente sous la forme d'une petite icône musicale (🎵) à côté du nom de la chaîne.</p>
+        <p>Une fois certifié, YouTube fusionne automatiquement vos clips officiels, vos albums et vos singles dans des onglets dédiés (<strong>Musique</strong>, <strong>Albums</strong>). Vos fans trouvent tout au même endroit. Personne ne peut revendiquer votre contenu à votre place.</p>
+
+        <div class="blogx-callout info">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div>Le badge OAC est <strong>différent du badge de vérification</strong> (la coche grise ou bleue). Le OAC est exclusivement réservé aux artistes musicaux et donne accès à des outils que la vérification classique ne donne pas.</div>
+        </div>
+
+        <h2 id="conditions">Les conditions <span class="accent">pour l'obtenir</span></h2>
+        <div class="blogx-steps">
+          <div class="blogx-step">
+            <div class="blogx-step-n">1</div>
+            <div class="blogx-step-body">
+              <strong>Avoir au moins 1 single ou album distribué sur les plateformes officielles</strong>
+              <p>Votre musique doit être disponible sur Spotify, Apple Music, ou une autre plateforme de streaming majeure. C'est la preuve que vous êtes un artiste publié officiellement. Vous devez passer par un distributeur comme DistroKid, TuneCore, ou un autre.</p>
+            </div>
+          </div>
+          <div class="blogx-step">
+            <div class="blogx-step-n">2</div>
+            <div class="blogx-step-body">
+              <strong>Avoir une chaîne YouTube active avec au moins quelques vidéos</strong>
+              <p>YouTube vérifie que votre chaîne est réelle et active. Idéalement au moins 3 vidéos publiées, même avec peu de vues. La qualité du contenu compte plus que le nombre d'abonnés.</p>
+            </div>
+          </div>
+          <div class="blogx-step">
+            <div class="blogx-step-n">3</div>
+            <div class="blogx-step-body">
+              <strong>Respecter les politiques de YouTube</strong>
+              <p>Aucun avertissement de droits d'auteur actif sur votre chaîne, pas de contenu qui viole les conditions d'utilisation. Si votre chaîne a des problèmes, réglez-les d'abord.</p>
+            </div>
+          </div>
+          <div class="blogx-step">
+            <div class="blogx-step-n">4</div>
+            <div class="blogx-step-body">
+              <strong>Le nom de votre chaîne doit correspondre à votre nom d'artiste</strong>
+              <p>YouTube vérifie la cohérence entre le nom de votre chaîne et le nom sous lequel votre musique est distribuée. Une incohérence est la cause d'échec la plus fréquente.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="blogx-callout warn">
+          <svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <div><strong>Erreur courante chez les artistes haïtiens :</strong> avoir distribué sa musique sous un nom légèrement différent du nom de la chaîne YouTube (ex: accent manquant, prénom inclus ou non). Ce détail bloque la certification dans 60% des cas.</div>
+        </div>
+
+        <h2 id="etapes">Les étapes <span class="accent">complètes</span></h2>
+        <p>Voici le processus exact, de A à Z. C'est précisément ce que Vortex Rights réalise pour vous.</p>
+
+        <div class="blogx-steps">
+          <div class="blogx-step">
+            <div class="blogx-step-n">1</div>
+            <div class="blogx-step-body">
+              <strong>Vérifier et aligner vos métadonnées</strong>
+              <p>Confirmer que le nom d'artiste sur DistroKid/TuneCore correspond exactement au nom de votre chaîne YouTube. Corriger si nécessaire avant de faire la demande.</p>
+            </div>
+          </div>
+          <div class="blogx-step">
+            <div class="blogx-step-n">2</div>
+            <div class="blogx-step-body">
+              <strong>Accéder au portail de demande YouTube for Artists</strong>
+              <p>La demande se fait via votre distributeur ou via le portail officiel YouTube for Artists. Le formulaire demande le lien de votre chaîne, vos plateformes de streaming, et une preuve que vous êtes l'artiste officiel.</p>
+            </div>
+          </div>
+          <div class="blogx-step">
+            <div class="blogx-step-n">3</div>
+            <div class="blogx-step-body">
+              <strong>Soumettre les preuves d'identité d'artiste</strong>
+              <p>Liens vers votre profil Spotify for Artists, Apple Music for Artists, ou tout autre profil artiste officiel. Plus vous en fournissez, plus la vérification est rapide.</p>
+            </div>
+          </div>
+          <div class="blogx-step">
+            <div class="blogx-step-n">4</div>
+            <div class="blogx-step-body">
+              <strong>Attendre la validation YouTube</strong>
+              <p>Le délai officiel est de 5 à 14 jours ouvrables. Dans les cas traités par Vortex Rights, nos artistes reçoivent leur badge entre 7 et 12 jours en moyenne.</p>
+            </div>
+          </div>
+          <div class="blogx-step">
+            <div class="blogx-step-n">5</div>
+            <div class="blogx-step-body">
+              <strong>Recevoir et configurer votre chaîne OAC</strong>
+              <p>Une fois approuvé, YouTube active automatiquement les onglets Musique et Albums sur votre chaîne. Vous pouvez ensuite personnaliser votre profil artiste via YouTube Studio.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2 id="preuves">Artistes haïtiens certifiés — <span class="accent">preuves réelles</span></h2>
+        <p>Ces résultats ne sont pas des exemples fictifs. Ce sont des artistes réels accompagnés par Vortex Rights. Leurs chaînes YouTube sont publiques et vérifiables.</p>
+
+        <div class="blogx-proof-grid">
+          <div class="blogx-proof-card reveal">
+            <img src="/Public/images/blog/oac-bx-gonz.jpg" alt="Chaîne YouTube officielle BX Gonz avec badge OAC" loading="lazy"/>
+            <div class="blogx-proof-info">
+              <div class="blogx-proof-name">BX Gonz</div>
+              <div class="blogx-proof-detail">@TheofficialBXGonz4 · 405 abonnés · 93 vidéos</div>
+              <div class="blogx-proof-badge">Badge OAC obtenu</div>
+            </div>
+          </div>
+          <div class="blogx-proof-card reveal">
+            <img src="/Public/images/blog/oac-bigi-blaka.jpg" alt="Chaîne YouTube officielle Bigi Blaka avec badge OAC" loading="lazy"/>
+            <div class="blogx-proof-info">
+              <div class="blogx-proof-name">Bigi Blaka</div>
+              <div class="blogx-proof-detail">@bigiblaka · 351 abonnés · 5 vidéos</div>
+              <div class="blogx-proof-badge">Badge OAC obtenu</div>
+            </div>
+          </div>
+          <div class="blogx-proof-card reveal">
+            <img src="/Public/images/blog/oac-lil-shee-mike.jpg" alt="Chaîne YouTube officielle Lil Shee Mike avec badge OAC" loading="lazy"/>
+            <div class="blogx-proof-info">
+              <div class="blogx-proof-name">Lil Shee Mike</div>
+              <div class="blogx-proof-detail">@lilsheemike · 207 abonnés · 4 vidéos</div>
+              <div class="blogx-proof-badge">Badge OAC obtenu</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="blogx-callout success">
+          <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <div>Ces 3 artistes ont obtenu leur badge OAC grâce à Vortex Rights. <strong>Vous pouvez vérifier leurs chaînes directement sur YouTube</strong> en cherchant leurs noms. Le badge 🎵 est visible publiquement.</div>
+        </div>
+
+        <h2 id="problemes">Les problèmes courants <span class="accent">et comment les éviter</span></h2>
+        <h3>❌ Refus de demande : nom d'artiste incohérent</h3>
+        <p>C'est la cause #1 de rejet. Si votre musique est distribuée sous "Jean-Marc" mais que votre chaîne s'appelle "Jeanmarc Officiel", YouTube ne peut pas faire le lien automatiquement. Solution : aligner les noms avant de soumettre.</p>
+        <h3>❌ Chaîne sans contenu suffisant</h3>
+        <p>YouTube refuse les chaînes avec moins de 3 vidéos ou des chaînes inactives depuis plus d'un an. Publiez au minimum un clip ou une lyric video récente avant de faire la demande.</p>
+        <h3>❌ Pas de profil Spotify for Artists ou Apple Music for Artists</h3>
+        <p>Sans accès à ces profils, vous ne pouvez pas fournir la preuve d'identité artiste requise. C'est pourquoi Vortex Rights commence souvent par la certification Spotify before YouTube.</p>
+        <h3>❌ Utiliser un compte YouTube personnel au lieu d'une Brand Account</h3>
+        <p>Pour les artistes, il est fortement recommandé d'utiliser une Brand Account YouTube (compte de marque) séparée de votre compte Google personnel. Cela facilite la gestion et la transmission des accès.</p>
+
+        <h2 id="vortex">Comment <span class="accent">Vortex Rights</span> vous accompagne</h2>
+        <p>Obtenir le badge OAC peut prendre des semaines si vous naviguez seul entre les formulaires YouTube, les paramètres de distributeur, et les corrections de métadonnées. Vortex Rights est votre partenaire technique qui gère tout ça à votre place.</p>
+
+        <div class="blogx-steps">
+          <div class="blogx-step">
+            <div class="blogx-step-n">1</div>
+            <div class="blogx-step-body">
+              <strong>Audit complet de votre infrastructure digitale</strong>
+              <p>On vérifie votre chaîne YouTube, vos métadonnées chez votre distributeur, et votre présence sur Spotify/Apple Music avant même de commencer.</p>
+            </div>
+          </div>
+          <div class="blogx-step">
+            <div class="blogx-step-n">2</div>
+            <div class="blogx-step-body">
+              <strong>Correction et alignement des données</strong>
+              <p>On corrige toutes les incohérences qui pourraient bloquer votre demande — sans que vous ayez à toucher quoi que ce soit vous-même.</p>
+            </div>
+          </div>
+          <div class="blogx-step">
+            <div class="blogx-step-n">3</div>
+            <div class="blogx-step-body">
+              <strong>Soumission et suivi de la demande</strong>
+              <p>On soumet la demande officielle et on la suit jusqu'à approbation. Chaque étape est documentée et partagée avec vous par WhatsApp ou email.</p>
+            </div>
+          </div>
+          <div class="blogx-step">
+            <div class="blogx-step-n">4</div>
+            <div class="blogx-step-body">
+              <strong>Transfert complet des accès en 48h</strong>
+              <p>Une fois le badge obtenu et votre solde réglé, on vous transfère la pleine propriété de tous les comptes. Vous êtes 100% autonome. 0% de commission.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="blogx-cta">
+          <h2>Prêt à obtenir votre <span class="accent">badge OAC</span> ?</h2>
+          <p>Rejoignez BX Gonz, Bigi Blaka, Lil Shee Mike et tous les artistes haïtiens qui ont déjà franchi le pas avec Vortex Rights.</p>
+          <a href="/tarifs" data-page="tarifs" onclick="nav(event,'tarifs')" class="blogx-cta-btn">
+            Voir nos packs →
+          </a>
+        </div>
+
+        <hr style="border:none;border-top:1px solid #1d1d2e;margin:40px 0;"/>
+
+        <div class="blogx-author">
+          <img class="blogx-avatar" src="/Public/images/fondateur.jpg" alt="Photo du fondateur Wood Jerry Fils-Aimé" loading="lazy"/>
+          <div>
+            <div class="blogx-name">Wood Jerry Fils-Aimé</div>
+            <div class="blogx-role">Fondateur & PDG · Vortex Rights · Port-au-Prince, Haïti</div>
+            <p style="font-size:13px; margin-top:8px; margin-bottom:0;">Artiste, beatmaker et développeur web. Fondateur de Blaka Recordz. Il a créé Vortex Rights pour donner aux artistes haïtiens les outils techniques dont ils ont besoin pour contrôler leur carrière.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
 <!-- ===== PAGE : FAQ ===== -->
 <div id="page-faq" class="page">
   <section style="padding:100px 0 80px;background:#000;">
@@ -1660,6 +2127,7 @@
           <li><a href="/a-propos" onclick="nav(event,'apropos')">&Agrave; Propos</a></li>
           <li><a href="/services" onclick="nav(event,'services')">Services</a></li>
           <li><a href="/tarifs" onclick="nav(event,'tarifs')">Tarifs</a></li>
+          <li><a href="/blog/badge-youtube-oac-artiste-haitien" data-page="blog" onclick="nav(event,'blog')">Blog</a></li>
           <li><a href="/contact" onclick="nav(event,'contact')">Contact</a></li>
         </ul>
       </nav>
@@ -1710,7 +2178,7 @@
 /* =========================================================
    CONSTANTES & CONFIG
    ========================================================= */
-const PAGES = ['accueil','services','tarifs','commande','merci','apropos','contact','faq','politique','conditions','404'];
+const PAGES = ['accueil','services','tarifs','blog','commande','merci','apropos','contact','faq','politique','conditions','404'];
 const CANONICAL_BASE = 'https://www.vortexrights.com';
 const LAUNCH_END_AT = new Date('2026-07-30T23:59:59-04:00').getTime();
 const PAGE_SEO = {
@@ -1728,6 +2196,11 @@ const PAGE_SEO = {
     path: '/tarifs',
     title: 'Nos Tarifs - Vortex Rights',
     description: 'Consultez des tarifs transparents pour accelerer votre carriere musicale : packs Decollage, Pro et Label.'
+  },
+  blog: {
+    path: '/blog/badge-youtube-oac-artiste-haitien',
+    title: 'Comment Obtenir le Badge YouTube OAC - Vortex Rights',
+    description: 'Guide pratique pour artistes haitiens : obtenir le badge YouTube Official Artist Channel (OAC) et structurer votre presence digitale.'
   },
   apropos: {
     path: '/a-propos',
@@ -1797,6 +2270,7 @@ const COUNTRY_CONFIG = {
 };
 // FIX: lien PayPal.me — remplacer "vortexrights" par votre vrai identifiant PayPal.me
 const PAYPAL_ME_BASE = 'https://www.paypal.me/vortexrights';
+const BLOG_SLUG_PATH = 'blog/badge-youtube-oac-artiste-haitien';
 
 /* =========================================================
    ROUTER
@@ -1898,6 +2372,7 @@ function nav(e, page, updateHistory = true) {
 
 function pageFromPath(pathname) {
   const clean = String(pathname || '/').replace(/^\/+|\/+$/g, '');
+  if (clean === BLOG_SLUG_PATH || clean === 'blog' || clean === 'blog-badge-youtube-oac-artiste-haitien.html' || clean === 'blog-badge-youtube-oac-artiste-haitien') return 'blog';
   if (!clean) return 'accueil';
   if (clean === 'a-propos' || clean === 'apropos') return 'apropos';
   if (PAGES.includes(clean)) return clean;

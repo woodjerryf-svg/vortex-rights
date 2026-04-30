@@ -4,8 +4,8 @@
   "description": "Vortex Rights - Services Musicaux",
   "main": "index.html",
   "scripts": {
-    "start": "npx serve -s .",
-    "dev": "npx serve -s . --listen 3000"
+    "start": "serve -s .",
+    "dev": "serve -s . --listen 3000"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1"
