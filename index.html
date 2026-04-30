@@ -467,7 +467,7 @@
 
 <!-- BANNER -->
 <div id="banner" role="banner" aria-label="Offre spéciale">
-  OFFRE DE LANCEMENT — 50% DE RÉDUCTION · <span style="color:#ff6b35">Expire bientôt !</span>
+  OFFRE DE LANCEMENT — 50% DE RÉDUCTION · <span id="launch-countdown" style="color:#ff6b35">Chargement du compte à rebours...</span>
 </div>
 
 <!-- NAVBAR -->
@@ -480,7 +480,7 @@
       <a href="/" role="menuitem" data-page="accueil" onclick="nav(event,'accueil')" aria-current="page">Accueil</a>
       <a href="/services" role="menuitem" data-page="services" onclick="nav(event,'services')">Services</a>
       <a href="/tarifs" role="menuitem" data-page="tarifs" onclick="nav(event,'tarifs')">Tarifs</a>
-      <a href="/apropos" role="menuitem" data-page="apropos" onclick="nav(event,'apropos')">&Agrave; Propos</a>
+      <a href="/a-propos" role="menuitem" data-page="apropos" onclick="nav(event,'apropos')">&Agrave; Propos</a>
       <a href="/contact" role="menuitem" data-page="contact" onclick="nav(event,'contact')">Contact</a>
       <a href="/commande" data-page="commande" onclick="nav(event,'commande')" class="nav-cta btn" role="menuitem">Commencer</a>
     </div>
@@ -492,7 +492,7 @@
     <a href="/" role="menuitem" data-page="accueil" onclick="nav(event,'accueil')">Accueil</a>
     <a href="/services" role="menuitem" data-page="services" onclick="nav(event,'services')">Services</a>
     <a href="/tarifs" role="menuitem" data-page="tarifs" onclick="nav(event,'tarifs')">Tarifs</a>
-    <a href="/apropos" role="menuitem" data-page="apropos" onclick="nav(event,'apropos')">&Agrave; Propos</a>
+    <a href="/a-propos" role="menuitem" data-page="apropos" onclick="nav(event,'apropos')">&Agrave; Propos</a>
     <a href="/contact" role="menuitem" data-page="contact" onclick="nav(event,'contact')">Contact</a>
     <a href="/faq" role="menuitem" data-page="faq" onclick="nav(event,'faq')">FAQ</a>
     <a href="/commande" role="menuitem" data-page="commande" onclick="nav(event,'commande')" style="background:var(--blue);color:#fff;padding:12px;border-radius:8px;text-align:center;font-weight:600;margin-top:6px;">Commencer</a>
@@ -780,7 +780,7 @@
 
         <form id="order-form" class="contact-form reveal" novalidate aria-label="Formulaire de commande Vortex Rights">
           <input type="hidden" name="_subject" value="Nouvelle commande Vortex Rights">
-          <input type="hidden" name="source" value="vortexrights.com">
+          <input type="hidden" name="source" value="www.vortexrights.com">
           <input type="hidden" name="submitted_at" id="order-submitted-at">
           <input type="hidden" name="pack_price" id="order-pack-price">
           <input type="hidden" name="cover_fee" id="order-cover-fee">
@@ -1284,7 +1284,7 @@
       <nav aria-label="Navigation secondaire">
         <p class="footer-heading">Navigation</p>
         <ul class="footer-links">
-          <li><a href="/apropos" onclick="nav(event,'apropos')">&Agrave; Propos</a></li>
+          <li><a href="/a-propos" onclick="nav(event,'apropos')">&Agrave; Propos</a></li>
           <li><a href="/services" onclick="nav(event,'services')">Services</a></li>
           <li><a href="/tarifs" onclick="nav(event,'tarifs')">Tarifs</a></li>
           <li><a href="/contact" onclick="nav(event,'contact')">Contact</a></li>
@@ -1338,6 +1338,65 @@
    CONSTANTES & CONFIG
    ========================================================= */
 const PAGES = ['accueil','services','tarifs','commande','merci','apropos','contact','faq','politique','conditions','404'];
+const CANONICAL_BASE = 'https://www.vortexrights.com';
+const LAUNCH_END_AT = new Date('2026-07-30T23:59:59-04:00').getTime();
+const PAGE_SEO = {
+  accueil: {
+    path: '/',
+    title: 'Vortex Rights - Conciergerie Digitale pour Artistes Haitiens',
+    description: "Vortex Rights professionnalise l'infrastructure musicale des artistes haitiens : distribution mondiale, badge OAC, Spotify for Artists, Content ID."
+  },
+  services: {
+    path: '/services',
+    title: 'Nos Services - Vortex Rights',
+    description: 'Distribution digitale, badge OAC YouTube, Spotify for Artists, Content ID et support expert pour artistes independants.'
+  },
+  tarifs: {
+    path: '/tarifs',
+    title: 'Nos Tarifs - Vortex Rights',
+    description: 'Consultez des tarifs transparents pour accelerer votre carriere musicale : packs Decollage, Pro et Label.'
+  },
+  apropos: {
+    path: '/a-propos',
+    title: 'A Propos - Vortex Rights',
+    description: "Decouvrez la mission, la vision et l'accompagnement de Vortex Rights pour la structuration des artistes haitiens."
+  },
+  contact: {
+    path: '/contact',
+    title: 'Contact - Vortex Rights',
+    description: "Contactez Vortex Rights pour lancer votre strategie de distribution et de protection de droits musicaux."
+  },
+  commande: {
+    path: '/commande',
+    title: 'Commander - Vortex Rights',
+    description: 'Demarrez votre commande Vortex Rights pour professionnaliser votre presence musicale en ligne.'
+  },
+  merci: {
+    path: '/merci',
+    title: 'Merci - Vortex Rights',
+    description: 'Confirmation de votre demande chez Vortex Rights.'
+  },
+  faq: {
+    path: '/faq',
+    title: 'FAQ - Vortex Rights',
+    description: 'Retrouvez les reponses aux questions frequentes sur les services Vortex Rights.'
+  },
+  politique: {
+    path: '/politique',
+    title: 'Politique de Confidentialite - Vortex Rights',
+    description: 'Consultez notre politique de confidentialite et la gestion de vos donnees personnelles.'
+  },
+  conditions: {
+    path: '/conditions',
+    title: "Conditions d'Utilisation - Vortex Rights",
+    description: "Consultez les conditions d'utilisation des services Vortex Rights."
+  },
+  '404': {
+    path: '/404',
+    title: 'Page Introuvable - Vortex Rights',
+    description: 'La page demandee est introuvable. Revenez vers les services Vortex Rights.'
+  }
+};
 const BANNER_H = 36;
 const ORDER_WHATSAPP = '50943469043';
 const EMAILJS_SERVICE_ID = 'service_fc7ulwt';
@@ -1370,6 +1429,64 @@ const PAYPAL_ME_BASE = 'https://www.paypal.me/vortexrights';
    ROUTER
    ========================================================= */
 let currentPage = 'accueil';
+let launchCountdownTimer = null;
+
+function pad2(n) {
+  return String(n).padStart(2, '0');
+}
+
+function renderLaunchCountdown() {
+  const el = document.getElementById('launch-countdown');
+  if (!el) return;
+
+  const diff = LAUNCH_END_AT - Date.now();
+  if (diff <= 0) {
+    el.textContent = 'Offre expirée le 30 juillet 2026';
+    if (launchCountdownTimer) {
+      clearInterval(launchCountdownTimer);
+      launchCountdownTimer = null;
+    }
+    return;
+  }
+
+  const totalSeconds = Math.floor(diff / 1000);
+  const days = Math.floor(totalSeconds / 86400);
+  const hours = Math.floor((totalSeconds % 86400) / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+
+  el.textContent = `Se termine dans ${days}j ${pad2(hours)}h ${pad2(minutes)}m ${pad2(seconds)}s`;
+}
+
+function startLaunchCountdown() {
+  renderLaunchCountdown();
+  if (launchCountdownTimer) clearInterval(launchCountdownTimer);
+  launchCountdownTimer = setInterval(renderLaunchCountdown, 1000);
+}
+
+function getSeoConfig(page) {
+  return PAGE_SEO[page] || PAGE_SEO['404'];
+}
+
+function applyDynamicSeo(page, path) {
+  const seo = getSeoConfig(page);
+  const resolvedPath = path || seo.path || '/';
+
+  const canonical = document.getElementById('canonical-tag');
+  if (canonical) canonical.setAttribute('href', CANONICAL_BASE + resolvedPath);
+
+  document.title = seo.title;
+
+  const description = document.querySelector('meta[name="description"]');
+  if (description) description.setAttribute('content', seo.description);
+
+  const ogUrl = document.querySelector('meta[property="og:url"]');
+  if (ogUrl) ogUrl.setAttribute('content', CANONICAL_BASE + resolvedPath);
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle) ogTitle.setAttribute('content', seo.title);
+  const ogDescription = document.querySelector('meta[property="og:description"]');
+  if (ogDescription) ogDescription.setAttribute('content', seo.description);
+}
 
 function nav(e, page, updateHistory = true) {
   if (e) e.preventDefault();
@@ -1391,18 +1508,13 @@ function nav(e, page, updateHistory = true) {
       if (a.dataset.page === page) a.setAttribute('aria-current', 'page');
     });
 
-    // FIX: canonical dynamique
-    const canonical = document.getElementById('canonical-tag');
-    if (canonical) {
-      const path = page === 'accueil' ? '/' : '/' + page;
-      canonical.setAttribute('href', 'https://www.vortexrights.com' + path);
-    }
+    const path = getSeoConfig(page).path;
+    applyDynamicSeo(page, path);
 
     window.scrollTo({ top: 0, behavior: 'instant' });
     closeMenu();
 
     if (updateHistory) {
-      const path = page === 'accueil' ? '/' : '/' + page;
       window.history.pushState({ page }, '', path);
     }
 
@@ -1414,6 +1526,7 @@ function nav(e, page, updateHistory = true) {
 function pageFromPath(pathname) {
   const clean = String(pathname || '/').replace(/^\/+|\/+$/g, '');
   if (!clean) return 'accueil';
+  if (clean === 'a-propos' || clean === 'apropos') return 'apropos';
   if (PAGES.includes(clean)) return clean;
   return '404'; // FIX: page 404 réelle
 }
@@ -1428,6 +1541,7 @@ function showPageInstant(page) {
     a.removeAttribute('aria-current');
     if (a.dataset.page === page) a.setAttribute('aria-current', 'page');
   });
+  applyDynamicSeo(page, getSeoConfig(page).path);
 }
 
 function startOrder(packName) {
@@ -1973,7 +2087,7 @@ function refreshLockedPacksUI() {
 
       const waText = [
         'Bonjour Vortex Rights,',
-        'je viens de finaliser ma commande sur vortexrights.com.',
+        'je viens de finaliser ma commande sur www.vortexrights.com.',
         'Pack : ' + (F.pack.value || '—'),
         'Acompte (70%) : ' + money(acompteLocal, currency),
         'Nom : ' + (F.fullName.value.trim() || '—'),
@@ -2051,7 +2165,12 @@ function refreshLockedPacksUI() {
    INIT
    ========================================================= */
 document.addEventListener('DOMContentLoaded', function() {
+  startLaunchCountdown();
   const initialPage = pageFromPath(window.location.pathname);
+  const canonicalPath = getSeoConfig(initialPage).path;
+  if (initialPage !== '404' && window.location.pathname !== canonicalPath) {
+    window.history.replaceState({ page: initialPage }, '', canonicalPath);
+  }
   showPageInstant(initialPage);
   refreshLockedPacksUI();
   observeReveals();
@@ -2060,6 +2179,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 window.addEventListener('popstate', function() {
   const page = pageFromPath(window.location.pathname);
+  const canonicalPath = getSeoConfig(page).path;
+  if (page !== '404' && window.location.pathname !== canonicalPath) {
+    window.history.replaceState({ page }, '', canonicalPath);
+  }
   showPageInstant(page);
   observeReveals();
 });
