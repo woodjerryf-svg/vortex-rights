@@ -91,6 +91,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://www.paypal.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap">
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800;900&family=Space+Mono&family=Anton&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800;900&family=Space+Mono&family=Anton&display=swap"></noscript>
 
@@ -451,12 +452,239 @@
     .scroll-top:hover { transform: translateY(-2px); }
     .scroll-top.visible { display: flex; }
 
+    /* TESTIMONIALS + PROCESS 70/30 (scoped to avoid conflicts) */
+    .vrx-section-shell { max-width: 1040px; margin: 0 auto; }
+    .vrx-section-label { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .vrx-section-label span { width: 4px; height: 22px; background: var(--orange); border-radius: 2px; display: inline-block; }
+    .vrx-section-label p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--orange);
+    }
+    .vrx-section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.25rem, 7vw, 3.65rem);
+      line-height: 1;
+      margin-bottom: 10px;
+      letter-spacing: 0.02em;
+    }
+    .vrx-section-title .vrx-accent { color: var(--blue); }
+    .vrx-section-sub {
+      font-family: 'DM Sans', sans-serif;
+      color: #9aa3bd;
+      font-size: 15px;
+      max-width: 560px;
+      line-height: 1.65;
+      margin-bottom: 42px;
+    }
+    .vrx-testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 20px;
+    }
+    .vrx-testimonial-card {
+      background: #13131e;
+      border: 1px solid #1e1e30;
+      border-radius: 14px;
+      padding: 28px 24px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+    .vrx-testimonial-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--blue), var(--orange));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .vrx-testimonial-card:hover { border-color: #2a2a45; transform: translateY(-4px); }
+    .vrx-testimonial-card:hover::before { opacity: 1; }
+    .vrx-testimonial-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(26,109,255,0.14);
+      border: 1px solid rgba(26,109,255,0.3);
+      border-radius: 999px;
+      padding: 5px 12px;
+      width: fit-content;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--blue);
+      letter-spacing: 0.05em;
+    }
+    .vrx-testimonial-badge svg { width: 12px; height: 12px; fill: var(--blue); }
+    .vrx-stars { display: flex; gap: 3px; }
+    .vrx-stars svg { width: 15px; height: 15px; fill: var(--orange); }
+    .vrx-quote {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14.5px;
+      line-height: 1.7;
+      color: #c8c8e0;
+      flex: 1;
+      position: relative;
+      padding-left: 16px;
+    }
+    .vrx-quote::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 4px;
+      bottom: 4px;
+      width: 2px;
+      background: #1e1e30;
+      border-radius: 2px;
+    }
+    .vrx-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 16px;
+      border-top: 1px solid #1e1e30;
+    }
+    .vrx-author-photo {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255,255,255,0.18);
+      flex-shrink: 0;
+    }
+    .vrx-author-info { display: flex; flex-direction: column; gap: 2px; }
+    .vrx-author-name { font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; color: #f0f0f5; }
+    .vrx-author-role { font-family: 'DM Sans', sans-serif; font-size: 12px; color: #9aa3bd; }
+    .vrx-testimonial-card.vrx-featured {
+      grid-column: span 2;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 32px;
+      background: linear-gradient(135deg, #13131e 60%, #0f1525);
+    }
+    .vrx-featured-left { flex: 1; display: flex; flex-direction: column; gap: 16px; }
+    .vrx-featured-right {
+      flex-shrink: 0;
+      width: 170px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      background: rgba(26,109,255,0.09);
+      border: 1px solid rgba(26,109,255,0.2);
+      border-radius: 10px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .vrx-stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 42px;
+      color: var(--blue);
+      line-height: 1;
+    }
+    .vrx-stat-label { font-family: 'DM Sans', sans-serif; font-size: 11px; color: #9aa3bd; line-height: 1.4; }
+    .vrx-process-section { max-width: 1040px; margin: 0 auto; }
+    .vrx-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      position: relative;
+      margin-top: 40px;
+    }
+    .vrx-step {
+      padding: 28px 24px;
+      background: #13131e;
+      border: 1px solid #1e1e30;
+      position: relative;
+      transition: background 0.25s;
+    }
+    .vrx-step:hover { background: #161626; }
+    .vrx-step:first-child { border-radius: 14px 0 0 14px; }
+    .vrx-step:last-child { border-radius: 0 14px 14px 0; }
+    .vrx-step-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 48px;
+      line-height: 1;
+      color: #2b2b42;
+      margin-bottom: 12px;
+    }
+    .vrx-step-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(26,109,255,0.12);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+    .vrx-step-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--blue);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .vrx-step-title { font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 15px; margin-bottom: 8px; color: #f0f0f5; }
+    .vrx-step-desc { font-family: 'DM Sans', sans-serif; font-size: 13px; color: #9aa3bd; line-height: 1.6; }
+    .vrx-step-arrow {
+      position: absolute;
+      right: -14px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 28px;
+      height: 28px;
+      background: #0a0a0f;
+      border: 1px solid #1e1e30;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      color: var(--blue);
+      font-size: 12px;
+    }
+    .vrx-step:last-child .vrx-step-arrow { display: none; }
+    .vrx-highlight-box {
+      margin-top: 20px;
+      padding: 18px 22px;
+      background: rgba(249,115,22,0.07);
+      border: 1px solid rgba(249,115,22,0.2);
+      border-radius: 10px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13.5px;
+      color: #e0a070;
+      line-height: 1.6;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .vrx-highlight-box svg { width: 18px; height: 18px; stroke: var(--orange); fill: none; stroke-width: 2; flex-shrink: 0; }
+
     /* RESPONSIVE */
     @media (max-width: 768px) {
       section { padding: 60px 0; }
       .hero-title { font-size: 2.4rem; }
       .pillars-grid { grid-template-columns: 1fr; }
       .pricing-grid { grid-template-columns: 1fr; }
+      .vrx-testimonial-card.vrx-featured { grid-column: span 1; flex-direction: column; }
+      .vrx-featured-right { width: 100%; }
+      .vrx-steps { grid-template-columns: 1fr; }
+      .vrx-step { border-radius: 0 !important; }
+      .vrx-step:first-child { border-radius: 14px 14px 0 0 !important; }
+      .vrx-step:last-child { border-radius: 0 0 14px 14px !important; }
+      .vrx-step-arrow { display: none; }
     }
   </style>
 </head>
@@ -753,6 +981,60 @@
           <span class="payment-pill">PayPal</span>
           <span class="payment-pill">Sogebank</span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:10px 0 100px;background:#000;">
+    <div class="container vrx-process-section">
+      <div class="vrx-section-label reveal">
+        <span></span>
+        <p>Notre modèle unique</p>
+      </div>
+      <h2 class="vrx-section-title reveal">Le paiement <span class="vrx-accent">70/30</span></h2>
+      <p class="vrx-section-sub reveal">Vous ne prenez aucun risque. Vous payez le reste seulement après avoir reçu et validé votre mission.</p>
+
+      <div class="vrx-steps">
+        <div class="vrx-step reveal">
+          <div class="vrx-step-num">01</div>
+          <div class="vrx-step-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+          </div>
+          <div class="vrx-step-title">Vous choisissez votre pack</div>
+          <div class="vrx-step-desc">Sélectionnez le service dont vous avez besoin. On vous contacte sous 24h pour valider ensemble la mission.</div>
+          <div class="vrx-step-arrow">→</div>
+        </div>
+        <div class="vrx-step reveal">
+          <div class="vrx-step-num">02</div>
+          <div class="vrx-step-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8v2m0 8v2M5.2 5.2l1.4 1.4M17.4 17.4l1.4 1.4M2 12h2m16 0h2M5.2 18.8l1.4-1.4M17.4 6.6l1.4-1.4"/></svg>
+          </div>
+          <div class="vrx-step-title">Vous payez 70% d'avance</div>
+          <div class="vrx-step-desc">Le premier versement lance la mission. On commence immédiatement le travail sur votre infrastructure digitale.</div>
+          <div class="vrx-step-arrow">→</div>
+        </div>
+        <div class="vrx-step reveal">
+          <div class="vrx-step-num">03</div>
+          <div class="vrx-step-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div class="vrx-step-title">On livre. Vous validez.</div>
+          <div class="vrx-step-desc">Vous recevez les preuves par captures d'écran (WhatsApp ou email). Vous vérifiez que tout est conforme.</div>
+          <div class="vrx-step-arrow">→</div>
+        </div>
+        <div class="vrx-step reveal">
+          <div class="vrx-step-num">04</div>
+          <div class="vrx-step-icon">
+            <svg viewBox="0 0 24 24"><path d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
+          </div>
+          <div class="vrx-step-title">Vous payez les 30% restants</div>
+          <div class="vrx-step-desc">Seulement une fois satisfait. On vous transfère ensuite la pleine propriété de tous vos comptes en 48h ouvrables.</div>
+        </div>
+      </div>
+
+      <div class="vrx-highlight-box reveal">
+        <svg viewBox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <span><strong style="color:#f97316">Après le transfert</strong>, nous nous déconnectons définitivement de tous vos comptes. Vous êtes 100% autonome. Zéro commission sur vos royalties, maintenant et pour toujours.</span>
       </div>
     </div>
   </section>
@@ -1114,6 +1396,97 @@
 
 <!-- ===== PAGE : CONTACT ===== -->
 <div id="page-contact" class="page">
+<section style="padding:100px 0 90px;background:#0b0b12;">
+  <div class="container vrx-section-shell">
+    <div class="vrx-section-label reveal">
+      <span></span>
+      <p>Ils nous font confiance</p>
+    </div>
+    <h2 class="vrx-section-title reveal">Des artistes. <span class="vrx-accent">Des résultats.</span></h2>
+    <p class="vrx-section-sub reveal">Pas des promesses. Des badges vérifiables, des comptes livrés, des artistes autonomes.</p>
+
+    <div class="vrx-testimonials-grid">
+      <article class="vrx-testimonial-card vrx-featured reveal">
+        <div class="vrx-featured-left">
+          <div class="vrx-testimonial-badge">
+            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Badge YouTube OAC obtenu
+          </div>
+          <div class="vrx-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="vrx-quote">
+            Depi Vortex Rights fin pwodwi EP mwen an epi lage li sou DistroKid, tout bagay chanje pou mwen. Nan mwens pase 2 semèn, yo fè m jwenn badge OAC (Atis Ofisyèl) mwen sou YouTube. Sa gen 1 mwa ak 15 jou depi y ap jere karyè mwen pou yon kontra 3 mwa, e m santi m vrèman an sekirite paske m wè se yon administrasyon serye k ap travay pou mwen ka otonòm demen.
+          </p>
+          <div class="vrx-author">
+            <img class="vrx-author-photo" src="./Public/images/temoignage1%20-%20artiste%20lil%20shee%20mike.jpg" alt="Photo de Lil Shee Mike">
+            <div class="vrx-author-info">
+              <span class="vrx-author-name">Lil Shee Mike</span>
+              <span class="vrx-author-role">Recording Artist — Port-au-Prince</span>
+            </div>
+          </div>
+        </div>
+        <div class="vrx-featured-right">
+          <div class="vrx-stat-num">&lt; 2 semaines</div>
+          <div class="vrx-stat-label">pour obtenir le badge OAC</div>
+        </div>
+      </article>
+
+      <article class="vrx-testimonial-card reveal">
+        <div class="vrx-testimonial-badge">
+          <svg viewBox="0 0 24 24" style="stroke:var(--blue);fill:none;stroke-width:2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Spotify for Artists certifié
+        </div>
+        <div class="vrx-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="vrx-quote">
+          I've been releasing music for a long time, but Vortex Rights finally brought the professional management I needed. They helped me take full control of my catalog and made my career much more independent. If you want to own your assets and be autonomous, this is the way to go.
+        </p>
+        <div class="vrx-author">
+          <img class="vrx-author-photo" src="./Public/images/temoignage2%20-%20artiste%20BX%20Gonz.jpg" alt="Photo de BX Gonz">
+          <div class="vrx-author-info">
+            <span class="vrx-author-name">BX Gonz</span>
+            <span class="vrx-author-role">Recording Artist — Diaspora</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="vrx-testimonial-card reveal">
+        <div class="vrx-testimonial-badge">
+          <svg viewBox="0 0 24 24" style="stroke:var(--blue);fill:none;stroke-width:2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Distribution + Codes ISRC
+        </div>
+        <div class="vrx-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="vrx-quote">
+          Depuis que j'ai appris à gérer ma propre carrière et à maîtriser mes droits musicaux, je vois l'industrie sous un tout autre angle. La musique n'est plus seulement une passion, c'est un actif. Mon objectif avec Vortex Rights est de permettre à chaque artiste haïtien de bénéficier de ce privilège : être un artiste autonome, respecté et surtout, maître de ses revenus.
+        </p>
+        <div class="vrx-author">
+          <img class="vrx-author-photo" src="./Public/images/temoignage3%20-%20artiste%20Bigi%20Blaka.jpg" alt="Photo de Bigi Blaka">
+          <div class="vrx-author-info">
+            <span class="vrx-author-name">Bigi Blaka</span>
+            <span class="vrx-author-role">Artiste &amp; Fondateur de Vortex Rights</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
   <section style="padding:100px 0 80px;background:#000;position:relative;overflow:hidden;">
     <img src="./Public/images/mixing.jpg" alt="" role="presentation" width="1920" height="600" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.1;" loading="lazy">
     <div class="container" style="position:relative;z-index:1;">
