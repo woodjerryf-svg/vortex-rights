@@ -12,13 +12,13 @@
   <meta name="author" content="Vortex Rights - Wood Jerry Fils-Aimé">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <!-- FIX: canonical mis à jour dynamiquement par JS -->
-  <link rel="canonical" id="canonical-tag" href="https://www.vortexrights.com/">
+  <link rel="canonical" id="canonical-tag" href="https://vortexrights.com/">
 
   <!-- OPEN GRAPH -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Vortex Rights">
   <meta property="og:locale" content="fr_HT">
-  <meta property="og:url" content="https://www.vortexrights.com/">
+  <meta property="og:url" content="https://vortexrights.com/">
   <meta property="og:title" content="Vortex Rights - Conciergerie Digitale pour Artistes Haïtiens">
   <meta property="og:description" content="Distribution mondiale, badge OAC, Content ID, Spotify for Artists. 0% commission. Vous gardez 100% de vos revenus. Offre de lancement -50%.">
   <meta property="og:image" content="https://www.vortexrights.com/Public/images/og-image.jpg">
@@ -44,7 +44,7 @@
         "@id": "https://www.vortexrights.com/#organization",
         "name": "Vortex Rights",
         "url": "https://www.vortexrights.com",
-        "logo": "https://www.vortexrights.com/Public/images/favicon.png",
+        "logo": "https://www.vortexrights.com/Public/images/icon.png",
         "description": "Agence de conciergerie digitale musicale pour artistes haïtiens - distribution, badge OAC, Content ID, 0% commission.",
         "foundingDate": "2026",
         "founder": { "@type": "Person", "name": "Wood Jerry Fils-Aimé" },
@@ -82,10 +82,11 @@
   </script>
 
   <!-- FAVICON -->
-  <link rel="icon" type="image/png" href="/Public/images/favicon.png">
+  <link rel="icon" type="image/png" href="/Public/images/icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/Public/images/favicon32px.png">
+  <link rel="shortcut icon" href="/Public/images/icon.png">
   <link rel="shortcut icon" href="/Public/images/favicon32px.png">
-  <link rel="apple-touch-icon" href="/Public/images/favicon.png">
+  <link rel="apple-touch-icon" href="/Public/images/icon.png">
   <meta name="theme-color" content="#1a6dff">
   <meta name="msapplication-TileColor" content="#1a6dff">
 
@@ -897,7 +898,8 @@
       border: 2px solid rgba(255,255,255,0.16);
       flex-shrink: 0;
     }
-    .blogx-name { font-weight: 700; font-size: 15px; color: #eeeef5; }
+    .blogx-name { font-weight: 700; font-size: 15px; color: #eeeef5; display: inline-flex; align-items: center; gap: 8px; }
+    .blogx-name-icon { width: 16px; height: 16px; object-fit: contain; }
     .blogx-role { font-size: 13px; color: #777799; margin-top: 2px; }
     @media (max-width: 768px) {
       .blogx-wrap { padding: 84px 0 60px; }
@@ -1027,7 +1029,7 @@
       <p class="section-sub centered reveal">Une approche complète pour transformer votre carrière en entreprise structurée et rentable.</p>
       <div class="pillars-grid">
         <article class="pillar-card reveal">
-          <img class="pillar-img" src="./Public/images/artist.jpg" alt="Artiste en studio - conformité technique" loading="lazy" width="400" height="200">
+          <img class="pillar-img" src="./Public/images/artist.webp" alt="Conformité Technique - Distribution musicale ISRC UPC" loading="lazy" width="400" height="200">
           <div class="pillar-body">
             <div class="pillar-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></div>
             <h3 class="pillar-title">Conformité Technique</h3>
@@ -1035,7 +1037,7 @@
           </div>
         </article>
         <article class="pillar-card reveal">
-          <img class="pillar-img" src="./Public/images/performer.jpg" alt="Artiste en performance - protection IP" loading="lazy" width="400" height="200">
+          <img class="pillar-img" src="./Public/images/performer.webp" alt="Protection IP - Content ID et gestion des droits d'auteur" loading="lazy" width="400" height="200">
           <div class="pillar-body">
             <div class="pillar-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
             <h3 class="pillar-title">Protection IP</h3>
@@ -1043,7 +1045,7 @@
           </div>
         </article>
         <article class="pillar-card reveal">
-          <img class="pillar-img" src="./Public/images/studio.jpg" alt="Studio d'enregistrement - identité visuelle" loading="lazy" width="400" height="200">
+          <img class="pillar-img" src="./Public/images/studio.webp" alt="Identité Visuelle - Design graphique pour l'industrie musicale" loading="lazy" width="400" height="200">
           <div class="pillar-body">
             <div class="pillar-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="10.5" r="2.5"/><circle cx="8.5" cy="7.5" r="2.5"/><circle cx="6.5" cy="12.5" r="2.5"/></svg></div>
             <h3 class="pillar-title">Identité Visuelle</h3>
@@ -1084,7 +1086,7 @@
     <div class="container">
       <div class="services-list">
         <article class="service-block reveal">
-          <img class="service-img" src="./Public/images/artist.jpg" alt="Distribution musicale mondiale" loading="lazy" width="1200" height="240">
+          <img class="service-img" src="./Public/images/artist.webp" alt="Conformité Technique - Distribution musicale ISRC UPC" loading="lazy" width="1200" height="240">
           <div class="service-body">
             <div class="service-header">
               <div class="service-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></div>
@@ -1103,7 +1105,7 @@
           </div>
         </article>
         <article class="service-block reveal">
-          <img class="service-img" src="./Public/images/performer.jpg" alt="Protection propriété intellectuelle musicale" loading="lazy" width="1200" height="240">
+          <img class="service-img" src="./Public/images/performer.webp" alt="Protection IP - Content ID et gestion des droits d'auteur" loading="lazy" width="1200" height="240">
           <div class="service-body">
             <div class="service-header">
               <div class="service-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
@@ -1122,7 +1124,7 @@
           </div>
         </article>
         <article class="service-block reveal">
-          <img class="service-img" src="./Public/images/studio.jpg" alt="Identité visuelle et branding musical" loading="lazy" width="1200" height="240">
+          <img class="service-img" src="./Public/images/studio.webp" alt="Identité Visuelle - Design graphique pour l'industrie musicale" loading="lazy" width="1200" height="240">
           <div class="service-body">
             <div class="service-header">
               <div class="service-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m9 9 6 6M15 9l-6 6"/></svg></div>
@@ -1619,7 +1621,7 @@
     </div>
   </section>
   <section style="background:#111;position:relative;overflow:hidden;">
-    <img src="./Public/images/studio.jpg" alt="" role="presentation" width="1920" height="600" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.08;" loading="lazy">
+    <img src="./Public/images/studio.webp" alt="" role="presentation" width="1920" height="600" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.08;" loading="lazy">
     <div class="container" style="max-width:960px;position:relative;z-index:1;">
       <p class="section-tag">Fondateur &amp; Vision</p>
       <h2 class="section-title reveal">Wood Jerry Fils-Aimé — Fondateur</h2>
@@ -1927,7 +1929,7 @@
 
         <div class="blogx-proof-grid">
           <div class="blogx-proof-card reveal">
-            <img src="/Public/images/blog/oac-bx-gonz.jpg" alt="Chaîne YouTube officielle BX Gonz avec badge OAC" loading="lazy"/>
+            <img src="/Public/images/blog/oac-bx-gonz.webp" alt="Chaîne YouTube officielle BX Gonz avec badge OAC" loading="lazy"/>
             <div class="blogx-proof-info">
               <div class="blogx-proof-name">BX Gonz</div>
               <div class="blogx-proof-detail">@TheofficialBXGonz4 · 405 abonnés · 93 vidéos</div>
@@ -1935,7 +1937,7 @@
             </div>
           </div>
           <div class="blogx-proof-card reveal">
-            <img src="/Public/images/blog/oac-bigi-blaka.jpg" alt="Chaîne YouTube officielle Bigi Blaka avec badge OAC" loading="lazy"/>
+            <img src="/Public/images/blog/oac-bigi-blaka.webp" alt="Chaîne YouTube officielle Bigi Blaka avec badge OAC" loading="lazy"/>
             <div class="blogx-proof-info">
               <div class="blogx-proof-name">Bigi Blaka</div>
               <div class="blogx-proof-detail">@bigiblaka · 351 abonnés · 5 vidéos</div>
@@ -1943,7 +1945,7 @@
             </div>
           </div>
           <div class="blogx-proof-card reveal">
-            <img src="/Public/images/blog/oac-lil-shee-mike.jpg" alt="Chaîne YouTube officielle Lil Shee Mike avec badge OAC" loading="lazy"/>
+            <img src="/Public/images/blog/oac-lil-shee-mike.webp" alt="Chaîne YouTube officielle Lil Shee Mike avec badge OAC" loading="lazy"/>
             <div class="blogx-proof-info">
               <div class="blogx-proof-name">Lil Shee Mike</div>
               <div class="blogx-proof-detail">@lilsheemike · 207 abonnés · 4 vidéos</div>
@@ -2012,9 +2014,9 @@
         <hr style="border:none;border-top:1px solid #1d1d2e;margin:40px 0;"/>
 
         <div class="blogx-author">
-          <img class="blogx-avatar" src="/Public/images/fondateur.jpg" alt="Photo du fondateur Wood Jerry Fils-Aimé" loading="lazy"/>
+          <img class="blogx-avatar" src="/Public/images/fondateur.webp" alt="Photo du fondateur Wood Jerry Fils-Aimé" loading="lazy"/>
           <div>
-            <div class="blogx-name">Wood Jerry Fils-Aimé</div>
+            <div class="blogx-name"><img class="blogx-name-icon" src="/Public/images/icon.png" alt="" aria-hidden="true"/>Wood Jerry Fils-Aimé</div>
             <div class="blogx-role">Fondateur & PDG · Vortex Rights · Port-au-Prince, Haïti</div>
             <p style="font-size:13px; margin-top:8px; margin-bottom:0;">Artiste, beatmaker et développeur web. Fondateur de Blaka Recordz. Il a créé Vortex Rights pour donner aux artistes haïtiens les outils techniques dont ils ont besoin pour contrôler leur carrière.</p>
           </div>
@@ -2179,7 +2181,7 @@
    CONSTANTES & CONFIG
    ========================================================= */
 const PAGES = ['accueil','services','tarifs','blog','commande','merci','apropos','contact','faq','politique','conditions','404'];
-const CANONICAL_BASE = 'https://www.vortexrights.com';
+const CANONICAL_BASE = 'https://vortexrights.com';
 const LAUNCH_END_AT = new Date('2026-07-30T23:59:59-04:00').getTime();
 const PAGE_SEO = {
   accueil: {
