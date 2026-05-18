@@ -3,6 +3,8 @@
     { "source": "/api/:path*", "destination": "/api/:path*" },
     { "source": "/blog/badge-youtube-oac-artiste-haitien", "destination": "/blog-badge-youtube-oac-artiste-haitien.html" },
     { "source": "/blog/badge-youtube-oac-artiste-haitien/", "destination": "/blog-badge-youtube-oac-artiste-haitien.html" },
+    { "source": "/blog/content-id-youtube-perte-argent", "destination": "/blog-content-id-youtube-perte-argent.html" },
+    { "source": "/blog/content-id-youtube-perte-argent/", "destination": "/blog-content-id-youtube-perte-argent.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "headers": [

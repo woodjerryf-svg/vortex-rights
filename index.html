@@ -94,7 +94,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://www.paypal.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&family=Inter:wght@400&display=swap">
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800;900&family=Space+Mono&family=Anton&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800;900&family=Space+Mono&family=Anton&display=swap"></noscript>
 
@@ -109,6 +109,7 @@
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
     }
+    p { font-family: 'Inter', sans-serif; font-weight: 400; }
 
     /* SCROLLBAR */
     ::-webkit-scrollbar { width: 3px; }
@@ -683,7 +684,7 @@
       border: 1px solid #1d1d2e;
       border-radius: 16px;
       padding: 54px 24px 46px;
-      text-align: center;
+      text-align: left;
       margin-bottom: 34px;
     }
     .blogx-tag {
@@ -701,17 +702,17 @@
       font-family: 'DM Sans', sans-serif;
     }
     .blogx-title {
-      font-family: 'Bebas Neue', sans-serif;
+      font-family: 'Anton', sans-serif;
       font-size: clamp(38px, 7vw, 66px);
       line-height: 1.05;
-      max-width: 840px;
-      margin: 0 auto 18px;
+      max-width: none;
+      margin: 0 0 18px;
     }
     .blogx-title .a { color: #3b82f6; }
     .blogx-title .b { color: #f97316; }
     .blogx-meta {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       flex-wrap: wrap;
       gap: 20px;
       font-size: 13px;
@@ -736,7 +737,7 @@
       margin-bottom: 48px;
     }
     .blogx-container h2 {
-      font-family: 'Bebas Neue', sans-serif;
+      font-family: 'Anton', sans-serif;
       font-size: clamp(28px, 5vw, 40px);
       line-height: 1.1;
       margin: 52px 0 18px;
@@ -744,6 +745,7 @@
     }
     .blogx-container h2 .accent { color: #3b82f6; }
     .blogx-container h3 {
+      font-family: 'Anton', sans-serif;
       font-size: 18px;
       font-weight: 700;
       margin: 32px 0 12px;
@@ -879,6 +881,49 @@
       transition: background .2s, transform .2s;
     }
     .blogx-cta-btn:hover { background: #2563eb; transform: translateY(-2px); }
+    .blog-list {
+      display: grid;
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .blog-card {
+      background: #10101a;
+      border: 1px solid #1d1d2e;
+      border-radius: 18px;
+      padding: 28px 26px;
+      transition: transform .22s ease, border-color .22s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-4px);
+      border-color: #2a2a44;
+    }
+    .blog-card h3 {
+      font-size: 1.55rem;
+      margin: 0 0 14px;
+      color: #fff;
+    }
+    .blog-card p {
+      margin: 0 0 18px;
+      color: #c0c0da;
+      line-height: 1.75;
+    }
+    .blog-card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 13px;
+      color: #777799;
+      margin-bottom: 18px;
+    }
+    .blog-card a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #3b82f6;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .blog-card a:hover { text-decoration: underline; }
     .blogx-author {
       display: flex;
       gap: 18px;
@@ -946,7 +991,7 @@
       <a href="/" role="menuitem" data-page="accueil" onclick="nav(event,'accueil')" aria-current="page">Accueil</a>
       <a href="/services" role="menuitem" data-page="services" onclick="nav(event,'services')">Services</a>
       <a href="/tarifs" role="menuitem" data-page="tarifs" onclick="nav(event,'tarifs')">Tarifs</a>
-      <a href="/blog/badge-youtube-oac-artiste-haitien" role="menuitem" data-page="blog" onclick="nav(event,'blog')">Blog</a>
+      <a href="/blog" role="menuitem" data-page="blog-index" onclick="nav(event,'blog-index')">Blog</a>
       <a href="/a-propos" role="menuitem" data-page="apropos" onclick="nav(event,'apropos')">&Agrave; Propos</a>
       <a href="/contact" role="menuitem" data-page="contact" onclick="nav(event,'contact')">Contact</a>
       <a href="/commande" data-page="commande" onclick="nav(event,'commande')" class="nav-cta btn" role="menuitem">Commencer</a>
@@ -959,7 +1004,7 @@
     <a href="/" role="menuitem" data-page="accueil" onclick="nav(event,'accueil')">Accueil</a>
     <a href="/services" role="menuitem" data-page="services" onclick="nav(event,'services')">Services</a>
     <a href="/tarifs" role="menuitem" data-page="tarifs" onclick="nav(event,'tarifs')">Tarifs</a>
-    <a href="/blog/badge-youtube-oac-artiste-haitien" role="menuitem" data-page="blog" onclick="nav(event,'blog')">Blog</a>
+    <a href="/blog" role="menuitem" data-page="blog-index" onclick="nav(event,'blog-index')">Blog</a>
     <a href="/a-propos" role="menuitem" data-page="apropos" onclick="nav(event,'apropos')">&Agrave; Propos</a>
     <a href="/contact" role="menuitem" data-page="contact" onclick="nav(event,'contact')">Contact</a>
     <a href="/faq" role="menuitem" data-page="faq" onclick="nav(event,'faq')">FAQ</a>
@@ -1797,6 +1842,70 @@
   </section>
 </div>
 
+<!-- ===== PAGE : BLOG INDEX ===== -->
+<div id="page-blog-index" class="page">
+  <section class="blogx-wrap">
+    <div class="container">
+      <header class="blogx-hero">
+        <div class="blogx-tag">Blog &amp; Ressources</div>
+        <h1 class="blogx-title">Le blog Vortex Rights</h1>
+        <p class="blogx-lead">Découvrez des guides pratiques, des études de cas et des conseils dédiés aux artistes haïtiens qui veulent sécuriser leurs revenus et maîtriser leur présence digitale.</p>
+      </header>
+
+      <div class="blog-list">
+        <article class="blog-card reveal">
+          <div class="blog-card-meta">Guide pratique · 8 min de lecture · 30 avril 2026</div>
+          <h3>Comment obtenir le badge YouTube OAC en tant qu’artiste haïtien</h3>
+          <p>Un guide étape par étape pour obtenir le badge YouTube Official Artist Channel et améliorer la crédibilité de votre chaîne musicale.</p>
+          <a href="/blog-badge-youtube-oac-artiste-haitien.html">Lire l’article <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="blog-card reveal">
+          <div class="blog-card-meta">Priorité haute · 6 min de lecture</div>
+          <h3>Comment obtenir Spotify for Artists en Haïti</h3>
+          <p>Guide étape par étape depuis la distribution jusqu'à la réclamation du profil — un complément naturel de l’article OAC.</p>
+          <a href="/blog-spotify-for-artists-haiti.html">Lire l’article <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="blog-card reveal">
+          <div class="blog-card-meta">Priorité haute · 6 min de lecture</div>
+          <h3>Comment les artistes haïtiens peuvent encaisser leurs royalties Spotify</h3>
+          <p>MonCash, PayPal, comptes bancaires — le guide pratique du retrait de revenus depuis Haïti.</p>
+          <a href="/blog-encaisser-royalties-spotify-haiti.html">Lire l’article <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="blog-card reveal">
+          <div class="blog-card-meta">Priorité haute · 7 min de lecture</div>
+          <h3>Qu'est-ce que le Content ID YouTube et pourquoi tu perds de l'argent sans lui</h3>
+          <p>Explication simple et cas concrets avec chiffres estimatifs pour créer le besoin du Pack Pro.</p>
+          <a href="/blog-content-id-youtube-perte-argent.html">Lire l’article <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="blog-card reveal">
+          <div class="blog-card-meta">Priorité moyenne · 6 min de lecture</div>
+          <h3>ISRC et UPC : à quoi ça sert vraiment et comment les obtenir</h3>
+          <p>Comprendre ces codes essentiels et apprendre à les obtenir pour distribuer sa musique correctement.</p>
+          <a href="#">Bientôt disponible <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="blog-card reveal">
+          <div class="blog-card-meta">Priorité moyenne · 6 min de lecture</div>
+          <h3>TikTok Creator Fund vs Content ID : comment ne pas laisser tes sons dans la nature</h3>
+          <p>Angle viral : ton son est utilisé dans 10 000 TikToks et tu ne gagnes rien — voici comment réagir.</p>
+          <a href="#">Bientôt disponible <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="blog-card reveal">
+          <div class="blog-card-meta">Priorité moyenne · 7 min de lecture</div>
+          <h3>DistroKid vs TuneCore vs CD Baby : quel distributeur pour un artiste haïtien ?</h3>
+          <p>Comparatif pratique avec focus MonCash/PayPal, support francophone et compatibilité locale.</p>
+          <a href="#">Bientôt disponible <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="blog-card reveal">
+          <div class="blog-card-meta">Secondaire · 5 min de lecture</div>
+          <h3>Droits voisins vs droits d'auteur : ce que tout artiste haïtien doit savoir</h3>
+          <p>Éducation juridique adaptée au contexte haïtien, sans SACEM, pour mieux protéger ses créations.</p>
+          <a href="#">Bientôt disponible <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+</div>
+
 <!-- ===== PAGE : BLOG ===== -->
 <div id="page-blog" class="page">
   <section class="blogx-wrap">
@@ -2026,6 +2135,327 @@
   </section>
 </div>
 
+<!-- ===== PAGE : BLOG : SPOTIFY FOR ARTISTS ===== -->
+<div id="page-blog-spotify" class="page">
+  <section class="blogx-wrap">
+    <div class="container">
+      <header class="blogx-hero">
+        <div class="blogx-tag">Guide Pratique · Spotify for Artists</div>
+        <h1 class="blogx-title">Comment obtenir <span class="a">Spotify for Artists</span><br/>en Haïti</h1>
+        <div class="blogx-meta">
+          <span>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg>
+            Vortex Rights
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            1 mai 2026
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            7 min de lecture
+          </span>
+        </div>
+      </header>
+
+      <div class="blogx-container">
+        <p class="blogx-lead">De la préparation de votre distribution à la demande de profil, voici la route claire pour obtenir Spotify for Artists depuis Haïti.</p>
+
+        <div class="blogx-toc">
+          <div class="blogx-toc-title">Dans cet article</div>
+          <ol>
+            <li><a href="#pourquoi">Pourquoi Spotify for Artists est essentiel</a></li>
+            <li><a href="#conditions">Conditions à respecter depuis Haïti</a></li>
+            <li><a href="#etapes">Étapes de création et réclamation</a></li>
+            <li><a href="#paiement">Pièges à éviter</a></li>
+            <li><a href="#vortex">Comment Vortex Rights aide</a></li>
+          </ol>
+        </div>
+
+        <h2 id="pourquoi">Pourquoi <span class="accent">Spotify for Artists</span> est essentiel</h2>
+        <p>Ce profil vous donne accès à vos statistiques réelles, à la gestion des playlists, à la personnalisation du profil artiste et à la garantie d’apparaître dans les bons résultats de recherche. Sans ce profil, vous restez invisible aux yeux des algorithmes et des partenaires.</p>
+
+        <div class="blogx-callout info">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div>Spotify for Artists n’est pas seulement un badge : c’est la clé pour vérifier votre page artiste, gérer vos sorties et accéder à des outils de promotion.</div>
+        </div>
+
+        <h2 id="conditions">Conditions à respecter depuis Haïti</h2>
+        <div class="blogx-steps">
+          <div class="blogx-step">
+            <div class="blogx-step-n">1</div>
+            <div class="blogx-step-body">
+              <strong>Avoir une sortie distribuée officiellement</strong>
+              <p>La musique doit exister sur Spotify via un distributeur reconnu. Sans sortie active, Spotify refuse la demande de profil artiste.</p>
+            </div>
+          </div>
+          <div class="blogx-step">
+            <div class="blogx-step-n">2</div>
+            <div class="blogx-step-body">
+              <strong>Disposer d’un compte Spotify personnel ou un email professionnel</strong>
+              <p>Spotify utilisera ce compte pour vérifier votre identité. Un email générique est possible, mais un email professionnel renforce la crédibilité.</p>
+            </div>
+          </div>
+          <div class="blogx-step">
+            <div class="blogx-step-n">3</div>
+            <div class="blogx-step-body">
+              <strong>Avoir une image de profil et une bio propres</strong>
+              <p>Votre page artiste doit ressembler à une marque réelle : photo nette, description concise et liens vers vos réseaux fonctionnels.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2 id="etapes">Étapes de création et réclamation</h2>
+        <p>Voici le processus exact que nous suivons pour obtenir votre profil Spotify for Artists :</p>
+        <div class="blogx-steps">
+          <div class="blogx-step">
+            <div class="blogx-step-n">1</div>
+            <div class="blogx-step-body">
+              <strong>Prendre le contrôle du distributeur</strong>
+              <p>Nous vérifions que votre sortie est active et nous identifions le bon compte auprès du distributeur (DistroKid, TuneCore, CD Baby, etc.).</p>
+            </div>
+          </div>
+          <div class="blogx-step">
+            <div class="blogx-step-n">2</div>
+            <div class="blogx-step-body">
+              <strong>Faire la demande Spotify for Artists</strong>
+              <p>Nous soumettons la demande avec les preuves nécessaires : distributeur, lien de diffusion, page Facebook/Instagram, et identité artiste.</p>
+            </div>
+          </div>
+          <div class="blogx-step">
+            <div class="blogx-step-n">3</div>
+            <div class="blogx-step-body">
+              <strong>Réclamer le profil</strong>
+              <p>Une fois le profil disponible, nous complétons la réclamation et validons l’accès. Si Spotify demande une preuve supplémentaire, nous la fournissons immédiatement.</p>
+            </div>
+          </div>
+          <div class="blogx-step">
+            <div class="blogx-step-n">4</div>
+            <div class="blogx-step-body">
+              <strong>Optimiser votre profil artiste</strong>
+              <p>Nous ajoutons une photo professionnelle, une biographie efficace et vérifions que les liens sont corrects.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="blogx-callout warn">
+          <svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <div><strong>Attention :</strong> la plupart des demandes échouent parce que l’artiste n’a pas vérifié son distributeur ou n’a pas de sortie active. Vérifiez cela avant de soumettre.</div>
+        </div>
+
+        <h2 id="paiement">Les preuves de distribution qu’il faut fournir</h2>
+        <ul style="color:#c0c0da;line-height:1.8;margin-bottom:30px;">
+          <li>Capture d’écran de la sortie Spotify</li>
+          <li>Nom exact de l’artiste tel qu’il apparaît sur Spotify</li>
+          <li>Lien vers la page artiste ou un single</li>
+          <li>Preuve de propriété du compte distributeur</li>
+        </ul>
+
+        <h2 id="vortex">Comment Vortex Rights aide</h2>
+        <p>Nous gérons le dossier de A à Z : préparation des preuves, soumission auprès de Spotify, suivi des demandes et réclamation finale du profil.</p>
+        <div class="blogx-callout success">
+          <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <div>Avec Vortex Rights, vous évitez les erreurs les plus courantes et passez de la distribution à la gestion du profil artiste sans blocage.</div>
+        </div>
+
+        <div class="blogx-cta">
+          <h2>Prêt à revendiquer votre profil Spotify ?</h2>
+          <p>Nous pouvons prendre en charge la demande et l’optimisation de votre profil artiste en moins de 10 jours ouvrés.</p>
+          <a href="/commande" data-page="commande" onclick="nav(event,'commande')" class="blogx-cta-btn">Démarrer maintenant →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== PAGE : BLOG : ROYALTIES SPOTIFY ===== -->
+<div id="page-blog-royalties" class="page">
+  <section class="blogx-wrap">
+    <div class="container">
+      <header class="blogx-hero">
+        <div class="blogx-tag">Guide Pratique · Royalties Spotify</div>
+        <h1 class="blogx-title">Comment les artistes haïtiens<br/><span class="a">encaisser leurs royalties Spotify</span></h1>
+        <div class="blogx-meta">
+          <span>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg>
+            Vortex Rights
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            2 mai 2026
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            8 min de lecture
+          </span>
+        </div>
+      </header>
+
+      <div class="blogx-container">
+        <p class="blogx-lead">MonCash, PayPal, comptes bancaires : voici comment réduire les frictions pour sortir vos revenus Spotify en Haïti.</p>
+
+        <div class="blogx-toc">
+          <div class="blogx-toc-title">Dans cet article</div>
+          <ol>
+            <li><a href="#comment">Comment Spotify paye</a></li>
+            <li><a href="#options">Options de retrait disponibles</a></li>
+            <li><a href="#chiffres">Chiffres et coûts</a></li>
+            <li><a href="#erreurs">Erreurs à éviter</a></li>
+            <li><a href="#conseil">Conseil pratique</a></li>
+          </ol>
+        </div>
+
+        <h2 id="comment">Comment Spotify paye</h2>
+        <p>Spotify collecte les revenus de streaming puis les reverse à votre distributeur, qui vous les transfère ensuite selon le mode de paiement choisi. Spotify ne paye pas directement l’artiste en Haïti ; c’est le distributeur qui fait l’intermédiaire.</p>
+
+        <h2 id="options">Options de retrait disponibles</h2>
+        <div class="blogx-steps">
+          <div class="blogx-step">
+            <div class="blogx-step-n">1</div>
+            <div class="blogx-step-body">
+              <strong>MonCash</strong>
+              <p>Le moyen le plus simple pour les artistes haïtiens. Certains distributeurs acceptent MonCash directement, d’autres permettent le transfert via un compte tierce lié.</p>
+            </div>
+          </div>
+          <div class="blogx-step">
+            <div class="blogx-step-n">2</div>
+            <div class="blogx-step-body">
+              <strong>PayPal</strong>
+              <p>Très pratique si vous avez déjà un compte vérifié. Certains artistes utilisent un PayPal international et transfèrent ensuite le solde vers Haïti via des services de change.</p>
+            </div>
+          </div>
+          <div class="blogx-step">
+            <div class="blogx-step-n">3</div>
+            <div class="blogx-step-body">
+              <strong>Transfert bancaire</strong>
+              <p>Possible si votre distributeur prend en charge les virements SWIFT. C’est souvent plus cher mais plus sûr pour les montants élevés.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="blogx-callout info">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div>La clé est de choisir le mode de paiement avant de publier votre musique, afin d’éviter les blocages au moment des premiers versements.</div>
+        </div>
+
+        <h2 id="chiffres">Chiffres et coûts</h2>
+        <p>En moyenne, 1 000 streams Spotify génèrent environ 3 à 4 USD. Après frais de distribution (10 à 15%) et conversion locale, il reste environ 2,50 à 3 USD pour l’artiste. Sur 100 000 streams, cela représente 250 à 300 USD — une somme significative si elle est bien rapatriée.</p>
+
+        <h2 id="erreurs">Erreurs à éviter</h2>
+        <h3>❌ Avoir un compte PayPal non vérifié</h3>
+        <p>Sans vérification, le distributeur peut bloquer le transfert ou exiger des documents supplémentaires. Vérifiez votre compte PayPal dès le début.</p>
+        <h3>❌ Demander le virement vers un compte bancaire non compatible</h3>
+        <p>Certains comptes internationaux refusent les versements de distributeurs musicaux. Assurez-vous que votre banque accepte les virements SWIFT et les paiements en USD.</p>
+        <h3>❌ Ne pas anticiper le change</h3>
+        <p>Convertir trop tard ou au mauvais taux peut faire perdre jusqu’à 20% de vos revenus. Utilisez un service fiable ou MonCash professionnel.</p>
+
+        <h2 id="conseil">Conseil pratique</h2>
+        <p>Pour les artistes haïtiens, l’option la plus rapide est souvent MonCash via un fournisseur local de confiance. Si vous ciblez l’international, PayPal reste le meilleur compromis pour les petites sommes.</p>
+
+        <div class="blogx-cta">
+          <h2>Besoin d’un accompagnement pour récupérer vos revenus Spotify ?</h2>
+          <p>Vortex Rights peut configurer votre mode de paiement, vérifier vos comptes, et garantir que chaque versement arrive bien en Haïti.</p>
+          <a href="/commande" data-page="commande" onclick="nav(event,'commande')" class="blogx-cta-btn">Commencer maintenant →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== PAGE : BLOG : CONTENT ID ===== -->
+<div id="page-blog-content-id" class="page">
+  <section class="blogx-wrap">
+    <div class="container">
+      <header class="blogx-hero">
+        <div class="blogx-tag">Guide Pratique · Content ID</div>
+        <h1 class="blogx-title">Qu'est-ce que le <span class="a">Content ID</span> YouTube<br/>et pourquoi tu perds de l'argent sans lui</h1>
+        <div class="blogx-meta">
+          <span>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg>
+            Vortex Rights
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            3 mai 2026
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            8 min de lecture
+          </span>
+        </div>
+      </header>
+
+      <div class="blogx-container">
+        <p class="blogx-lead">Le Content ID est le système qui identifie et monétise automatiquement l’utilisation de ta musique sur YouTube. Sans lui, tu laisses de l’argent sur la table.</p>
+
+        <div class="blogx-toc">
+          <div class="blogx-toc-title">Dans cet article</div>
+          <ol>
+            <li><a href="#cest-quoi">C'est quoi le Content ID ?</a></li>
+            <li><a href="#gain">Combien tu perds sans lui</a></li>
+            <li><a href="#comment">Comment ça marche</a></li>
+            <li><a href="#cas">Cas concrets</a></li>
+            <li><a href="#pack">Pourquoi le Pack Pro</a></li>
+          </ol>
+        </div>
+
+        <h2 id="cest-quoi">C'est quoi le <span class="accent">Content ID</span> ?</h2>
+        <p>Content ID est un système de reconnaissance audio de YouTube qui repère automatiquement ta musique utilisée dans des vidéos. Il permet de réclamer les revenus générés par ces vidéos ou de bloquer leur diffusion si tu le souhaites.</p>
+
+        <h2 id="gain">Combien tu perds sans lui</h2>
+        <p>Sur YouTube, une vidéo non revendiquée peut générer 2 à 5 USD par 1 000 vues. Si ton son apparaît dans 10 000 vidéos, cela représente facilement 20 000 vues non monétisées — soit jusqu’à 40 à 80 USD qui ne te reviennent pas.</p>
+
+        <div class="blogx-callout info">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div>Si tu as 5 titres populaires utilisés dans des reels, clips ou vidéos de danse, tu peux perdre plusieurs centaines de dollars par mois sans Content ID.</div>
+        </div>
+
+        <h2 id="comment">Comment ça marche</h2>
+        <div class="blogx-steps">
+          <div class="blogx-step">
+            <div class="blogx-step-n">1</div>
+            <div class="blogx-step-body">
+              <strong>Envoi de la musique au distributeur</strong>
+              <p>Le distributeur intègre ton contenu dans la base Content ID. Il doit recevoir des fichiers audio propres et les métadonnées exactes.</p>
+            </div>
+          </div>
+          <div class="blogx-step">
+            <div class="blogx-step-n">2</div>
+            <div class="blogx-step-body">
+              <strong>Activation de la réclamation automatique</strong>
+              <p>Une fois la musique reconnue, YouTube applique la réclamation à chaque vidéo qui utilise ton son.</p>
+            </div>
+          </div>
+          <div class="blogx-step">
+            <div class="blogx-step-n">3</div>
+            <div class="blogx-step-body">
+              <strong>Choix du type de réclamation</strong>
+              <p>Tu peux choisir de monétiser, de suivre ou de bloquer chaque utilisation. Pour les artistes haïtiens, la monétisation est souvent la meilleure stratégie.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2 id="cas">Cas concrets</h2>
+        <p>Imaginons un artiste haïtien dont une chanson est utilisée dans 4 reels à 20 000 vues chacune. Sans Content ID, ces vidéos apportent zéro revenu au producteur. Avec Content ID, même un simple claim peut ramener 60 à 120 USD par mois, selon le CPM de la région.</p>
+
+        <div class="blogx-callout warn">
+          <svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <div>Ne pas activer Content ID, c’est laisser les plateformes décider de la redistribution. La plupart des artistes haïtiens n’y pensent qu’après avoir déjà perdu des revenus.</div>
+        </div>
+
+        <h2 id="pack">Pourquoi le Pack Pro</h2>
+        <p>Le Pack Pro de Vortex Rights inclut la configuration Content ID, le suivi des réclamations et la gestion des revenus. Il est conçu pour que tu puisses récupérer les gains sur YouTube sans te perdre dans la paperasse.</p>
+
+        <div class="blogx-cta">
+          <h2>Besoin d’une mise en place Content ID fiable ?</h2>
+          <p>Vortex Rights peut configurer ton Content ID et t’aider à réclamer chaque utilisation de ta musique sur YouTube.</p>
+          <a href="/commande" data-page="commande" onclick="nav(event,'commande')" class="blogx-cta-btn">Démarrer le Pack Pro →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
 <!-- ===== PAGE : FAQ ===== -->
 <div id="page-faq" class="page">
   <section style="padding:100px 0 80px;background:#000;">
@@ -2129,7 +2559,7 @@
           <li><a href="/a-propos" onclick="nav(event,'apropos')">&Agrave; Propos</a></li>
           <li><a href="/services" onclick="nav(event,'services')">Services</a></li>
           <li><a href="/tarifs" onclick="nav(event,'tarifs')">Tarifs</a></li>
-          <li><a href="/blog/badge-youtube-oac-artiste-haitien" data-page="blog" onclick="nav(event,'blog')">Blog</a></li>
+          <li><a href="/blog-badge-youtube-oac-artiste-haitien.html">Blog</a></li>
           <li><a href="/contact" onclick="nav(event,'contact')">Contact</a></li>
         </ul>
       </nav>
@@ -2180,7 +2610,7 @@
 /* =========================================================
    CONSTANTES & CONFIG
    ========================================================= */
-const PAGES = ['accueil','services','tarifs','blog','commande','merci','apropos','contact','faq','politique','conditions','404'];
+const PAGES = ['accueil','services','tarifs','blog-index','blog','blog-spotify','blog-royalties','blog-content-id','commande','merci','apropos','contact','faq','politique','conditions','404'];
 const CANONICAL_BASE = 'https://vortexrights.com';
 const LAUNCH_END_AT = new Date('2026-07-30T23:59:59-04:00').getTime();
 const PAGE_SEO = {
@@ -2198,6 +2628,26 @@ const PAGE_SEO = {
     path: '/tarifs',
     title: 'Nos Tarifs - Vortex Rights',
     description: 'Consultez des tarifs transparents pour accelerer votre carriere musicale : packs Decollage, Pro et Label.'
+  },
+  'blog-index': {
+    path: '/blog',
+    title: 'Blog - Vortex Rights',
+    description: 'Découvrez nos articles et guides pour artistes haïtiens sur la distribution, le badge OAC, le Content ID et la stratégie digitale.'
+  },
+  'blog-spotify': {
+    path: '/blog/spotify-for-artists-haiti',
+    title: 'Comment obtenir Spotify for Artists en Haïti - Vortex Rights',
+    description: 'Guide étape par étape de la distribution à la réclamation du profil Spotify for Artists en Haïti.'
+  },
+  'blog-royalties': {
+    path: '/blog/encaisser-royalties-spotify-haiti',
+    title: 'Comment encaisser ses royalties Spotify en Haïti - Vortex Rights',
+    description: 'MonCash, PayPal, comptes bancaires : guide pratique pour retirer vos revenus Spotify depuis Haïti.'
+  },
+  'blog-content-id': {
+    path: '/blog/content-id-youtube-perte-argent',
+    title: 'Content ID YouTube : pourquoi tu perds de l’argent sans lui - Vortex Rights',
+    description: 'Explication simple du Content ID YouTube avec cas concrets et chiffres estimatifs pour les artistes haïtiens.'
   },
   blog: {
     path: '/blog/badge-youtube-oac-artiste-haitien',
@@ -2374,7 +2824,11 @@ function nav(e, page, updateHistory = true) {
 
 function pageFromPath(pathname) {
   const clean = String(pathname || '/').replace(/^\/+|\/+$/g, '');
-  if (clean === BLOG_SLUG_PATH || clean === 'blog' || clean === 'blog-badge-youtube-oac-artiste-haitien.html' || clean === 'blog-badge-youtube-oac-artiste-haitien') return 'blog';
+  if (clean === BLOG_SLUG_PATH || clean === 'blog-badge-youtube-oac-artiste-haitien.html' || clean === 'blog-badge-youtube-oac-artiste-haitien') return 'blog';
+  if (clean === 'blog/spotify-for-artists-haiti') return 'blog-spotify';
+  if (clean === 'blog/encaisser-royalties-spotify-haiti') return 'blog-royalties';
+  if (clean === 'blog/content-id-youtube-perte-argent') return 'blog-content-id';
+  if (clean === 'blog') return 'blog-index';
   if (!clean) return 'accueil';
   if (clean === 'a-propos' || clean === 'apropos') return 'apropos';
   if (PAGES.includes(clean)) return clean;

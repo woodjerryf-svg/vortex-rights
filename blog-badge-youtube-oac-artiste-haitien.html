@@ -22,6 +22,7 @@
   <meta property="og:description" content="Preuves réelles. Étapes détaillées. Accompagnement Vortex Rights. Obtenez votre badge Official Artist Channel dès aujourd'hui."/>
   <meta property="og:type" content="article"/>
   <meta property="og:url" content="https://www.vortexrights.com/blog/badge-youtube-oac-artiste-haitien"/>
+  <meta property="og:image" content="https://www.vortexrights.com/Public/images/blog/badge-YouTube-OAC.jpg"/>
   <meta property="og:site_name" content="Vortex Rights"/>
 
   <!-- Schema.org Article (Google comprend le contenu) -->
@@ -46,22 +47,25 @@
   }
   </script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Inter:wght@400&display=swap" rel="stylesheet">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:       #09090f;
-      --surface:  #111118;
-      --card:     #14141e;
-      --border:   #1d1d2e;
-      --blue:     #3b82f6;
-      --orange:   #f97316;
-      --green:    #22c55e;
-      --white:    #eeeef5;
-      --muted:    #777799;
-      --max:      760px;
+      --bg: #08080d;
+      --surface: #0f0f16;
+      --card: #14141e;
+      --border: rgba(255,255,255,0.1);
+      --border-accent: rgba(255,255,255,0.16);
+      --blue: #3b82f6;
+      --orange: #f97316;
+      --green: #22c55e;
+      --white: #eeeef5;
+      --muted: #bbb8c8;
+      --max: 840px;
     }
 
     html { scroll-behavior: smooth; }
@@ -70,49 +74,104 @@
       background: var(--bg);
       color: var(--white);
       font-family: 'DM Sans', sans-serif;
-      font-size: 16px;
-      line-height: 1.75;
+      font-size: 17px;
+      line-height: 1.7;
+      min-height: 100vh;
+      background-image: url('/Public/images/blog/badge-YouTube-OAC.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      position: relative;
     }
 
-    /* ── HEADER ARTICLE ── */
-    .hero {
-      background: linear-gradient(180deg, #0d0d1a 0%, var(--bg) 100%);
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: -1;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8,8,13,0.93);
+      backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
-      padding: 64px 24px 56px;
-      text-align: center;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+    .nav-brand {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+    .nav-brand span { color: var(--blue); }
+    .nav-tag {
+      font-size: 12px;
+      color: var(--muted);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      padding: 4px 12px;
+      border-radius: 20px;
+      letter-spacing: 0.3px;
+    }
+
+    /* HERO */
+    .hero {
+      max-width: var(--max);
+      margin: 12px auto 0;
+      background: rgba(0, 0, 0, 0.96);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 22px;
+      padding: 72px 2rem 48px;
+      text-align: left;
     }
     .hero-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(59,130,246,.1);
-      border: 1px solid rgba(59,130,246,.25);
-      border-radius: 99px;
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      background: rgba(59,130,246,0.1);
+      border: 1px solid rgba(59,130,246,0.28);
+      border-radius:20px;
       padding: 5px 14px;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: .1em;
+      font-size:12px;
+      font-weight:500;
+      letter-spacing:0.5px;
       text-transform: uppercase;
       color: var(--blue);
-      margin-bottom: 22px;
+      margin-bottom:28px;
     }
+    .hero-tag::before { content: ''; font-size: 8px; }
     .hero h1 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(38px, 7vw, 66px);
-      line-height: 1.05;
-      max-width: 720px;
-      margin: 0 auto 20px;
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(30px, 5vw, 50px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      margin: 0 0 20px;
     }
     .hero h1 .a { color: var(--blue); }
     .hero h1 .b { color: var(--orange); }
     .hero-meta {
       display: flex;
-      justify-content: center;
+      align-items: center;
+      justify-content: flex-start;
       flex-wrap: wrap;
       gap: 20px;
       font-size: 13px;
       color: var(--muted);
       margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
     }
     .hero-meta span { display: flex; align-items: center; gap: 6px; }
     .hero-meta svg { width:14px; height:14px; stroke: currentColor; fill:none; stroke-width:2; }
@@ -120,8 +179,11 @@
     /* ── CONTENU ── */
     .container {
       max-width: var(--max);
-      margin: 0 auto;
-      padding: 56px 24px 80px;
+      margin: 12px auto 0;
+      padding: 56px 2rem 80px;
+      background: rgba(0, 0, 0, 0.96);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 22px;
     }
 
     /* Chapô intro */
@@ -136,20 +198,24 @@
 
     /* Titres */
     h2 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(28px, 5vw, 40px);
+      font-family: 'Anton', sans-serif;
+      font-size: 26px;
       line-height: 1.1;
       margin: 52px 0 18px;
       color: var(--white);
+      letter-spacing: -0.5px;
+      font-weight: 700;
     }
     h2 .accent { color: var(--blue); }
     h3 {
+      font-family: 'Anton', sans-serif;
       font-size: 18px;
-      font-weight: 700;
+      font-weight: 600;
       margin: 32px 0 12px;
       color: var(--white);
     }
-    p { margin-bottom: 18px; color: #b8b8d0; }
+    p { margin-bottom: 18px; color: #b8b8d0; font-family: 'Inter', sans-serif; font-weight: 400; }
+    svg { display: none !important; }
 
     /* PROOF CARDS — photos réelles */
     .proof-grid {
@@ -223,7 +289,7 @@
       margin-top: 6px;
       width: fit-content;
     }
-    .proof-badge::before { content: '✓'; }
+    .proof-badge::before { content: ''; }
 
     /* Steps numérotés */
     .steps-list { display: flex; flex-direction: column; gap: 0; margin: 28px 0; }
@@ -235,7 +301,7 @@
     }
     .step-item:last-child { border-bottom: none; }
     .step-n {
-      font-family: 'Bebas Neue', sans-serif;
+      font-family: 'Syne', sans-serif;
       font-size: 36px;
       color: var(--border);
       line-height: 1;
@@ -283,7 +349,7 @@
       gap: 8px;
       background: var(--blue);
       color: #fff;
-      font-weight: 700;
+      font-weight: 600;
       font-size: 15px;
       padding: 14px 32px;
       border-radius: 8px;
@@ -292,39 +358,28 @@
     }
     .cta-btn:hover { background: #2563eb; transform: translateY(-2px); }
 
-    /* Nav top */
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(9,9,15,.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      display: flex;
+    .blog-return {
+      max-width: var(--max);
+      margin: 20px auto 0;
+      padding: 0 2rem;
+    }
+    .btn-blog-back {
+      display: inline-flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 14px 24px;
-    }
-    .topbar-logo {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 22px;
-      letter-spacing: .05em;
+      gap: 8px;
+      color: var(--white);
+      background: #000;
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 12px 18px;
+      border-radius: 999px;
       text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s, transform 0.2s;
     }
-    .topbar-logo .v { color: var(--blue); }
-    .topbar-logo .r { color: var(--orange); }
-    .topbar-logo .w { color: var(--white); }
-    .topbar-cta {
-      background: var(--blue);
-      color: #fff;
-      font-size: 13px;
-      font-weight: 700;
-      padding: 8px 18px;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: background .2s;
+    .btn-blog-back:hover {
+      background: #07070a;
+      transform: translateY(-1px);
     }
-    .topbar-cta:hover { background: #2563eb; }
 
     /* Séparateur */
     hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
@@ -365,17 +420,72 @@
     .bio-name { font-weight: 700; font-size: 15px; color: var(--white); display: inline-flex; align-items: center; gap: 8px; }
     .bio-name-icon { width: 16px; height: 16px; object-fit: contain; }
     .bio-role { font-size: 13px; color: var(--muted); margin-top:2px; }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 2rem;
+      text-align: center;
+      max-width: var(--max);
+      margin: 12px auto 40px;
+      background: rgba(0, 0, 0, 0.96);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+    }
+    .footer-brand {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    .footer-brand span { color: var(--blue); }
+    footer p { font-size: 13px; color: #8f8a9b; margin: 0; }
+    .scroll-top-btn {
+      position: fixed;
+      right: 20px;
+      bottom: 24px;
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: #000;
+      color: #fff;
+      font-family: 'Anton', sans-serif;
+      font-size: 18px;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 120;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(8px);
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .scroll-top-btn.show {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 640px) {
+      nav { padding: 0 1rem; }
+      .blog-return { padding: 0 1rem; }
+      .hero { padding: 56px 1rem 36px; }
+      .container { padding: 40px 1rem 60px; }
+      .author-bio { flex-direction: column; align-items: flex-start; }
+      footer { margin: 12px 1rem 30px; }
+    }
   </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="topbar">
-  <a href="https://www.vortexrights.com" class="topbar-logo">
-    <span class="v">VORTEX</span><span class="w"> </span><span class="r">RIGHTS</span>
-  </a>
-  <a href="https://www.vortexrights.com/tarifs" class="topbar-cta">Voir les tarifs →</a>
+<nav>
+  <a href="https://www.vortexrights.com" class="nav-brand">Vortex<span>Rights</span></a>
+  <span class="nav-tag">Guide Artiste</span>
 </nav>
+<div class="blog-return">
+  <a href="/blog" class="btn-blog-back">← Retour au blog principal</a>
+</div>
 
 <!-- HERO -->
 <header class="hero">
@@ -619,6 +729,13 @@
 
 </main>
 
+<footer>
+  <div class="footer-brand">Vortex<span>Rights</span></div>
+  <p>© 2026 Vortex Rights · Droits musicaux pour les artistes haïtiens</p>
+</footer>
+
+<button type="button" id="scrollTopBtn" class="scroll-top-btn" aria-label="Retour en haut">↑</button>
+
 <script>
   (function() {
     const cards = document.querySelectorAll('.proof-card.reveal');
@@ -639,6 +756,18 @@
     }, { threshold: 0.2, rootMargin: '0px 0px -6% 0px' });
 
     cards.forEach((card) => io.observe(card));
+  })();
+
+  (function () {
+    const btn = document.getElementById('scrollTopBtn');
+    if (!btn) return;
+    const toggle = () => {
+      if (window.scrollY > 300) btn.classList.add('show');
+      else btn.classList.remove('show');
+    };
+    window.addEventListener('scroll', toggle, { passive: true });
+    toggle();
+    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   })();
 </script>
 

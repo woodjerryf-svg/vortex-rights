@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comment encaisser tes royalties Spotify depuis Haïti — Vortex Rights</title>
+<meta name="description" content="Le guide complet et honnête pour retirer tes royalties Spotify en Haïti via PayPal, virement bancaire, Wise et MonCash. Tout ce que personne ne documente.">
+<meta name="author" content="Vortex Rights">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://vortexrights.com/blog-encaisser-royalties-spotify-haiti.html">
+<meta property="og:title" content="Comment encaisser tes royalties Spotify depuis Haïti — Vortex Rights">
+<meta property="og:description" content="Guide complet pour retirer tes royalties Spotify en Haïti via PayPal, Wise, virement bancaire et MonCash.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://vortexrights.com/blog-encaisser-royalties-spotify-haiti.html">
+<meta property="og:image" content="https://vortexrights.com/Public/images/blog/royalties-Spotify.jpg">
+<meta property="og:site_name" content="Vortex Rights">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Inter:wght@400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #08080d;
+    --bg-card: #0f0f16;
+    --bg-subtle: #14141c;
+    --border: rgba(255,255,255,0.07);
+    --border-accent: rgba(255,255,255,0.14);
+    --text: #edeae4;
+    --text-muted: #9490a0;
+    --text-dim: #524f5e;
+    --gold: #F5A623;
+    --gold-glow: rgba(245,166,35,0.10);
+    --gold-border: rgba(245,166,35,0.28);
+    --green: #22c55e;
+    --green-glow: rgba(34,197,94,0.10);
+    --green-border: rgba(34,197,94,0.28);
+    --red: #ef4444;
+    --red-glow: rgba(239,68,68,0.10);
+    --red-border: rgba(239,68,68,0.28);
+    --blue: #3b82f6;
+    --blue-glow: rgba(59,130,246,0.10);
+    --blue-border: rgba(59,130,246,0.28);
+    --purple: #a855f7;
+    --purple-glow: rgba(168,85,247,0.10);
+    --purple-border: rgba(168,85,247,0.28);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 17px;
+    min-height: 100vh;
+    background-image: url('/Public/images/blog/royalties-Spotify.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: -1;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(8,8,13,0.93);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 60px;
+  }
+  .nav-brand { font-family:'Syne',sans-serif; font-weight:800; font-size:18px; color:var(--text); text-decoration:none; }
+  .nav-brand span { color: var(--gold); }
+  .nav-tag { font-size:12px; color:var(--text-muted); background:var(--bg-subtle); border:1px solid var(--border); padding:4px 12px; border-radius:20px; }
+
+  .blog-return {
+    max-width: 840px;
+    margin: 20px auto 0;
+    padding: 0 2rem;
+  }
+  .btn-blog-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text);
+    background: #000;
+    border: 1px solid rgba(255,255,255,0.18);
+    padding: 12px 18px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .btn-blog-back:hover {
+    background: #07070a;
+    transform: translateY(-1px);
+  }
+
+  /* HERO */
+  .hero {
+    max-width:840px;
+    margin:12px auto 0;
+    padding:72px 2rem 48px;
+    background: rgba(0, 0, 0, 0.96);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:22px;
+    text-align:left;
+  }
+  .hero-badge {
+    display:inline-flex; align-items:center; gap:6px;
+    background:var(--gold-glow); border:1px solid var(--gold-border); color:var(--gold);
+    font-size:12px; font-weight:500; padding:5px 14px; border-radius:20px; margin-bottom:28px;
+    letter-spacing:0.5px; text-transform:uppercase;
+  }
+  .hero-badge::before { content:'●'; font-size:8px; }
+
+  h1 { font-family:'Anton',sans-serif; font-weight:800; font-size:clamp(30px,5vw,50px); line-height:1.1; letter-spacing:-1.5px; color:var(--text); margin-bottom:20px; }
+  h1 em { font-style:normal; color:var(--gold); }
+
+  .hero-intro { font-size:19px; color:var(--text-muted); line-height:1.65; max-width:680px; margin-bottom:36px; }
+
+  .hero-meta { display:flex; align-items:center; justify-content:flex-start; gap:20px; flex-wrap:wrap; padding-top:24px; border-top:1px solid var(--border); }
+  .meta-item { display:flex; align-items:center; gap:6px; font-size:13px; color:var(--text-muted); }
+  .meta-dot { width:4px; height:4px; border-radius:50%; background:var(--text-dim); }
+
+  /* PAIN POINT */
+  .pain-box {
+    max-width:840px;
+    margin:12px auto 0;
+    padding:20px 2rem;
+    background: rgba(0, 0, 0, 0.96);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:22px;
+  }
+  .pain-inner {
+    background: var(--red-glow); border:1px solid var(--red-border); border-radius:12px; padding:22px 26px;
+    display:flex; gap:16px; align-items:flex-start;
+  }
+  .pain-icon { font-size:26px; flex-shrink:0; margin-top:2px; }
+  .pain-text strong { display:block; color:#f87171; font-weight:600; font-size:15px; margin-bottom:6px; }
+  .pain-text p { font-size:14px; color:var(--text-muted); margin:0; line-height:1.6; }
+
+  /* CONTENT */
+  .content {
+    max-width:840px;
+    margin:12px auto 0;
+    padding:24px 2rem 80px;
+    background: rgba(0, 0, 0, 0.96);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:22px;
+  }
+  .section { margin-top:60px; }
+
+  h2 { font-family:'Anton',sans-serif; font-weight:700; font-size:26px; letter-spacing:-0.5px; color:var(--text); margin-bottom:20px; padding-top:12px; }
+  h3 { font-family:'Anton',sans-serif; font-weight:600; font-size:18px; color:var(--text); margin-bottom:12px; margin-top:30px; }
+  p { color:var(--text-muted); margin-bottom:16px; font-family: 'Inter', sans-serif; font-weight: 400; }
+
+  /* Icon cleanup */
+  svg,
+  .pain-icon,
+  .method-icon,
+  .flow-node .fn-icon {
+    display: none !important;
+  }
+  .hero-badge::before,
+  .method-pros li::before,
+  .checklist li::before {
+    content: '';
+  }
+  p strong { color:var(--text); font-weight:500; }
+  a { color:var(--gold); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+
+  .divider { border:none; border-top:1px solid var(--border); margin:48px 0; }
+
+  /* FLOW DIAGRAM */
+  .flow-row { display:flex; align-items:center; gap:0; flex-wrap:wrap; margin:24px 0; }
+  .flow-node {
+    background:var(--bg-card); border:1px solid var(--border-accent);
+    border-radius:10px; padding:14px 18px; text-align:center; min-width:120px;
+    flex:1;
+  }
+  .flow-node .fn-icon { font-size:22px; margin-bottom:6px; }
+  .flow-node .fn-label { font-size:12px; color:var(--text-muted); line-height:1.4; }
+  .flow-node .fn-name { font-weight:600; font-size:14px; color:var(--text); }
+  .flow-arrow { font-size:22px; color:var(--text-dim); padding:0 8px; flex-shrink:0; }
+  .flow-node.highlight { border-color:var(--gold-border); background:var(--gold-glow); }
+  .flow-node.highlight .fn-label { color:#c4872a; }
+
+  /* PAYOUT TABLE */
+  .payout-grid { display:flex; flex-direction:column; gap:10px; margin-top:16px; }
+  .payout-row {
+    display:grid; grid-template-columns:140px 1fr auto;
+    gap:16px; align-items:center;
+    background:var(--bg-card); border:1px solid var(--border);
+    border-radius:10px; padding:16px 20px;
+    transition: border-color 0.2s;
+  }
+  .payout-row:hover { border-color:var(--border-accent); }
+  .payout-method { font-weight:600; font-size:15px; color:var(--text); }
+  .payout-desc { font-size:13px; color:var(--text-muted); line-height:1.5; }
+  .payout-badge {
+    font-size:11px; font-weight:600; padding:4px 10px; border-radius:6px;
+    white-space:nowrap; text-align:center;
+  }
+  .badge-ok { background:var(--green-glow); color:var(--green); border:1px solid var(--green-border); }
+  .badge-warn { background:var(--gold-glow); color:var(--gold); border:1px solid var(--gold-border); }
+  .badge-ko { background:var(--red-glow); color:#f87171; border:1px solid var(--red-border); }
+
+  /* METHOD CARDS */
+  .method-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin-top:20px; }
+  .method-card { background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:22px; }
+  .method-card.primary { border-color:var(--gold-border); }
+  .method-card.secondary { border-color:var(--blue-border); }
+  .method-header { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+  .method-icon { font-size:28px; }
+  .method-name { font-family:'Syne',sans-serif; font-weight:700; font-size:17px; color:var(--text); }
+  .method-tag { font-size:11px; font-weight:500; padding:2px 8px; border-radius:4px; margin-top:2px; }
+  .method-body { font-size:13px; color:var(--text-muted); line-height:1.6; }
+  .method-pros { margin-top:12px; }
+  .method-pros li {
+    display:flex; gap:8px; font-size:13px; color:var(--text-muted); margin-bottom:5px; list-style:none;
+  }
+  .method-pros li.pro::before { content:'✓'; color:var(--green); font-weight:700; flex-shrink:0; }
+  .method-pros li.con::before { content:'✗'; color:#f87171; font-weight:700; flex-shrink:0; }
+  .method-pros li.warn::before { content:'⚠'; color:var(--gold); flex-shrink:0; }
+
+  /* STEP CARDS */
+  .steps { display:flex; flex-direction:column; gap:0; margin-top:8px; }
+  .step { display:flex; gap:0; position:relative; }
+  .step-left { display:flex; flex-direction:column; align-items:center; flex-shrink:0; width:48px; margin-right:20px; }
+  .step-num {
+    width:36px; height:36px; border-radius:50%; background:var(--bg-subtle);
+    border:1px solid var(--border-accent); display:flex; align-items:center; justify-content:center;
+    font-family:'Syne',sans-serif; font-weight:700; font-size:14px; color:var(--text); flex-shrink:0; z-index:1;
+  }
+  .step-num.gold { background:var(--gold); border-color:var(--gold); color:#000; }
+  .step-line { width:1px; flex:1; background:var(--border); margin:4px 0; min-height:24px; }
+  .step-body {
+    background:var(--bg-card); border:1px solid var(--border); border-radius:10px;
+    padding:20px 22px; margin-bottom:12px; flex:1;
+  }
+  .step-body:hover { border-color:var(--border-accent); }
+  .step-title { font-weight:600; font-size:16px; color:var(--text); margin-bottom:8px; }
+  .step-desc { font-size:14px; color:var(--text-muted); margin:0; line-height:1.6; }
+  .step-note {
+    display:flex; align-items:flex-start; gap:8px;
+    background:var(--gold-glow); border:1px solid rgba(245,166,35,0.2);
+    border-radius:6px; padding:10px 12px; margin-top:12px;
+  }
+  .step-note span { font-size:13px; color:#c4872a; line-height:1.5; }
+  .step-danger {
+    display:flex; align-items:flex-start; gap:8px;
+    background:var(--red-glow); border:1px solid rgba(239,68,68,0.2);
+    border-radius:6px; padding:10px 12px; margin-top:12px;
+  }
+  .step-danger span { font-size:13px; color:#f87171; line-height:1.5; }
+
+  /* INFO BOXES */
+  .info-box { background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:20px 24px; margin:24px 0; }
+  .info-box.gold { border-color:var(--gold-border); background:var(--gold-glow); }
+  .info-box.green { border-color:var(--green-border); background:var(--green-glow); }
+  .info-box.red { border-color:var(--red-border); background:var(--red-glow); }
+  .info-box.blue { border-color:var(--blue-border); background:var(--blue-glow); }
+  .info-box-title { font-weight:600; font-size:15px; margin-bottom:8px; }
+  .info-box.gold .info-box-title { color:var(--gold); }
+  .info-box.green .info-box-title { color:var(--green); }
+  .info-box.red .info-box-title { color:#f87171; }
+  .info-box.blue .info-box-title { color:var(--blue); }
+  .info-box p { font-size:14px; margin:0; }
+
+  /* FEES TABLE */
+  .fees-table { width:100%; border-collapse:collapse; margin-top:16px; font-size:14px; }
+  .fees-table th { text-align:left; padding:10px 14px; color:var(--text-dim); font-weight:500; font-size:12px; letter-spacing:0.3px; text-transform:uppercase; border-bottom:1px solid var(--border); }
+  .fees-table td { padding:12px 14px; color:var(--text-muted); border-bottom:1px solid var(--border); vertical-align:top; }
+  .fees-table td strong { color:var(--text); font-weight:500; }
+  .fees-table tr:last-child td { border-bottom:none; }
+  .fees-table tr:hover td { background:var(--bg-subtle); }
+  .ok-pill { display:inline-block; background:var(--green-glow); color:var(--green); border:1px solid var(--green-border); border-radius:4px; padding:1px 7px; font-size:11px; font-weight:600; }
+  .warn-pill { display:inline-block; background:var(--gold-glow); color:var(--gold); border:1px solid var(--gold-border); border-radius:4px; padding:1px 7px; font-size:11px; font-weight:600; }
+  .ko-pill { display:inline-block; background:var(--red-glow); color:#f87171; border:1px solid var(--red-border); border-radius:4px; padding:1px 7px; font-size:11px; font-weight:600; }
+
+  /* CHECKLIST */
+  .checklist { list-style:none; margin:12px 0 16px; display:flex; flex-direction:column; gap:8px; }
+  .checklist li { display:flex; align-items:flex-start; gap:10px; font-size:15px; color:var(--text-muted); }
+  .checklist li::before { content:'✓'; color:var(--green); font-weight:700; flex-shrink:0; margin-top:1px; }
+
+  /* CALCULATOR BLOCK */
+  .calc-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; margin-top:16px; }
+  .calc-card { background:var(--bg-subtle); border:1px solid var(--border); border-radius:10px; padding:18px; text-align:center; }
+  .calc-card .cc-streams { font-family:'Syne',sans-serif; font-weight:800; font-size:24px; color:var(--text); }
+  .calc-card .cc-label { font-size:12px; color:var(--text-muted); margin:4px 0 10px; }
+  .calc-card .cc-amount { font-size:20px; font-weight:600; color:var(--gold); }
+  .calc-card .cc-note { font-size:11px; color:var(--text-dim); margin-top:4px; }
+
+  blockquote { border-left:3px solid var(--gold); padding:4px 0 4px 20px; margin:24px 0; }
+  blockquote p { font-size:16px; color:var(--text); font-style:italic; margin:0; }
+
+  code { background:var(--bg-subtle); border:1px solid var(--border); border-radius:4px; padding:1px 7px; font-size:14px; color:var(--gold); font-family:'Courier New',monospace; }
+
+  /* CTA */
+  .cta-block {
+    background: linear-gradient(135deg, var(--gold-glow) 0%, var(--purple-glow) 100%);
+    border:1px solid var(--gold-border); border-radius:14px; padding:40px 36px; text-align:center; margin-top:60px;
+  }
+  .cta-block h2 { margin-bottom:12px; font-size:24px; }
+  .cta-block p { font-size:16px; margin-bottom:24px; }
+  .cta-buttons { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+  .btn-primary { background:var(--gold); color:#000; font-weight:700; font-size:15px; padding:12px 28px; border-radius:8px; text-decoration:none; font-family:'Syne',sans-serif; transition:opacity 0.2s; }
+  .btn-primary:hover { opacity:0.85; text-decoration:none; }
+  .btn-secondary { background:transparent; color:var(--text); font-weight:500; font-size:15px; padding:12px 28px; border-radius:8px; border:1px solid var(--border-accent); text-decoration:none; }
+  .btn-secondary:hover { border-color:rgba(255,255,255,0.3); text-decoration:none; }
+
+  footer {
+    border-top:1px solid var(--border);
+    padding:32px 2rem;
+    text-align:center;
+    max-width:840px;
+    margin:12px auto 40px;
+    background: rgba(0, 0, 0, 0.96);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:16px;
+  }
+  .footer-brand { font-family:'Syne',sans-serif; font-weight:700; font-size:16px; margin-bottom:8px; }
+  .footer-brand span { color:var(--gold); }
+  footer p { font-size:13px; color:var(--text-dim); margin:0; }
+  .scroll-top-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 24px;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.18);
+    background: #000;
+    color: #fff;
+    font-family: 'Anton', sans-serif;
+    font-size: 18px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 120;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(8px);
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .scroll-top-btn.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  @media (max-width:640px) {
+    .flow-row { flex-direction:column; }
+    .flow-arrow { transform:rotate(90deg); }
+    .payout-row { grid-template-columns:1fr auto; }
+    .payout-row .payout-desc { display:none; }
+    .method-cards { grid-template-columns:1fr; }
+    .step-left { width:36px; margin-right:14px; }
+    h1 { font-size:28px; letter-spacing:-0.8px; }
+    .cta-block { padding:28px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="https://vortexrights.com" class="nav-brand">Vortex<span>Rights</span></a>
+  <span class="nav-tag">Guide Artiste</span>
+</nav>
+
+<div class="blog-return">
+  <a href="/blog" class="btn-blog-back">← Retour au blog principal</a>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-badge">Priorité haute · Royalties & Paiements</div>
+  <h1>Comment les artistes haïtiens peuvent <em>encaisser leurs royalties Spotify</em></h1>
+  <p class="hero-intro">
+    Tu as de la musique sur Spotify, les streams rentrent — mais comment récupérer cet argent en Haïti ? MonCash, PayPal, virement bancaire... C'est le point de douleur le plus ignoré par tous les guides en ligne. On le couvre enfin, honnêtement.
+  </p>
+  <div class="hero-meta">
+    <span class="meta-item">Par l'équipe Vortex Rights</span>
+    <span class="meta-dot"></span>
+    <span class="meta-item">Mis à jour : Mai 2026</span>
+    <span class="meta-dot"></span>
+    <span class="meta-item">Lecture : 10 min</span>
+  </div>
+</header>
+
+<!-- PAIN POINT -->
+<div class="pain-box">
+  <div class="pain-inner">
+    <div class="pain-icon">🚫</div>
+    <div class="pain-text">
+      <strong>Le problème que personne ne documente</strong>
+      <p>Haïti n'est pas sur la liste des pays avec un accès complet à PayPal, Zelle ou Payoneer. Les banques locales sont rarement reliées aux systèmes de virement internationaux classiques. Résultat : des dizaines d'artistes haïtiens ont des royalties bloquées sur leurs comptes DistroKid ou TuneCore sans savoir comment les récupérer. Ce guide change ça.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<main class="content">
+
+  <!-- SECTION 1: COMMENT SPOTIFY PAIE -->
+  <div class="section">
+    <h2>Comprendre d'abord : Spotify ne te paie pas directement</h2>
+    <p>
+      C'est la première chose à avoir clairement en tête. <strong>Spotify ne vire jamais d'argent directement à un artiste.</strong> Le circuit de paiement passe toujours par des intermédiaires, et c'est le distributeur qui est ton point de contact pour récupérer tes royalties.
+    </p>
+
+    <div class="flow-row">
+      <div class="flow-node">
+        <div class="fn-icon">🎵</div>
+        <div class="fn-name">Spotify</div>
+        <div class="fn-label">Collecte les revenus (abos + pub)</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">
+        <div class="fn-icon">🏷️</div>
+        <div class="fn-name">Distributeur</div>
+        <div class="fn-label">DistroKid, TuneCore, CD Baby…</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node highlight">
+        <div class="fn-icon">🇭🇹</div>
+        <div class="fn-name">Toi, l'artiste</div>
+        <div class="fn-label">Via PayPal, virement, Wise…</div>
+      </div>
+    </div>
+
+    <p>
+      Spotify reverse environ <strong>70% de ses revenus aux ayants droit</strong>, calculé selon un système de "streamshare" : ta part dépend du pourcentage que tes streams représentent sur le total mondial ce mois-là. Ton distributeur reçoit ces fonds et les reverse ensuite selon ton accord avec eux.
+    </p>
+
+    <div class="info-box gold">
+      <p class="info-box-title">💡 Délai réel de paiement — ce qu'il faut savoir</p>
+      <p>Il faut compter environ <strong>3 à 4 mois</strong> entre le moment où tes streams ont lieu et le moment où tu peux retirer l'argent. Par exemple, des streams de janvier arrivent généralement sur ton compte distributeur en mars ou avril. C'est normal pour toute l'industrie musicale — ce n'est pas un bug.</p>
+    </div>
+
+    <h3>Le seuil minimum de 1 000 streams — règle de 2024</h3>
+    <p>
+      Depuis début 2024, Spotify a modifié ses règles : <strong>un titre doit avoir atteint au moins 1 000 streams dans les 12 derniers mois</strong> pour générer des royalties d'enregistrement. En dessous, les fractions de centimes générées ne sont pas versées aux artistes mais redistribuées dans le pool global. C'est important pour les artistes qui débutent.
+    </p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- SECTION 2: COMBIEN TU GAGNES -->
+  <div class="section">
+    <h2>Combien ça rapporte vraiment ?</h2>
+    <p>
+      Spotify ne paie pas un taux fixe par stream. Le montant moyen mondial tourne autour de <strong>0,003$ à 0,005$ par stream</strong> selon l'origine géographique de l'auditeur. Un écouteur américain ou canadien génère plus de revenus qu'un écouteur haïtien, car le prix de l'abonnement Spotify y est plus élevé.
+    </p>
+
+    <div class="calc-grid">
+      <div class="calc-card">
+        <div class="cc-streams">10 000</div>
+        <div class="cc-label">streams</div>
+        <div class="cc-amount">~30$</div>
+        <div class="cc-note">Estimation mondiale moyenne</div>
+      </div>
+      <div class="calc-card">
+        <div class="cc-streams">50 000</div>
+        <div class="cc-label">streams</div>
+        <div class="cc-amount">~150$</div>
+        <div class="cc-note">Avant frais distributeur</div>
+      </div>
+      <div class="calc-card">
+        <div class="cc-streams">100 000</div>
+        <div class="cc-label">streams</div>
+        <div class="cc-amount">~300$</div>
+        <div class="cc-note">Hors droits d'édition</div>
+      </div>
+      <div class="calc-card">
+        <div class="cc-streams">1 000 000</div>
+        <div class="cc-label">streams</div>
+        <div class="cc-amount">~3 000$</div>
+        <div class="cc-note">Varie énormément selon pays</div>
+      </div>
+    </div>
+
+    <div class="info-box red" style="margin-top:20px;">
+      <p class="info-box-title">⚠️ Attention — les royalties d'édition sont séparées</p>
+      <p>Les chiffres ci-dessus ne concernent que les <strong>royalties d'enregistrement</strong>. Si tu as composé et écrit tes propres chansons, tu as droit à des <strong>royalties d'édition/composition</strong> supplémentaires. Ces droits ne passent PAS par ton distributeur — ils nécessitent une inscription séparée auprès d'une société de gestion collective. Vortex Rights peut t'aider sur ce point.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- SECTION 3: MÉTHODES DE RETRAIT PAR DISTRIBUTEUR -->
+  <div class="section">
+    <h2>Méthodes de retrait selon ton distributeur</h2>
+    <p>
+      C'est ici que la situation d'Haïti complique les choses. Voici un tableau honnête des options disponibles et leur accessibilité depuis le territoire haïtien :
+    </p>
+
+    <div class="payout-grid">
+      <div class="payout-row">
+        <div class="payout-method">PayPal</div>
+        <div class="payout-desc">Disponible sur DistroKid et TuneCore. Fonctionnel depuis Haïti avec un compte PayPal vérifié, mais les retraits directs vers banque locale sont complexes. Frais : 1,07$ + 2% (hors US), jusqu'à 22,47$ max.</div>
+        <div class="payout-badge badge-warn">Partiel</div>
+      </div>
+      <div class="payout-row">
+        <div class="payout-method">Wire Transfer</div>
+        <div class="payout-desc">Virement bancaire international. Disponible sur DistroKid via Tipalti. Frais : 20$ (monnaie locale) ou 26$ (en USD). Nécessite un compte bancaire haïtien éligible aux virements SWIFT/internationaux.</div>
+        <div class="payout-badge badge-warn">Limité</div>
+      </div>
+      <div class="payout-row">
+        <div class="payout-method">Wise</div>
+        <div class="payout-desc">Recommandé. DistroKid peut virer vers un compte Wise. Wise peut ensuite envoyer des fonds vers Haïti. Frais réduits, taux de change avantageux. Compte Wise créable depuis Haïti.</div>
+        <div class="payout-badge badge-ok">Recommandé</div>
+      </div>
+      <div class="payout-row">
+        <div class="payout-method">Payoneer</div>
+        <div class="payout-desc">Utilisé par TuneCore comme partenaire principal. Malheureusement, l'option "Global Payment Service" n'est plus disponible pour les nouvelles inscriptions depuis Haïti depuis juin 2024.</div>
+        <div class="payout-badge badge-ko">Fermé Haïti</div>
+      </div>
+      <div class="payout-row">
+        <div class="payout-method">ACH / eCheck</div>
+        <div class="payout-desc">Exclusivement pour les résidents américains avec un compte bancaire US. Non applicable depuis Haïti sans un compte bancaire étranger.</div>
+        <div class="payout-badge badge-ko">USA seulement</div>
+      </div>
+      <div class="payout-row">
+        <div class="payout-method">MonCash direct</div>
+        <div class="payout-desc">Aucun distributeur majeur ne paie directement sur MonCash. Ce service est disponible via des intermédiaires locaux qui convertissent PayPal/Wise → MonCash moyennant des frais.</div>
+        <div class="payout-badge badge-warn">Via tiers</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- SECTION 4: LES 3 CHEMINS -->
+  <div class="section">
+    <h2>Les 3 parcours concrets pour récupérer ton argent</h2>
+
+    <div class="method-cards">
+
+      <!-- CHEMIN 1: WISE -->
+      <div class="method-card primary">
+        <div class="method-header">
+          <div class="method-icon">🏦</div>
+          <div>
+            <div class="method-name">Parcours Wise</div>
+            <div class="method-tag" style="background:var(--gold-glow);color:var(--gold);border:1px solid var(--gold-border);border-radius:4px;font-size:11px;padding:2px 8px;">Option #1 Recommandée</div>
+          </div>
+        </div>
+        <div class="method-body">
+          Crée un compte Wise, configure-le comme méthode de paiement sur ton distributeur, puis transfère depuis Wise vers ton compte bancaire haïtien (SOGEBANK, BNC, UNIBANK, BUH, etc.) ou vers MonCash via un intermédiaire.
+        </div>
+        <ul class="method-pros">
+          <li class="pro">Frais parmi les plus bas du marché</li>
+          <li class="pro">Taux de change transparent et équitable</li>
+          <li class="pro">Compte ouvrabe depuis Haïti</li>
+          <li class="pro">Compatible DistroKid (paiement direct)</li>
+          <li class="warn">Transfert Wise → banque haïtienne prend 1–3 jours</li>
+        </ul>
+      </div>
+
+      <!-- CHEMIN 2: PAYPAL -->
+      <div class="method-card secondary">
+        <div class="method-header">
+          <div class="method-icon">💳</div>
+          <div>
+            <div class="method-name">Parcours PayPal</div>
+            <div class="method-tag" style="background:var(--blue-glow);color:var(--blue);border:1px solid var(--blue-border);border-radius:4px;font-size:11px;padding:2px 8px;">Option #2 Populaire</div>
+          </div>
+        </div>
+        <div class="method-body">
+          Configure PayPal comme méthode sur DistroKid ou TuneCore. Depuis ton compte PayPal, tu peux ensuite convertir vers MonCash ou virement bancaire local via des services comme JBJ Production, HtiPay ou autres intermédiaires locaux.
+        </div>
+        <ul class="method-pros">
+          <li class="pro">Très répandu, facile à configurer</li>
+          <li class="pro">Compatible DistroKid et TuneCore</li>
+          <li class="warn">Haïti a des fonctionnalités PayPal limitées</li>
+          <li class="warn">Frais de retrait : 1,07$ + 2% (max 22,47$)</li>
+          <li class="con">Nécessite souvent un intermédiaire pour MonCash</li>
+        </ul>
+      </div>
+
+      <!-- CHEMIN 3: COMPTE BANCAIRE ÉTRANGER -->
+      <div class="method-card">
+        <div class="method-header">
+          <div class="method-icon">🌍</div>
+          <div>
+            <div class="method-name">Compte bancaire étranger</div>
+            <div class="method-tag" style="background:rgba(255,255,255,0.05);color:var(--text-muted);border:1px solid var(--border);border-radius:4px;font-size:11px;padding:2px 8px;">Option #3 Si diaspora</div>
+          </div>
+        </div>
+        <div class="method-body">
+          Si tu as un proche de confiance aux États-Unis, au Canada ou en France, ils peuvent configurer leur compte bancaire comme méthode de réception sur DistroKid/TuneCore, puis te transférer l'argent via Western Union, MoneyGram, Zelle ou autre.
+        </div>
+        <ul class="method-pros">
+          <li class="pro">ACH (US) : seulement 1,07$ de frais</li>
+          <li class="pro">Pas de limitations liées à Haïti</li>
+          <li class="warn">Nécessite confiance totale dans la personne</li>
+          <li class="con">Frais de transfert supplémentaires (Western Union, etc.)</li>
+          <li class="con">Potentiellement compliqué fiscalement</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- SECTION 5: GUIDE WISE ÉTAPE PAR ÉTAPE -->
+  <div class="section">
+    <h2>Guide pratique — Parcours Wise, étape par étape</h2>
+    <p>
+      Wise (anciennement TransferWise) est la solution la plus efficace et la moins chère pour les artistes haïtiens. Voici comment mettre ça en place avec DistroKid :
+    </p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-left">
+          <div class="step-num gold">1</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-body">
+          <div class="step-title">Crée ton compte Wise</div>
+          <div class="step-desc">Va sur <a href="https://wise.com" target="_blank">wise.com</a> et crée un compte avec ton adresse email. Wise est accessible depuis Haïti. Tu auras besoin d'une pièce d'identité (passeport, CIN) pour la vérification KYC — complète-la dès la création du compte.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-left">
+          <div class="step-num gold">2</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-body">
+          <div class="step-title">Récupère ton numéro de compte USD Wise</div>
+          <div class="step-desc">Une fois le compte vérifié, Wise te donne un <strong>routing number et account number américain</strong> (compte virtuel USD). C'est ce numéro que tu vas utiliser comme "compte bancaire" sur DistroKid. Va dans "Wise → Ouvrir un compte" → sélectionne USD.</div>
+          <div class="step-note">
+            <span>💡 Ce compte USD Wise a un routing number et un account number américains — DistroKid le traite comme un compte US, ce qui te donne accès aux frais d'ACH (seulement 1,07$ au lieu de 20$ pour un wire international).</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-left">
+          <div class="step-num gold">3</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-body">
+          <div class="step-title">Configure Wise comme paiement sur DistroKid</div>
+          <div class="step-desc">Sur DistroKid, va dans <strong>Profile icon → Payout Method</strong>. Choisis "ACH (US Bank Account)" et entre le routing number et account number de ton compte USD Wise. Remplis aussi le formulaire fiscal W-8BEN (tu n'es pas résident US).</div>
+          <div class="step-danger">
+            <span>⚠️ Le formulaire W-8BEN est obligatoire pour les artistes non-américains. Sans ce formulaire, DistroKid peut retenir <strong>30% de tes royalties</strong> au titre de la withholding tax américaine. Haïti a un traité fiscal avec les USA qui peut réduire ou éliminer cette retenue — vérifie avec un comptable.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-left">
+          <div class="step-num gold">4</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-body">
+          <div class="step-title">Retirer depuis DistroKid</div>
+          <div class="step-desc">Quand tu as des fonds disponibles sur ton "DistroKid Bank" (onglet Bank sur ton dashboard), clique sur <strong>"Withdraw"</strong>. Le seuil minimum est 6$. Les paiements sont traités deux fois par semaine. Délai d'arrivée sur Wise : 1 à 14 jours.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-left">
+          <div class="step-num gold">5</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-body">
+          <div class="step-title">Transférer depuis Wise vers Haïti</div>
+          <div class="step-desc">Une fois l'argent sur Wise, tu peux :
+            <br><br>
+            <strong>Option A — Virement bancaire direct :</strong> Wise peut envoyer de l'argent vers des banques haïtiennes (SOGEBANK, BNC, UNIBANK, BUH) via virement bancaire. Frais faibles, délai : quelques minutes à 2 jours.
+            <br><br>
+            <strong>Option B — Via intermédiaire vers MonCash :</strong> Envoie depuis Wise vers un compte en USD, puis utilise un service local (JBJ Production, HtiPay, etc.) pour convertir en HTG/MonCash.
+          </div>
+          <div class="step-note">
+            <span>💡 Pour des montants fréquents, il est plus pratique de garder un solde USD sur Wise et de ne transférer que lorsque tu as une somme significative — chaque transfert coûte des frais fixes, donc autant grouper les retraits.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- SECTION 6: FRAIS COMPARATIF -->
+  <div class="section">
+    <h2>Comparatif des frais de retrait par méthode</h2>
+    <p>Voici un tableau des frais réels pour comprendre ce que tu gardes réellement :</p>
+
+    <table class="fees-table">
+      <thead>
+        <tr>
+          <th>Méthode</th>
+          <th>Frais distributeur</th>
+          <th>Frais transfert vers Haïti</th>
+          <th>Dispo Haïti</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Wise (ACH via compte USD)</strong></td>
+          <td>1,07$ (ACH)</td>
+          <td>~0.5–2% selon montant</td>
+          <td><span class="ok-pill">Oui</span></td>
+        </tr>
+        <tr>
+          <td><strong>PayPal (non-US)</strong></td>
+          <td>1,07$ + 2% (max 22,47$)</td>
+          <td>Frais intermédiaire local</td>
+          <td><span class="warn-pill">Partiel</span></td>
+        </tr>
+        <tr>
+          <td><strong>Wire Transfer international</strong></td>
+          <td>20–26$ par retrait</td>
+          <td>Frais bancaires SWIFT locaux</td>
+          <td><span class="warn-pill">Possible</span></td>
+        </tr>
+        <tr>
+          <td><strong>Payoneer (TuneCore)</strong></td>
+          <td>Frais Payoneer</td>
+          <td>N/A — service fermé pour Haïti</td>
+          <td><span class="ko-pill">Fermé</span></td>
+        </tr>
+        <tr>
+          <td><strong>ACH direct US (via proche)</strong></td>
+          <td>1,07$</td>
+          <td>Frais Western Union / Zelle</td>
+          <td><span class="warn-pill">Indirect</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="info-box green" style="margin-top:20px;">
+      <p class="info-box-title">✅ Conseil Vortex Rights — maximise ce que tu gardes</p>
+      <p>Pour minimiser les frais : <strong>accumule tes royalties</strong> sur ton compte distributeur avant de retirer (retire mensuellement ou trimestriellement plutôt qu'à chaque petit montant). Les frais fixes de retrait "mangent" une grosse part des petites sommes. Exemple : 1,07$ de frais sur un retrait de 10$ = 10% perdu. Sur 200$, c'est seulement 0,5%.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- SECTION 7: DROITS D'ÉDITION -->
+  <div class="section">
+    <h2>N'oublie pas tes droits d'édition — l'argent souvent perdu</h2>
+    <p>
+      La plupart des artistes haïtiens indépendants ne savent pas qu'il existe <strong>deux types de royalties Spotify</strong>. Celles que ton distributeur collecte (royalties d'enregistrement) représentent en réalité seulement une partie de ce que tu mérites si tu as composé tes chansons.
+    </p>
+
+    <div class="info-box blue">
+      <p class="info-box-title">📚 Les deux types de royalties</p>
+      <p><strong>1. Royalties d'enregistrement (master) :</strong> Payées via ton distributeur (DistroKid, TuneCore, CD Baby). C'est l'argent pour l'enregistrement de la chanson.<br><br>
+      <strong>2. Royalties d'édition/composition :</strong> Payées aux compositeurs et auteurs des paroles. Elles passent par des sociétés de gestion collective (PRO — Performance Rights Organizations). Ces droits NE sont pas gérés par ton distributeur seul — ils nécessitent une inscription auprès d'un organisme spécialisé. Vortex Rights t'accompagne dans cette démarche.</p>
+    </div>
+
+    <blockquote>
+      <p>"Un artiste haïtien qui compose sa musique et ne récupère que les royalties d'enregistrement laisse potentiellement autant d'argent de côté que ce qu'il récupère déjà."</p>
+    </blockquote>
+  </div>
+
+  <hr class="divider">
+
+  <!-- SECTION 8: ERREURS À ÉVITER -->
+  <div class="section">
+    <h2>Les 4 erreurs classiques à éviter absolument</h2>
+
+    <h3>❌ Erreur 1 — Oublier de remplir le W-8BEN</h3>
+    <p>
+      Si tu es un artiste non-américain et que tu ne remplis pas ce formulaire fiscal sur DistroKid ou TuneCore, <strong>30% de tes royalties peuvent être retenues automatiquement</strong> à la source. C'est une règle fiscale américaine, pas un choix du distributeur. Remplis-le dès que tu configures ta méthode de paiement.
+    </p>
+
+    <h3>❌ Erreur 2 — Retirer de trop petits montants trop souvent</h3>
+    <p>
+      Les frais fixes de retrait (1$ à 26$ selon la méthode) n'ont aucun sens si tu retires 8$ toutes les deux semaines. <strong>Attends d'avoir au moins 50–100$ accumulés</strong> avant de retirer pour minimiser l'impact des frais.
+    </p>
+
+    <h3>❌ Erreur 3 — Utiliser un email différent de celui du distributeur pour PayPal</h3>
+    <p>
+      DistroKid envoie les paiements PayPal à l'adresse email que tu as configurée. <strong>Assure-toi que cette adresse email existe bien sur ton compte PayPal</strong>, sinon le paiement peut être retourné ou perdu.
+    </p>
+
+    <h3>❌ Erreur 4 — Ne pas vérifier son compte PayPal/Wise</h3>
+    <p>
+      Un compte non vérifié sur PayPal ou Wise a des limites de réception strictes. Pour un artiste qui commence à générer des revenus sérieux, <strong>ces limites peuvent bloquer des paiements</strong>. Vérifie ton identité sur ces plateformes dès le départ.
+    </p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- RÉCAP -->
+  <div class="section">
+    <h2>Récapitulatif — ce que tu dois retenir</h2>
+    <div class="info-box">
+      <p class="info-box-title" style="color:var(--text);">📋 L'essentiel en 6 points</p>
+      <ul class="checklist" style="margin-top:12px;">
+        <li><strong>Spotify → Distributeur → Toi.</strong> Tu ne reçois jamais d'argent directement de Spotify.</li>
+        <li><strong>Wise est la méthode la plus efficace</strong> depuis Haïti. Crée un compte USD Wise et utilise-le comme compte "américain" sur DistroKid.</li>
+        <li><strong>Remplis le W-8BEN</strong> immédiatement pour éviter une retenue de 30% sur tes royalties.</li>
+        <li><strong>Attends 3–4 mois</strong> avant de voir l'argent des streams sur ton compte — c'est le cycle normal.</li>
+        <li><strong>Accumule avant de retirer</strong> — les frais fixes ne valent la peine que sur des montants significatifs.</li>
+        <li><strong>Tu as aussi des droits d'édition</strong> si tu composes ta musique — un guide et un accompagnement Vortex Rights existent pour ça.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-block">
+    <h2>Tu veux récupérer <em>tous</em> tes droits ?</h2>
+    <p>Vortex Rights accompagne les artistes haïtiens dans la gestion complète de leurs royalties — enregistrement ET édition. Ne laisse plus d'argent sur la table.</p>
+    <div class="cta-buttons">
+      <a href="https://vortexrights.com/contact" class="btn-primary">Parler à un expert</a>
+      <a href="https://vortexrights.com/blog" class="btn-secondary">Lire d'autres guides</a>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-brand">Vortex<span>Rights</span></div>
+  <p>© 2026 Vortex Rights · Droits musicaux pour les artistes haïtiens</p>
+</footer>
+
+<button type="button" id="scrollTopBtn" class="scroll-top-btn" aria-label="Retour en haut">↑</button>
+<script>
+  (function () {
+    const btn = document.getElementById('scrollTopBtn');
+    if (!btn) return;
+    const toggle = () => {
+      if (window.scrollY > 300) btn.classList.add('show');
+      else btn.classList.remove('show');
+    };
+    window.addEventListener('scroll', toggle, { passive: true });
+    toggle();
+    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  })();
+</script>
+</body>
+</html>
